@@ -11,3 +11,7 @@ export default function Jumbotron({
     </Item>
   );
 }
+
+Jumbotron.Container = function JumbontronContainer({ children, ...restProps }) {
+  return <Container {...restProps}>{children}</Container>;
+};
