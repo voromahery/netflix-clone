@@ -1,11 +1,28 @@
 {
-	"name": "project",
-	"dependencies": {
-		"fuse.js": "5.2.3",
-		"normalize.css": "8.0.1",
-		"react": "^17.0.1",
-		"react-dom": "^16.13.1",
-		"react-router-dom": "^5.2.0",
-		"styled-components": "5.1.0"
-	}
+  "name": "project",
+  "dependencies": {
+    "fuse.js": "5.2.3",
+    "normalize.css": "8.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "5.1.0"
+  },
+  "description": "return this.options.title || this.options.name;\r \t}",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voromahery/netflix-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voromahery/netflix-clone/issues"
+  },
+  "homepage": "https://github.com/voromahery/netflix-clone#readme"
 }
