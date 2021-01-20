@@ -1,17 +1,3 @@
-import react from "react";
-
-export default function Jumbotron({
-  children,
-  direction = "row",
-  ...restProps
-}) {
-  return (
-    <Item {...restProps}>
-      <Inner direction={direction}>{children}</Inner>
-    </Item>
-  );
-}
-
-Jumbotron.Container = function JumbontronContainer({ children, ...restProps }) {
-  return <Container {...restProps}>{children}</Container>;
-};
+export {default as Jumbotron} from './jumbotron'
+export { default as Footer } from "./footer";
+export { default as Accordion } from "./accordion";
