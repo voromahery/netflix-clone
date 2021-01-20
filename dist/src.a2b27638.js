@@ -36482,7 +36482,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 19px;\n  color: white;\n  text-align: center;\n\n  @media (max-width: 600px) {\n    font-size: 16px;\n    line-height: 22px;\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -36492,7 +36492,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  height: 70px;\n  background: #e50914;\n  color: white;\n  padding: 0 32px;\n  text-transform: uppercase;\n  font-size: 26px;\n  border: 0;\n  cursor: pointer;\n\n  img {\n    margin-left: 10px;\n    filter: brightness(0) invert(1);\n    width: 24px;\n\n    @media (max-width: 1000px) {\n      width: 16px;\n    }\n  }\n\n  &:hover {\n    background: #f40612;\n  }\n\n  @media (max-width: 1000px) {\n    height: 50px;\n    font-size: 16px;\n    margin-top: 20px;\n    font-weight: bold;\n  }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36502,7 +36502,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  max-width: 450px;\n  width: 100%;\n  border: 0;\n  padding: 10px;\n  height: 70px;\n  box-sizing: border-box;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36512,7 +36512,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  height: 100%;\n  margin-top: 20px;\n  flex-wrap: wrap;\n\n  @media (max-width: 1000px) {\n    flex-direction: column;\n    align-items: center;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36752,7 +36752,7 @@ function FaqsContainer() {
     }, /*#__PURE__*/_react.default.createElement(_components.Accordion.Header, null, item.header), /*#__PURE__*/_react.default.createElement(_components.Accordion.Body, null, item.body));
   })), /*#__PURE__*/_react.default.createElement(_components.OptForm, null, /*#__PURE__*/_react.default.createElement(_components.OptForm.Input, {
     placeholder: "Email Address"
-  })));
+  }), /*#__PURE__*/_react.default.createElement(_components.OptForm.Button, null, "Try it now!"), /*#__PURE__*/_react.default.createElement(_components.OptForm.Text, null, "Ready to watch? Enter your email to create or restart.")));
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js","../fixtures/faqs.json":"src/fixtures/faqs.json"}],"src/pages/Home.js":[function(require,module,exports) {
 "use strict";
