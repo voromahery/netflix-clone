@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import Styled from "styled-components";
-
-
 
 export const Container = styled.section`
   display: flex;
@@ -17,8 +14,8 @@ export const Inner = styled.section`
   display: flex;
   padding: 70px 45px;
   flex-direction: column;
-  max-widthL 815px;
-  margin: auto
+  max-width: 815px;
+  margin: auto;
 `;
 
 export const Item = styled.div`
@@ -47,24 +44,25 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  margin-botto: 1px;
+  margin-bottom: 1px;
   font-size: 26px;
   font-weight: normal;
   background: #303030;
   padding: 0.8em 1.2em 0.8em 1.2em;
-  use-select: none;
-  // width: 100%;
+  user-select: none;
+  /* width: 100%; */
 
   img {
     filter: brightness(0) invert(1);
     width: 24px;
+    align-items: center;
 
     @media (max-width: 600px) {
       width: 16px;
     }
   }
 
-  align-items: center @media (max-width: 600px) {
+  @media (max-width: 600px) {
     font-size: 16px;
   }
 `;
@@ -74,7 +72,7 @@ export const Body = styled.div`
   line-height: normal;
   transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
   padding: 0.8em 1.2em 0.8em 1.2em;
-  use-select: none;
+  user-select: none;
   align-items: center;
   box-sizing: border-box;
   background: #303030;
