@@ -37484,9 +37484,41 @@ function Signup() {
     type: "submit"
   }, "Sign Up"), /*#__PURE__*/_react.default.createElement(_index.default.Text, null, "Already have an account. ", /*#__PURE__*/_react.default.createElement(_index.default.Link, {
     to: ROUTE.SIGN_IN
-  }, "Sign In")), /*#__PURE__*/_react.default.createElement(_index.default.TextSmall, null, "This page is protected by Google reCAPTCHA")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
+  }, " Sign In")), /*#__PURE__*/_react.default.createElement(_index.default.TextSmall, null, "This page is protected by Google reCAPTCHA")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
-},{"react":"node_modules/react/index.js","../constants/routes":"src/constants/routes.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js"}],"src/pages/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../constants/routes":"src/constants/routes.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js"}],"src/containers/browse.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = BrowseContainer;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function BrowseContainer() {
+  return /*#__PURE__*/_react.default.createElement("div", null, "BROWSE");
+}
+},{"react":"node_modules/react/index.js"}],"src/pages/browse.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Browse;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _browse = _interopRequireDefault(require("../containers/browse"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Browse() {
+  return /*#__PURE__*/_react.default.createElement(_browse.default, null);
+}
+},{"react":"node_modules/react/index.js","../containers/browse":"src/containers/browse.js"}],"src/pages/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37510,6 +37542,12 @@ Object.defineProperty(exports, "Signup", {
     return _signup.default;
   }
 });
+Object.defineProperty(exports, "Browse", {
+  enumerable: true,
+  get: function () {
+    return _browse.default;
+  }
+});
 
 var _home = _interopRequireDefault(require("./home"));
 
@@ -37517,8 +37555,10 @@ var _signin = _interopRequireDefault(require("./signin"));
 
 var _signup = _interopRequireDefault(require("./signup"));
 
+var _browse = _interopRequireDefault(require("./browse"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./home":"src/pages/home.js","./signin":"src/pages/signin.js","./signup":"src/pages/signup.js"}],"src/app.js":[function(require,module,exports) {
+},{"./home":"src/pages/home.js","./signin":"src/pages/signin.js","./signup":"src/pages/signup.js","./browse":"src/pages/browse.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37547,7 +37587,7 @@ function App() {
     path: ROUTE.SIGN_UP
   }, /*#__PURE__*/_react.default.createElement(_pages.Signup, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: ROUTE.BROWSE
-  }, /*#__PURE__*/_react.default.createElement("p", null, "I will be the browse page")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  }, /*#__PURE__*/_react.default.createElement(_pages.Browse, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: ROUTE.HOME
   }, /*#__PURE__*/_react.default.createElement(_pages.Home, null))));
 }

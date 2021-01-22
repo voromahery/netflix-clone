@@ -45,7 +45,7 @@ export default function Signup() {
               Sign Up
             </Form.Submit>
             <Form.Text>
-              Already have an account. <Form.Link to={ROUTE.SIGN_IN}>Sign In</Form.Link>
+              Already have an account. <Form.Link to={ROUTE.SIGN_IN}> Sign In</Form.Link>
             </Form.Text>
             <Form.TextSmall>
               This page is protected by Google reCAPTCHA
