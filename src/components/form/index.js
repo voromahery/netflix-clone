@@ -3,22 +3,32 @@ import {
   Container,
   Input,
   Link,
-  Text,
+  TextSmall,
   Title,
-  SubmitButton,
-  ErrorMessage,
+  Submit,
+  Error,
+  Base,
+  Text,
 } from "./styles/form";
 
 export default function Form({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
 
-Form.Input = function FormInput({ ...restProps }) {
-  return <Input {...restProps} />;
+Form.Input = function FormInput({ children, ...restProps }) {
+  return <Input {...restProps}>{children}</Input>;
+};
+
+Form.Base = function FormBase({ children, ...restProps }) {
+  return <Base {...restProps}>{children}</Base>;
 };
 
 Form.Link = function FormLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>;
+};
+
+Form.TextSmall = function FormTextSmall({ children, ...restProps }) {
+  return <TextSmall {...restProps}>{children}</TextSmall>;
 };
 
 Form.Text = function FormText({ children, ...restProps }) {
@@ -29,10 +39,10 @@ Form.Title = function FormTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
 };
 
-Form.SubmitButton = function FormSubmitButton({ children, ...restProps }) {
-  return <SubmitButton {...restProps}>{children}</SubmitButton>;
+Form.Submit = function FormSubmit({ children, ...restProps }) {
+  return <Submit {...restProps}>{children}</Submit>;
 };
 
-Form.ErrorMessage = function FormErrorMessage({ children, ...restProps }) {
-  return <ErrorMessage {...restProps}>{children}</ErrorMessage>;
+Form.Error = function FormError({ children, ...restProps }) {
+  return <Error {...restProps}>{children}</Error>;
 };

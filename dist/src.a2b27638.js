@@ -36757,7 +36757,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  color: white;\n  font-size: 26px;\n  font-weight: normal;\n  margin: 16px auto;\n  @media (max-width: 600px) {\n    font-size: 18px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n    color: white;\n    font-size: 26px;\n    font-weight: normal;\n    margin: 16px auto;\n    @media (max-width: 600px) {\n        font-size: 18px;\n    }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36767,7 +36767,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  color: white;\n  max-width: 640px;\n  font-size: 50px;\n  font-weight: 500;\n  margin: auto;\n  @media (max-width: 600px) {\n    font-size: 35px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n    color: white;\n    max-width: 640px;\n    font-size: 50px;\n    font-weight: 500;\n    margin: auto;\n    @media (max-width: 600px) {\n        font-size: 35px;\n    }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36777,7 +36777,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  border-bottom: 8px solid #222;\n  text-align: center;\n  padding: 165px 45px;\n"]);
+  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    border-bottom: 8px solid #222;\n    text-align: center;\n    padding: 165px 45px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36843,11 +36843,23 @@ Feature.SubTitle = function FeatureSubTitle(_ref3) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ErrorMessage = exports.Title = exports.Text = exports.SubmitButton = exports.Link = exports.Input = exports.Container = void 0;
+exports.Base = exports.Error = exports.Text = exports.Title = exports.TextSmall = exports.Submit = exports.Link = exports.Input = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _reactRouterDom = require("react-router-dom");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
 
 function _templateObject7() {
   var data = _taggedTemplateLiteral([""]);
@@ -36928,27 +36940,33 @@ exports.Container = Container;
 var Input = _styledComponents.default.input(_templateObject2());
 
 exports.Input = Input;
-
-var Link = _styledComponents.default.a(_templateObject3());
-
+var Link = (0, _styledComponents.default)(_reactRouterDom.Link);
 exports.Link = Link;
 
-var SubmitButton = _styledComponents.default.button(_templateObject4());
+var Submit = _styledComponents.default.button(_templateObject3());
 
-exports.SubmitButton = SubmitButton;
+exports.Submit = Submit;
 
-var Text = _styledComponents.default.p(_templateObject5());
+var TextSmall = _styledComponents.default.small(_templateObject4());
 
-exports.Text = Text;
+exports.TextSmall = TextSmall;
 
-var Title = _styledComponents.default.h1(_templateObject6());
+var Title = _styledComponents.default.h1(_templateObject5());
 
 exports.Title = Title;
 
-var ErrorMessage = _styledComponents.default.div(_templateObject7());
+var Text = _styledComponents.default.p(_templateObject6());
 
-exports.ErrorMessage = ErrorMessage;
-},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/form/index.js":[function(require,module,exports) {
+exports.Text = Text;
+
+var Error = _styledComponents.default.div(_templateObject7());
+
+exports.Error = Error;
+
+var Base = _styledComponents.default.div(_templateObject8());
+
+exports.Base = Base;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/components/form/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36974,43 +36992,59 @@ function Form(_ref) {
 }
 
 Form.Input = function FormInput(_ref2) {
-  var restProps = Object.assign({}, _ref2);
-  return /*#__PURE__*/_react.default.createElement(_form.Input, restProps);
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_form.Input, restProps, children);
 };
 
-Form.Link = function FormLink(_ref3) {
+Form.Base = function FormBase(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_form.Base, restProps, children);
+};
+
+Form.Link = function FormLink(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_form.Link, restProps, children);
 };
 
-Form.Text = function FormText(_ref4) {
-  var children = _ref4.children,
-      restProps = _objectWithoutProperties(_ref4, ["children"]);
+Form.TextSmall = function FormTextSmall(_ref5) {
+  var children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_form.TextSmall, restProps, children);
+};
+
+Form.Text = function FormText(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_form.Text, restProps, children);
 };
 
-Form.Title = function FormTitle(_ref5) {
-  var children = _ref5.children,
-      restProps = _objectWithoutProperties(_ref5, ["children"]);
+Form.Title = function FormTitle(_ref7) {
+  var children = _ref7.children,
+      restProps = _objectWithoutProperties(_ref7, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_form.Title, restProps, children);
 };
 
-Form.SubmitButton = function FormSubmitButton(_ref6) {
-  var children = _ref6.children,
-      restProps = _objectWithoutProperties(_ref6, ["children"]);
+Form.Submit = function FormSubmit(_ref8) {
+  var children = _ref8.children,
+      restProps = _objectWithoutProperties(_ref8, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_form.SubmitButton, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_form.Submit, restProps, children);
 };
 
-Form.ErrorMessage = function FormErrorMessage(_ref7) {
-  var children = _ref7.children,
-      restProps = _objectWithoutProperties(_ref7, ["children"]);
+Form.Error = function FormError(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_form.ErrorMessage, restProps, children);
+  return /*#__PURE__*/_react.default.createElement(_form.Error, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/form":"src/components/form/styles/form.js"}],"src/components/index.js":[function(require,module,exports) {
 "use strict";
@@ -37234,7 +37268,7 @@ function HeaderContainer(_ref) {
     to: ROUTE.SIGN_IN
   }, "Sign In")), children);
 }
-},{"react":"node_modules/react/index.js","../components":"src/components/index.js","../constants/routes":"src/constants/routes.js"}],"src/pages/Home.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js","../constants/routes":"src/constants/routes.js"}],"src/pages/home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37261,7 +37295,71 @@ function Home() {
     placeholder: "Email Address"
   }), /*#__PURE__*/_react.default.createElement(_components.OptForm.Button, null, "Try it now!"), /*#__PURE__*/_react.default.createElement(_components.OptForm.Text, null, "Ready to watch? Enter your email to create or restart.")))), /*#__PURE__*/_react.default.createElement(_jumbotron.default, null), /*#__PURE__*/_react.default.createElement(_faqs.default, null), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
-},{"react":"node_modules/react/index.js","../containers/jumbotron":"src/containers/jumbotron.js","../containers/footer":"src/containers/footer.js","../containers/faqs":"src/containers/faqs.js","../containers/header":"src/containers/header.js","../components":"src/components/index.js"}],"src/app.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../containers/jumbotron":"src/containers/jumbotron.js","../containers/footer":"src/containers/footer.js","../containers/faqs":"src/containers/faqs.js","../containers/header":"src/containers/header.js","../components":"src/components/index.js"}],"src/pages/signin.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Signin;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _header = _interopRequireDefault(require("../containers/header"));
+
+var _index = _interopRequireDefault(require("./../components/form/index"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function Signin() {
+  var _useState = (0, _react.useState)(""),
+      _useState2 = _slicedToArray(_useState, 2),
+      error = _useState2[0],
+      setError = _useState2[1];
+
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_header.default, null, /*#__PURE__*/_react.default.createElement(_index.default, null, /*#__PURE__*/_react.default.createElement(_index.default.Title, null, "Sign in"), error && /*#__PURE__*/_react.default.createElement(_index.default.Error, null))));
+}
+},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js"}],"src/pages/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "Home", {
+  enumerable: true,
+  get: function () {
+    return _home.default;
+  }
+});
+Object.defineProperty(exports, "Signin", {
+  enumerable: true,
+  get: function () {
+    return _signin.default;
+  }
+});
+
+var _home = _interopRequireDefault(require("./home"));
+
+var _signin = _interopRequireDefault(require("./signin"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./home":"src/pages/home.js","./signin":"src/pages/signin.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37275,7 +37373,7 @@ var _reactRouterDom = require("react-router-dom");
 
 var ROUTE = _interopRequireWildcard(require("./constants/routes"));
 
-var _Home = _interopRequireDefault(require("./pages/Home"));
+var _pages = require("./pages");
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
@@ -37286,15 +37384,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function App() {
   return /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: ROUTE.SIGN_IN
-  }, /*#__PURE__*/_react.default.createElement("p", null, "I will be the sign in page")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  }, /*#__PURE__*/_react.default.createElement(_pages.Signin, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: ROUTE.SIGN_UP
   }, /*#__PURE__*/_react.default.createElement("p", null, "I will be the sign up page")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: ROUTE.BROWSE
   }, /*#__PURE__*/_react.default.createElement("p", null, "I will be the browse page")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: ROUTE.HOME
-  }, /*#__PURE__*/_react.default.createElement(_Home.default, null))));
+  }, /*#__PURE__*/_react.default.createElement(_pages.Home, null))));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./constants/routes":"src/constants/routes.js","./pages/Home":"src/pages/Home.js"}],"src/global-styles.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./constants/routes":"src/constants/routes.js","./pages":"src/pages/index.js"}],"src/global-styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37388,7 +37486,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50002" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56954" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
