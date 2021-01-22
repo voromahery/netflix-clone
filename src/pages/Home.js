@@ -1,9 +1,9 @@
 import React from "react";
-import JumbontronContainer from "../containers/jumbotron";
+import JumbotronContainer from "../containers/jumbotron";
 import FooterContainer from "../containers/footer";
 import FaqsContainer from "../containers/faqs";
 import HeaderContainer from "../containers/header";
-import { Feature, OptForm } from "../components";
+import { OptForm, Feature } from "../components";
 
 export default function Home() {
   return (
@@ -13,20 +13,18 @@ export default function Home() {
           <Feature.Title>
             Unlimited Films, TV programmes and more.
           </Feature.Title>
-          <Feature.SubTitle>
-            Watch anywhere, cancel at any time.
-          </Feature.SubTitle>
+          <Feature.SubTitle>Watch anywhere, cancel anytime.</Feature.SubTitle>
           <OptForm>
             <OptForm.Input placeholder="Email Address" />
             <OptForm.Button>Try it now!</OptForm.Button>
             <OptForm.Text>
-              Ready to watch? Enter your email to create or restart.
+              Ready to watch? Enter your email to create or restart your
+              membership.
             </OptForm.Text>
           </OptForm>
         </Feature>
       </HeaderContainer>
-
-      <JumbontronContainer></JumbontronContainer>
+      <JumbotronContainer></JumbotronContainer>
       <FaqsContainer></FaqsContainer>
       <FooterContainer></FooterContainer>
     </>
