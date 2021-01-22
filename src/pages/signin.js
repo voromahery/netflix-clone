@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import HeaderContainer from "../containers/header";
 import Form from "./../components/form/index";
+import FooterContainer from './../containers/footer';
 
 export default function Signin() {
   const [error, setError] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
+  const isInvalid = password === '' || emailAddress === '';
 
   const handleSignin = (event) => {
     event.preventDefault();
@@ -31,7 +33,7 @@ export default function Signin() {
               value={password}
               onChange={({ target }) => setPassword(target.value)}
             />
-            <Form.Submit disabled={false} type="submit">
+            <Form.Submit disabled={isInvalid} type="submit">
               Sign In
             </Form.Submit>
             <Form.Text>New to Netflix? <Form.Link to="/signup">Sign up now</Form.Link></Form.Text>
@@ -41,6 +43,7 @@ export default function Signin() {
           </Form.Base>
         </Form>
       </HeaderContainer>
+      <FooterContainer/>
     </div>
   );
 }

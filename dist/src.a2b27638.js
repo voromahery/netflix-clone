@@ -37319,6 +37319,8 @@ var _header = _interopRequireDefault(require("../containers/header"));
 
 var _index = _interopRequireDefault(require("./../components/form/index"));
 
+var _footer = _interopRequireDefault(require("./../containers/footer"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -37353,6 +37355,8 @@ function Signin() {
       password = _useState6[0],
       setPassword = _useState6[1];
 
+  var isInvalid = password === '' || emailAddress === '';
+
   var handleSignin = function handleSignin(event) {
     event.preventDefault();
   };
@@ -37377,13 +37381,13 @@ function Signin() {
       return setPassword(target.value);
     }
   }), /*#__PURE__*/_react.default.createElement(_index.default.Submit, {
-    disabled: false,
+    disabled: isInvalid,
     type: "submit"
   }, "Sign In"), /*#__PURE__*/_react.default.createElement(_index.default.Text, null, "New to Netflix? ", /*#__PURE__*/_react.default.createElement(_index.default.Link, {
     to: "/signup"
-  }, "Sign up now")), /*#__PURE__*/_react.default.createElement(_index.default.TextSmall, null, "This page is protected by Google reCAPTCHA")))));
+  }, "Sign up now")), /*#__PURE__*/_react.default.createElement(_index.default.TextSmall, null, "This page is protected by Google reCAPTCHA")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
-},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js"}],"src/pages/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js"}],"src/pages/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
