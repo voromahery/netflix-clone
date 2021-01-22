@@ -37315,6 +37315,8 @@ exports.default = Signin;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var ROUTE = _interopRequireWildcard(require("../constants/routes"));
+
 var _header = _interopRequireDefault(require("../containers/header"));
 
 var _index = _interopRequireDefault(require("./../components/form/index"));
@@ -37365,7 +37367,7 @@ function Signin() {
     onSubmit: handleSignin,
     method: "POST"
   }, /*#__PURE__*/_react.default.createElement(_index.default.Input, {
-    placeholder: "Email address",
+    placeholder: "EmailAddress",
     value: emailAddress,
     onChange: function onChange(_ref) {
       var target = _ref.target;
@@ -37384,10 +37386,107 @@ function Signin() {
     disabled: isInvalid,
     type: "submit"
   }, "Sign In"), /*#__PURE__*/_react.default.createElement(_index.default.Text, null, "New to Netflix? ", /*#__PURE__*/_react.default.createElement(_index.default.Link, {
-    to: "/signup"
+    to: ROUTE.SIGN_UP
   }, "Sign up now")), /*#__PURE__*/_react.default.createElement(_index.default.TextSmall, null, "This page is protected by Google reCAPTCHA")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
-},{"react":"node_modules/react/index.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js"}],"src/pages/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../constants/routes":"src/constants/routes.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js"}],"src/pages/signup.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Signup;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var ROUTE = _interopRequireWildcard(require("../constants/routes"));
+
+var _header = _interopRequireDefault(require("../containers/header"));
+
+var _index = _interopRequireDefault(require("./../components/form/index"));
+
+var _footer = _interopRequireDefault(require("./../containers/footer"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function Signup() {
+  var _useState = (0, _react.useState)(""),
+      _useState2 = _slicedToArray(_useState, 2),
+      firstName = _useState2[0],
+      setFirstName = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(""),
+      _useState4 = _slicedToArray(_useState3, 2),
+      error = _useState4[0],
+      setError = _useState4[1];
+
+  var _useState5 = (0, _react.useState)(""),
+      _useState6 = _slicedToArray(_useState5, 2),
+      emailAddress = _useState6[0],
+      setEmailAddress = _useState6[1];
+
+  var _useState7 = (0, _react.useState)(""),
+      _useState8 = _slicedToArray(_useState7, 2),
+      password = _useState8[0],
+      setPassword = _useState8[1];
+
+  var isInvalid = firstName === "" || password === "" || emailAddress === "";
+
+  var handleSignup = function handleSignup(event) {
+    event.preventDefault();
+  };
+
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_header.default, null, /*#__PURE__*/_react.default.createElement(_index.default, null, /*#__PURE__*/_react.default.createElement(_index.default.Title, null, "Sign up"), error && /*#__PURE__*/_react.default.createElement(_index.default.Error, null), /*#__PURE__*/_react.default.createElement(_index.default.Base, {
+    onSubmit: handleSignup,
+    method: "POST"
+  }, /*#__PURE__*/_react.default.createElement(_index.default.Input, {
+    placeholder: "FirstName",
+    value: firstName,
+    onChange: function onChange(_ref) {
+      var target = _ref.target;
+      return setFirstName(target.value);
+    }
+  }), /*#__PURE__*/_react.default.createElement(_index.default.Input, {
+    placeholder: "EmailAddress",
+    autoComplete: "off",
+    value: emailAddress,
+    onChange: function onChange(_ref2) {
+      var target = _ref2.target;
+      return setEmailAddress(target.value);
+    }
+  }), /*#__PURE__*/_react.default.createElement(_index.default.Input, {
+    type: "password",
+    placeholder: "Password",
+    autoComplete: "off",
+    value: password,
+    onChange: function onChange(_ref3) {
+      var target = _ref3.target;
+      return setPassword(target.value);
+    }
+  }), /*#__PURE__*/_react.default.createElement(_index.default.Submit, {
+    disabled: isInvalid,
+    type: "submit"
+  }, "Sign Up"), /*#__PURE__*/_react.default.createElement(_index.default.Text, null, "Already have an account. ", /*#__PURE__*/_react.default.createElement(_index.default.Link, {
+    to: ROUTE.SIGN_IN
+  }, "Sign In")), /*#__PURE__*/_react.default.createElement(_index.default.TextSmall, null, "This page is protected by Google reCAPTCHA")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
+}
+},{"react":"node_modules/react/index.js","../constants/routes":"src/constants/routes.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js"}],"src/pages/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37405,13 +37504,21 @@ Object.defineProperty(exports, "Signin", {
     return _signin.default;
   }
 });
+Object.defineProperty(exports, "Signup", {
+  enumerable: true,
+  get: function () {
+    return _signup.default;
+  }
+});
 
 var _home = _interopRequireDefault(require("./home"));
 
 var _signin = _interopRequireDefault(require("./signin"));
 
+var _signup = _interopRequireDefault(require("./signup"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./home":"src/pages/home.js","./signin":"src/pages/signin.js"}],"src/app.js":[function(require,module,exports) {
+},{"./home":"src/pages/home.js","./signin":"src/pages/signin.js","./signup":"src/pages/signup.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37438,7 +37545,7 @@ function App() {
     path: ROUTE.SIGN_IN
   }, /*#__PURE__*/_react.default.createElement(_pages.Signin, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: ROUTE.SIGN_UP
-  }, /*#__PURE__*/_react.default.createElement("p", null, "I will be the sign up page")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  }, /*#__PURE__*/_react.default.createElement(_pages.Signup, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: ROUTE.BROWSE
   }, /*#__PURE__*/_react.default.createElement("p", null, "I will be the browse page")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: ROUTE.HOME
