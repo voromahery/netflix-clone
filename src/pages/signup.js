@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useHistory } from "react-router-dom";
 import * as ROUTE from "../constants/routes";
 import HeaderContainer from "../containers/header";
+import { FirebaseContext } from "../context/firebase";
 import Form from "./../components/form/index";
 import FooterContainer from "./../containers/footer";
 
 export default function Signup() {
+  const history = useHistory();
+  const {firebase} = useContext(FirebaseContext);
   const [firstName, setFirstName] = useState("");
   const [error, setError] = useState("");
   const [emailAddress, setEmailAddress] = useState("");
@@ -13,6 +17,22 @@ export default function Signup() {
 
   const handleSignup = (event) => {
     event.preventDefault();
+    firebase.auth()
+      .createUserWithPassword(emailAddress, password)
+      .then((result) => {
+        result.user
+          .updateProfile({
+            displayName: firstName,
+            photoUrl: Math.floor(Math.random() * 5) + 1,
+          })
+          .then(() => {
+            setEmailAddress("");
+            setPassword("");
+            setError("");
+            history.push(ROUTE.BROWSE);
+          });
+      })
+      .catch((error) => setError(error.message));
   };
 
   return (
@@ -45,7 +65,8 @@ export default function Signup() {
               Sign Up
             </Form.Submit>
             <Form.Text>
-              Already have an account. <Form.Link to={ROUTE.SIGN_IN}> Sign In</Form.Link>
+              Already have an account.{" "}
+              <Form.Link to={ROUTE.SIGN_IN}> Sign In</Form.Link>
             </Form.Text>
             <Form.TextSmall>
               This page is protected by Google reCAPTCHA

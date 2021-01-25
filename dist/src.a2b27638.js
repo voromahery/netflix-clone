@@ -37555,7 +37555,19 @@ function Signin() {
     to: ROUTE.SIGN_UP
   }, "Sign up now")), /*#__PURE__*/_react.default.createElement(_index.default.TextSmall, null, "This page is protected by Google reCAPTCHA")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
-},{"react":"node_modules/react/index.js","../constants/routes":"src/constants/routes.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js"}],"src/pages/signup.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../constants/routes":"src/constants/routes.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js"}],"src/context/firebase.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.FirebaseContext = void 0;
+
+var _react = require("react");
+
+var FirebaseContext = (0, _react.createContext)(null);
+exports.FirebaseContext = FirebaseContext;
+},{"react":"node_modules/react/index.js"}],"src/pages/signup.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37565,9 +37577,13 @@ exports.default = Signup;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _reactRouterDom = require("react-router-dom");
+
 var ROUTE = _interopRequireWildcard(require("../constants/routes"));
 
 var _header = _interopRequireDefault(require("../containers/header"));
+
+var _firebase = require("../context/firebase");
 
 var _index = _interopRequireDefault(require("./../components/form/index"));
 
@@ -37592,6 +37608,11 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function Signup() {
+  var history = (0, _reactRouterDom.useHistory)();
+
+  var _useContext = (0, _react.useContext)(_firebase.FirebaseContext),
+      firebase = _useContext.firebase;
+
   var _useState = (0, _react.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
       firstName = _useState2[0],
@@ -37616,6 +37637,19 @@ function Signup() {
 
   var handleSignup = function handleSignup(event) {
     event.preventDefault();
+    firebase.auth().createUserWithPassword(emailAddress, password).then(function (result) {
+      result.user.updateProfile({
+        displayName: firstName,
+        photoUrl: Math.floor(Math.random() * 5) + 1
+      }).then(function () {
+        setEmailAddress("");
+        setPassword("");
+        setError("");
+        history.push(ROUTE.BROWSE);
+      });
+    }).catch(function (error) {
+      return setError(error.message);
+    });
   };
 
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_header.default, null, /*#__PURE__*/_react.default.createElement(_index.default, null, /*#__PURE__*/_react.default.createElement(_index.default.Title, null, "Sign up"), error && /*#__PURE__*/_react.default.createElement(_index.default.Error, null), /*#__PURE__*/_react.default.createElement(_index.default.Base, {
@@ -37648,23 +37682,11 @@ function Signup() {
   }), /*#__PURE__*/_react.default.createElement(_index.default.Submit, {
     disabled: isInvalid,
     type: "submit"
-  }, "Sign Up"), /*#__PURE__*/_react.default.createElement(_index.default.Text, null, "Already have an account. ", /*#__PURE__*/_react.default.createElement(_index.default.Link, {
+  }, "Sign Up"), /*#__PURE__*/_react.default.createElement(_index.default.Text, null, "Already have an account.", " ", /*#__PURE__*/_react.default.createElement(_index.default.Link, {
     to: ROUTE.SIGN_IN
   }, " Sign In")), /*#__PURE__*/_react.default.createElement(_index.default.TextSmall, null, "This page is protected by Google reCAPTCHA")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
-},{"react":"node_modules/react/index.js","../constants/routes":"src/constants/routes.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js"}],"src/context/firebase.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.FirebaseContext = void 0;
-
-var _react = require("react");
-
-var FirebaseContext = (0, _react.createContext)(null);
-exports.FirebaseContext = FirebaseContext;
-},{"react":"node_modules/react/index.js"}],"src/containers/profiles.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../constants/routes":"src/constants/routes.js","../containers/header":"src/containers/header.js","../context/firebase":"src/context/firebase.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js"}],"src/containers/profiles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
