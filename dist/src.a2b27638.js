@@ -37062,14 +37062,24 @@ Form.Error = function FormError(_ref9) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Item = exports.Picture = exports.Name = exports.List = exports.Title = exports.Container = void 0;
+exports.Item = exports.User = exports.Picture = exports.Name = exports.List = exports.Title = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _templateObject6() {
+function _templateObject7() {
   var data = _taggedTemplateLiteral(["\n  max-height: 200px;\n  max-width: 200px;\n  list-style-type: none;\n  text-align: center;\n  margin-right: 30px;\n  &:hover > ", " {\n    border: 3px solid white;\n  }\n  &:hover ", " {\n    font-weight: bold;\n    color: white;\n  }\n  &:last-of-type {\n    margin-right: 0;\n  }\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n  display: block;\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -37150,7 +37160,11 @@ var Picture = _styledComponents.default.img(_templateObject5());
 
 exports.Picture = Picture;
 
-var Item = _styledComponents.default.li(_templateObject6(), Picture, Name);
+var User = _styledComponents.default.div(_templateObject6());
+
+exports.User = User;
+
+var Item = _styledComponents.default.li(_templateObject7(), Picture, Name);
 
 exports.Item = Item;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/profiles/index.js":[function(require,module,exports) {
@@ -37208,8 +37222,17 @@ Profiles.Item = function ProfilesItem(_ref5) {
   return /*#__PURE__*/_react.default.createElement(_profiles.Item, restProps, children);
 };
 
-Profiles.Picture = function ProfilesPicture(_ref6) {
-  var restProps = Object.assign({}, _ref6);
+Profiles.User = function ProfilesUser(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_profiles.User, restProps, children);
+};
+
+Profiles.Picture = function ProfilesPicture(_ref7) {
+  var src = _ref7.src,
+      restProps = _objectWithoutProperties(_ref7, ["src"]);
+
   return /*#__PURE__*/_react.default.createElement(_profiles.Picture, _extends({
     src: src ? "/images/users/".concat(src, ".png") : "/images/misc/loading.gif"
   }, restProps));
@@ -37471,7 +37494,19 @@ function Home() {
     placeholder: "Email Address"
   }), /*#__PURE__*/_react.default.createElement(_components.OptForm.Button, null, "Try it now!"), /*#__PURE__*/_react.default.createElement(_components.OptForm.Text, null, "Ready to watch? Enter your email to create or restart your membership.")))), /*#__PURE__*/_react.default.createElement(_jumbotron.default, null), /*#__PURE__*/_react.default.createElement(_faqs.default, null), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
-},{"react":"node_modules/react/index.js","../containers/jumbotron":"src/containers/jumbotron.js","../containers/footer":"src/containers/footer.js","../containers/faqs":"src/containers/faqs.js","../containers/header":"src/containers/header.js","../components":"src/components/index.js"}],"src/pages/signin.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../containers/jumbotron":"src/containers/jumbotron.js","../containers/footer":"src/containers/footer.js","../containers/faqs":"src/containers/faqs.js","../containers/header":"src/containers/header.js","../components":"src/components/index.js"}],"src/context/firebase.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.FirebaseContext = void 0;
+
+var _react = require("react");
+
+var FirebaseContext = (0, _react.createContext)(null);
+exports.FirebaseContext = FirebaseContext;
+},{"react":"node_modules/react/index.js"}],"src/pages/signin.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37481,6 +37516,8 @@ exports.default = Signin;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _reactRouterDom = require("react-router-dom");
+
 var ROUTE = _interopRequireWildcard(require("../constants/routes"));
 
 var _header = _interopRequireDefault(require("../containers/header"));
@@ -37488,6 +37525,8 @@ var _header = _interopRequireDefault(require("../containers/header"));
 var _index = _interopRequireDefault(require("./../components/form/index"));
 
 var _footer = _interopRequireDefault(require("./../containers/footer"));
+
+var _firebase = require("./../context/firebase");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37508,6 +37547,11 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function Signin() {
+  var _useContext = (0, _react.useContext)(_firebase.FirebaseContext),
+      firebase = _useContext.firebase;
+
+  var history = (0, _reactRouterDom.useHistory)();
+
   var _useState = (0, _react.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
       error = _useState2[0],
@@ -37523,10 +37567,18 @@ function Signin() {
       password = _useState6[0],
       setPassword = _useState6[1];
 
-  var isInvalid = password === '' || emailAddress === '';
+  var isInvalid = password === "" || emailAddress === "";
 
   var handleSignin = function handleSignin(event) {
     event.preventDefault();
+    firebase.aut().signInWithEmailAndPassword(emailAddress, password).then(function () {
+      setEmailAddress("");
+      setPassword("");
+      setError("");
+      history.pushState(ROUTE.BROWSE);
+    }).catch(function (error) {
+      return setError(error.message);
+    });
   };
 
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_header.default, null, /*#__PURE__*/_react.default.createElement(_index.default, null, /*#__PURE__*/_react.default.createElement(_index.default.Title, null, "Sign in"), error && /*#__PURE__*/_react.default.createElement(_index.default.Error, null), /*#__PURE__*/_react.default.createElement(_index.default.Base, {
@@ -37551,23 +37603,11 @@ function Signin() {
   }), /*#__PURE__*/_react.default.createElement(_index.default.Submit, {
     disabled: isInvalid,
     type: "submit"
-  }, "Sign In"), /*#__PURE__*/_react.default.createElement(_index.default.Text, null, "New to Netflix? ", /*#__PURE__*/_react.default.createElement(_index.default.Link, {
+  }, "Sign In"), /*#__PURE__*/_react.default.createElement(_index.default.Text, null, "New to Netflix?", " ", /*#__PURE__*/_react.default.createElement(_index.default.Link, {
     to: ROUTE.SIGN_UP
   }, "Sign up now")), /*#__PURE__*/_react.default.createElement(_index.default.TextSmall, null, "This page is protected by Google reCAPTCHA")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
-},{"react":"node_modules/react/index.js","../constants/routes":"src/constants/routes.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js"}],"src/context/firebase.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.FirebaseContext = void 0;
-
-var _react = require("react");
-
-var FirebaseContext = (0, _react.createContext)(null);
-exports.FirebaseContext = FirebaseContext;
-},{"react":"node_modules/react/index.js"}],"src/pages/signup.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../constants/routes":"src/constants/routes.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js","./../context/firebase":"src/context/firebase.js"}],"src/pages/signup.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37637,7 +37677,7 @@ function Signup() {
 
   var handleSignup = function handleSignup(event) {
     event.preventDefault();
-    firebase.auth().createUserWithPassword(emailAddress, password).then(function (result) {
+    firebase.auth().createUserWithEmailAndPassword(emailAddress, password).then(function (result) {
       result.user.updateProfile({
         displayName: firstName,
         photoUrl: Math.floor(Math.random() * 5) + 1

@@ -1,5 +1,13 @@
 import React from "react";
-import { Container, Title, List, Item, Name, Picture } from "./styles/profiles";
+import {
+  Container,
+  Title,
+  List,
+  Item,
+  Name,
+  Picture,
+  User,
+} from "./styles/profiles";
 
 export default function Profiles({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
@@ -21,7 +29,11 @@ Profiles.Item = function ProfilesItem({ children, ...restProps }) {
   return <Item {...restProps}>{children}</Item>;
 };
 
-Profiles.Picture = function ProfilesPicture({ ...restProps }) {
+Profiles.User = function ProfilesUser({ children, ...restProps }) {
+  return <User {...restProps}>{children}</User>;
+};
+
+Profiles.Picture = function ProfilesPicture({ src, ...restProps }) {
   return (
     <Picture
       src={src ? `/images/users/${src}.png` : `/images/misc/loading.gif`}
