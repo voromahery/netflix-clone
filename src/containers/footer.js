@@ -1,12 +1,12 @@
-import React from 'react'
-import {Footer} from '../components'
+import React from "react";
+import { Footer } from "../components";
 
 export default function FooterContainer() {
-    return (
-      <Footer>
-        <Footer.Title>Question? Contact us</Footer.Title>
-        <Footer.Break />
-        <Footer.Row >
+  return (
+    <Footer>
+      <Footer.Title>Question? Contact us</Footer.Title>
+      <Footer.Break />
+      <Footer.Row>
         <Footer.Column>
           <Footer.Link href="#">FAQs</Footer.Link>
           <Footer.Link href="#">Investor relation</Footer.Link>
@@ -34,8 +34,8 @@ export default function FooterContainer() {
           <Footer.Link href="#">cookie preference</Footer.Link>
           <Footer.Link href="#">Legl notice</Footer.Link>
         </Footer.Column>
-        </Footer.Row>
-        <Footer.Text>Nextflix Madagascar</Footer.Text>
-      </Footer>
-    );
+      </Footer.Row>
+      <Footer.Text>Nextflix Madagascar</Footer.Text>
+    </Footer>
+  );
 }
