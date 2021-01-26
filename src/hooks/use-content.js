@@ -14,6 +14,7 @@ export default function useContent(target) {
           ...contentObj.data(),
           docId: contentObj.id,
         }));
+        console.log(allContent, snapshot);
         setContent(allContent);
       })
       .catch((error) => console.log(error.message));

@@ -38299,6 +38299,7 @@ function useContent(target) {
           docId: contentObj.id
         });
       });
+      console.log(allContent, snapshot);
       setContent(allContent);
     }).catch(function (error) {
       return console.log(error.message);
@@ -38328,62 +38329,62 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = selectionMap;
+exports.default = SelectionMap;
 
-function selectionMap(_ref) {
+function SelectionMap(_ref) {
   var series = _ref.series,
       films = _ref.films;
   return {
     series: [{
-      title: "Documentaries",
+      title: 'Documentaries',
       data: series.filter(function (item) {
-        return item.genre === "documentaries";
+        return item.genre === 'documentaries';
       })
     }, {
-      title: "Comedies",
+      title: 'Comedies',
       data: series.filter(function (item) {
-        return item.genre === "comedies";
+        return item.genre === 'comedies';
       })
     }, {
-      title: "Children",
+      title: 'Children',
       data: series.filter(function (item) {
-        return item.genre === "children";
+        return item.genre === 'children';
       })
     }, {
-      title: "Crime",
+      title: 'Crime',
       data: series.filter(function (item) {
-        return item.genre === "crime";
+        return item.genre === 'crime';
       })
     }, {
-      title: "Feel Good",
+      title: 'Feel Good',
       data: series.filter(function (item) {
-        return item.genre === "feel-good";
+        return item.genre === 'feel-good';
       })
     }],
     films: [{
-      title: "Drama",
+      title: 'Drama',
       data: films.filter(function (item) {
-        return item.genre === "drama";
+        return item.genre === 'drama';
       })
     }, {
-      title: "Thriller",
+      title: 'Thriller',
       data: films.filter(function (item) {
-        return item.genre === "thriller";
+        return item.genre === 'thriller';
       })
     }, {
-      title: "Children",
+      title: 'Children',
       data: films.filter(function (item) {
-        return item.genre === "children";
+        return item.genre === 'children';
       })
     }, {
-      title: "Suspense",
+      title: 'Suspense',
       data: films.filter(function (item) {
-        return item.genre === "suspense";
+        return item.genre === 'suspense';
       })
     }, {
-      title: "Romance",
+      title: 'Romance',
       data: films.filter(function (item) {
-        return item.genre === "romance";
+        return item.genre === 'romance';
       })
     }]
   };
@@ -38394,7 +38395,7 @@ function selectionMap(_ref) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "selectionMap", {
+Object.defineProperty(exports, "SelectionMap", {
   enumerable: true,
   get: function () {
     return _selectionMap.default;
@@ -38429,7 +38430,7 @@ function Browse() {
   var _useContent2 = (0, _hooks.useContent)("films"),
       films = _useContent2.films;
 
-  var slides = (0, _utils.selectionMap)({
+  var slides = (0, _utils.SelectionMap)({
     series: series,
     films: films
   });
@@ -38594,7 +38595,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57449" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62704" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
