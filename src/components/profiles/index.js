@@ -1,43 +1,27 @@
-import React from "react";
-import {
-  Container,
-  Title,
-  List,
-  Item,
-  Name,
-  Picture,
-  User,
-} from "./styles/profiles";
+import React from 'react';
+import { Container, Title, List, Item, Picture, Name } from './styles/profiles';
 
 export default function Profiles({ children, ...restProps }) {
-  return <Container {...restProps}>{children}</Container>;
+	return <Container {...restProps}>{children}</Container>;
 }
 
 Profiles.Title = function ProfilesTitle({ children, ...restProps }) {
-  return <Title {...restProps}>{children}</Title>;
+	return <Title {...restProps}>{children}</Title>;
 };
-
 Profiles.List = function ProfilesList({ children, ...restProps }) {
-  return <List {...restProps}>{children}</List>;
+	return <List {...restProps}>{children}</List>;
 };
-
-Profiles.Name = function ProfilesName({ children, ...restProps }) {
-  return <Name {...restProps}>{children}</Name>;
-};
-
-Profiles.Item = function ProfilesItem({ children, ...restProps }) {
-  return <Item {...restProps}>{children}</Item>;
-};
-
 Profiles.User = function ProfilesUser({ children, ...restProps }) {
-  return <User {...restProps}>{children}</User>;
+	return <Item {...restProps}>{children}</Item>;
 };
-
 Profiles.Picture = function ProfilesPicture({ src, ...restProps }) {
-  return (
-    <Picture
-      src={src ? `/images/users/${src}.png` : `/images/misc/loading.gif`}
-      {...restProps}
-    />
-  );
+	return (
+		<Picture
+			{...restProps}
+			src={`/images/users/1.png`}
+		/>
+	);
+};
+Profiles.Name = function ProfilesName({ children, ...restProps }) {
+	return <Name {...restProps}>{children}</Name>;
 };

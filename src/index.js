@@ -4,6 +4,8 @@ import { App } from "./app";
 import { GlobalStyles } from "./global-styles";
 import { FirebaseContext } from "./context/firebase";
 
+// import { seedDatabase } from './seed';
+
 const config = {
   apiKey: "AIzaSyDxUyuoEGZb3HaWcd-naMKARRz7-MOdX8o",
   authDomain: "netflix-onja-daniel.firebaseapp.com",
@@ -13,7 +15,9 @@ const config = {
   appId: "1:457412370353:web:8b3be230e1300535056790",
 };
 
+
 const firebase = window.firebase.initializeApp(config);
+// seedDatabase(firebase);
 
 ReactDOM.render(
   <>

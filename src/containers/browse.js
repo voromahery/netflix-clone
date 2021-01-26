@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from '../components';
 import * as ROUTES from '../constants/routes';
 import { FirebaseContext } from '../context/firebase';
 import SelectProfileContainer from './profiles';
 import FooterContainer from './footer';
+import { ReleaseBody, Loading } from '../components';
 
 export default function BrowseContainer() {
 	const [profile, setProfile] = useState({});
@@ -15,8 +16,16 @@ export default function BrowseContainer() {
 		displayName: 'Daniel',
 		photoURL: '1',
 	};
+
+useEffect(() => {
+setTimeout(() => {
+	setLoading(false);
+}, 3000)
+}, [])
+
 	return profile.displayName ? (
 		<>
+		{loading ? <Loading src={user.photoURL} />: <Loading.ReleaseBody/>}
 			<Header src="joker1" dontShowOnSmallViewPort>
 				<Header.Frame>
 					<Header.Group>
