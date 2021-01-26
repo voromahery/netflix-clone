@@ -38194,12 +38194,12 @@ function BrowseContainer() {
       profile = _useState2[0],
       setProfile = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(''),
+  var _useState3 = (0, _react.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
       searchTerm = _useState4[0],
       setSearchTerm = _useState4[1];
 
-  var _useState5 = (0, _react.useState)('series'),
+  var _useState5 = (0, _react.useState)("series"),
       _useState6 = _slicedToArray(_useState5, 2),
       category = _useState6[0],
       setCategory = _useState6[1];
@@ -38210,14 +38210,14 @@ function BrowseContainer() {
       setLoading = _useState8[1];
 
   var user = {
-    displayName: 'Daniel',
-    photoURL: '1'
+    displayName: "Daniel",
+    photoURL: "1"
   };
   (0, _react.useEffect)(function () {
     setTimeout(function () {
       setLoading(false);
     }, 3000);
-  }, []);
+  }, [user]);
   return profile.displayName ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, loading ? /*#__PURE__*/_react.default.createElement(_components.Loading, {
     src: user.photoURL
   }) : /*#__PURE__*/_react.default.createElement(_components.Loading.ReleaseBody, null), /*#__PURE__*/_react.default.createElement(_components.Header, {
@@ -38229,14 +38229,14 @@ function BrowseContainer() {
     alt: "Netflix"
   }), /*#__PURE__*/_react.default.createElement(_components.Header.Link, {
     onClick: function onClick() {
-      return setCategory('series');
+      return setCategory("series");
     },
-    active: category === 'series' ? 'true' : 'false'
+    active: category === "series" ? "true" : "false"
   }, "Series"), /*#__PURE__*/_react.default.createElement(_components.Header.Link, {
     onClick: function onClick() {
-      return setCategory('films');
+      return setCategory("films");
     },
-    active: category === 'films' ? 'true' : 'false'
+    active: category === "films" ? "true" : "false"
   }, "Films")), /*#__PURE__*/_react.default.createElement(_components.Header.Group, null, /*#__PURE__*/_react.default.createElement(_components.Header.Search, {
     searchTerm: searchTerm,
     setSearchTerm: setSearchTerm
@@ -38253,7 +38253,158 @@ function BrowseContainer() {
     setProfile: setProfile
   });
 }
-},{"react":"node_modules/react/index.js","../components":"src/components/index.js","../constants/routes":"src/constants/routes.js","../context/firebase":"src/context/firebase.js","./profiles":"src/containers/profiles.js","./footer":"src/containers/footer.js"}],"src/pages/browse.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js","../constants/routes":"src/constants/routes.js","../context/firebase":"src/context/firebase.js","./profiles":"src/containers/profiles.js","./footer":"src/containers/footer.js"}],"src/hooks/use-content.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = useContent;
+
+var _react = require("react");
+
+var _firebase = require("../context/firebase");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function useContent(target) {
+  var _useState = (0, _react.useState)([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      content = _useState2[0],
+      setContent = _useState2[1];
+
+  var _useContext = (0, _react.useContext)(_firebase.FirebaseContext),
+      firebase = _useContext.firebase;
+
+  (0, _react.useEffect)(function () {
+    firebase.firestore().collection(target).get().then(function (snapshot) {
+      var allContent = snapshot.docs.map(function (contentObj) {
+        return _objectSpread(_objectSpread({}, contentObj.data()), {}, {
+          docId: contentObj.id
+        });
+      });
+      setContent(allContent);
+    }).catch(function (error) {
+      return console.log(error.message);
+    });
+  }, []);
+  return _defineProperty({}, target, content);
+}
+},{"react":"node_modules/react/index.js","../context/firebase":"src/context/firebase.js"}],"src/hooks/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "useContent", {
+  enumerable: true,
+  get: function () {
+    return _useContent.default;
+  }
+});
+
+var _useContent = _interopRequireDefault(require("./use-content"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./use-content":"src/hooks/use-content.js"}],"src/utils/selection-map.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = selectionMap;
+
+function selectionMap(_ref) {
+  var series = _ref.series,
+      films = _ref.films;
+  return {
+    series: [{
+      title: "Documentaries",
+      data: series.filter(function (item) {
+        return item.genre === "documentaries";
+      })
+    }, {
+      title: "Comedies",
+      data: series.filter(function (item) {
+        return item.genre === "comedies";
+      })
+    }, {
+      title: "Children",
+      data: series.filter(function (item) {
+        return item.genre === "children";
+      })
+    }, {
+      title: "Crime",
+      data: series.filter(function (item) {
+        return item.genre === "crime";
+      })
+    }, {
+      title: "Feel Good",
+      data: series.filter(function (item) {
+        return item.genre === "feel-good";
+      })
+    }],
+    films: [{
+      title: "Drama",
+      data: films.filter(function (item) {
+        return item.genre === "drama";
+      })
+    }, {
+      title: "Thriller",
+      data: films.filter(function (item) {
+        return item.genre === "thriller";
+      })
+    }, {
+      title: "Children",
+      data: films.filter(function (item) {
+        return item.genre === "children";
+      })
+    }, {
+      title: "Suspense",
+      data: films.filter(function (item) {
+        return item.genre === "suspense";
+      })
+    }, {
+      title: "Romance",
+      data: films.filter(function (item) {
+        return item.genre === "romance";
+      })
+    }]
+  };
+}
+},{}],"src/utils/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "selectionMap", {
+  enumerable: true,
+  get: function () {
+    return _selectionMap.default;
+  }
+});
+
+var _selectionMap = _interopRequireDefault(require("./selection-map"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./selection-map":"src/utils/selection-map.js"}],"src/pages/browse.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38265,12 +38416,29 @@ var _react = _interopRequireDefault(require("react"));
 
 var _browse = _interopRequireDefault(require("../containers/browse"));
 
+var _hooks = require("../hooks");
+
+var _utils = require("../utils");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Browse() {
-  return /*#__PURE__*/_react.default.createElement(_browse.default, null);
+  var _useContent = (0, _hooks.useContent)("series"),
+      series = _useContent.series;
+
+  var _useContent2 = (0, _hooks.useContent)("films"),
+      films = _useContent2.films;
+
+  var slides = (0, _utils.selectionMap)({
+    series: series,
+    films: films
+  });
+  console.log(slides);
+  return /*#__PURE__*/_react.default.createElement(_browse.default, {
+    slides: slides
+  });
 }
-},{"react":"node_modules/react/index.js","../containers/browse":"src/containers/browse.js"}],"src/pages/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../containers/browse":"src/containers/browse.js","../hooks":"src/hooks/index.js","../utils":"src/utils/index.js"}],"src/pages/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38426,7 +38594,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51392" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57449" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
