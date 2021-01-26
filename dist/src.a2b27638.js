@@ -36607,7 +36607,7 @@ OptForm.Text = function OptFormText(_ref4) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Logo = exports.ButtonLink = exports.Link = exports.Container = exports.Background = void 0;
+exports.Profile = exports.Dropdown = exports.Picture = exports.SearchInput = exports.SearchIcon = exports.Search = exports.PlayButton = exports.FeatureCallOut = exports.Feature = exports.Text = exports.Group = exports.Logo = exports.ButtonLink = exports.Link = exports.Container = exports.Background = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -36615,8 +36615,118 @@ var _reactRouterDom = require("react-router-dom");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _templateObject16() {
+  var data = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\tmargin-left: 20px;\n\tposition: relative;\n\tbutton {\n\t\tcursor: pointer;\n\t}\n\t&:hover > ", " {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t}\n"]);
+
+  _templateObject16 = function _templateObject16() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject15() {
+  var data = _taggedTemplateLiteral(["\n\tdisplay: none;\n\tposition: absolute;\n\tbackground-color: black;\n\tpadding: 10px;\n\twidth: 100px;\n\ttop: 32px;\n\tright: 10px;\n\t", ":last-of-type ", " {\n\t\tcursor: pointer;\n\t}\n\t", " {\n\t\tmargin-bottom: 10px;\n\t\t&:last-of-type {\n\t\t\tmargin-bottom: 0;\n\t\t}\n\t\t", ", ", " {\n\t\t\tcursor: default;\n\t\t}\n\t}\n\tbutton {\n\t\tmargin-right: 10px;\n\t}\n\tp {\n\t\tfont-size: 12px;\n\t\tmargin-bottom: 0;\n\t\tmargin-top: 0;\n\t}\n"]);
+
+  _templateObject15 = function _templateObject15() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject14() {
+  var data = _taggedTemplateLiteral(["\n\tbackground: url(", ");\n\tbackground-size: contain;\n\tborder: 0;\n\twidth: 32px;\n\theight: 32px;\n\tcursor: pointer;\n"]);
+
+  _templateObject14 = function _templateObject14() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject13() {
+  var data = _taggedTemplateLiteral(["\n\tbackground-color: #44444459;\n\tcolor: white;\n\tborder: 1px solid white;\n\ttransition: width 0.5s;\n\theight: 30px;\n\tfont-size: 14px;\n\tmargin-left: ", ";\n\tpadding: ", ";\n\topacity: ", ";\n\twidth: ", ";\n"]);
+
+  _templateObject13 = function _templateObject13() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject12() {
+  var data = _taggedTemplateLiteral(["\n\tcursor: pointer;\n\tbackground-color: transparent;\n\tborder: 0;\n\timg {\n\t\tfilter: brightness(0) invert(1);\n\t\twidth: 16px;\n\t}\n"]);
+
+  _templateObject12 = function _templateObject12() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject11() {
+  var data = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\t@media (max-width: 700px) {\n\t\tdisplay: none;\n\t}\n"]);
+
+  _templateObject11 = function _templateObject11() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject10() {
+  var data = _taggedTemplateLiteral(["\n    box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);\n    background-color: #e6e6e6;\n    color: #000;\n    border-width: 0;\n    padding: 10px 20px;\n    border-radius: 5px;\n    max-width: 130px;\n    font-weight: bold;\n    font-size: 20px;\n    margin-top: 10px;\n    cursor: pointer;\n    transition: background-color 0.5s ease;\n    \n    &:hover {\n        background: #ff1e1e;\n        color: white;\n    }\n"]);
+
+  _templateObject10 = function _templateObject10() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject9() {
+  var data = _taggedTemplateLiteral(["\n\tcolor: white;\n\tfont-size: 50px;\n\tline-height: normal;\n\tfont-weight: bold;\n\ttext-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);\n\tmargin: 0;\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n\tpadding: 150px 0 500px 0;\n\tflex-direction: column;\n\talign-items: normal;\n\twidth: 50%;\n\t@media (max-width: 1100px) {\n\t\tdisplay: none;\n\t}\n"]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n\tcolor: white;\n\tfont-size: 22px;\n\tline-height: normal;\n\ttext-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);\n"]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n"]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    height: 32px;\n    width: 108px;\n    margin-right: 40px;\n    @media (min-width: 1449px) {\n        height: 45px;\n        width: 167px;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\theight: 32px;\n\twidth: 108px;\n\tmargin-right: 40px;\n\t@media (min-width: 1449px) {\n\t\theight: 45px;\n\t\twidth: 167px;\n\t}\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -36626,7 +36736,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    display: block;\n    background-color: #e50914;\n    width: 84px;\n    height: fit-content;\n    color: white;\n    border: 0;\n    font-size: 15px;\n    border-radius: 3px;\n    padding: 8px 17px;\n    cursor: pointer;\n    text-decoration: none;\n    box-sizing: border-box;\n    &:hover {\n        background: #f40612;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\tdisplay: block;\n\tbackground-color: #e50914;\n\twidth: 84px;\n\theight: fit-content;\n\tcolor: white;\n\tborder: 0;\n\tfont-size: 15px;\n\tborder-radius: 3px;\n\tpadding: 8px 17px;\n\tcursor: pointer;\n\ttext-decoration: none;\n\tbox-sizing: border-box;\n\t&:hover {\n\t\tbackground: #f40612;\n\t}\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -36636,7 +36746,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    color: #fff;\n    text-decoration: none;\n    margin-right: 30px;\n    font-weight: ", ";\n    cursor: pointer;\n    &:hover {\n        font-weight: bold;\n    }\n    &:last-of-type {\n        margin-right: 0;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\tcolor: #fff;\n\ttext-decoration: none;\n\tmargin-right: 30px;\n\tfont-weight: ", ";\n\tcursor: pointer;\n\t&:hover {\n\t\tfont-weight: bold;\n\t}\n\t&:last-of-type {\n\t\tmargin-right: 0;\n\t}\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -36646,7 +36756,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    margin: 0 56px;\n    height: 64px;\n    padding: 18px 0;\n    justify-content: space-between;\n    align-items: center;\n    a {\n        display: flex;\n    }\n    @media (max-width: 1000px) {\n        margin: 0 30px;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tmargin: 0 56px;\n\theight: 64px;\n\tpadding: 18px 0;\n\tjustify-content: space-between;\n\talign-items: center;\n\ta {\n\t\tdisplay: flex;\n\t}\n\t@media (max-width: 1000px) {\n\t\tmargin: 0 30px;\n\t}\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36656,7 +36766,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    background: url(", ") top left / cover no-repeat;\n    @media (max-width: 1100px) {\n        ", "\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tflex-direction: column;\n\tbackground: url(", ") top left / cover no-repeat;\n\t@media (max-width: 1100px) {\n\t\t", "\n\t}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36693,6 +36803,63 @@ exports.ButtonLink = ButtonLink;
 var Logo = _styledComponents.default.img(_templateObject5());
 
 exports.Logo = Logo;
+
+var Group = _styledComponents.default.div(_templateObject6());
+
+exports.Group = Group;
+
+var Text = _styledComponents.default.p(_templateObject7());
+
+exports.Text = Text;
+var Feature = (0, _styledComponents.default)(Container)(_templateObject8());
+exports.Feature = Feature;
+
+var FeatureCallOut = _styledComponents.default.h2(_templateObject9());
+
+exports.FeatureCallOut = FeatureCallOut;
+
+var PlayButton = _styledComponents.default.button(_templateObject10());
+
+exports.PlayButton = PlayButton;
+
+var Search = _styledComponents.default.div(_templateObject11());
+
+exports.Search = Search;
+
+var SearchIcon = _styledComponents.default.button(_templateObject12());
+
+exports.SearchIcon = SearchIcon;
+
+var SearchInput = _styledComponents.default.input(_templateObject13(), function (_ref4) {
+  var active = _ref4.active;
+  return active === true ? '10px' : '0';
+}, function (_ref5) {
+  var active = _ref5.active;
+  return active === true ? '0 10px' : '0';
+}, function (_ref6) {
+  var active = _ref6.active;
+  return active === true ? '1' : '0';
+}, function (_ref7) {
+  var active = _ref7.active;
+  return active === true ? '200px' : '0px';
+});
+
+exports.SearchInput = SearchInput;
+
+var Picture = _styledComponents.default.button(_templateObject14(), function (_ref8) {
+  var src = _ref8.src;
+  return src;
+});
+
+exports.Picture = Picture;
+
+var Dropdown = _styledComponents.default.div(_templateObject15(), Group, Link, Group, Link, Picture);
+
+exports.Dropdown = Dropdown;
+
+var Profile = _styledComponents.default.div(_templateObject16(), Dropdown);
+
+exports.Profile = Profile;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/components/header/index.js":[function(require,module,exports) {
 "use strict";
 
@@ -36701,13 +36868,29 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = Header;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
 var _header = require("./styles/header");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
@@ -36729,20 +36912,116 @@ Header.Frame = function HeaderFrame(_ref2) {
   return /*#__PURE__*/_react.default.createElement(_header.Container, restProps, children);
 };
 
-Header.Logo = function HeaderLogo(_ref3) {
-  var to = _ref3.to,
-      restProps = _objectWithoutProperties(_ref3, ["to"]);
+Header.Group = function HeaderGroup(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_header.Group, restProps, children);
+}; // create a new element called logo
+// use ReachRouterLink
+// pass the children to ReachRouterLink
+
+
+Header.Logo = function HeaderLogo(_ref4) {
+  var to = _ref4.to,
+      restProps = _objectWithoutProperties(_ref4, ["to"]);
 
   return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: to
   }, /*#__PURE__*/_react.default.createElement(_header.Logo, restProps));
 };
 
-Header.ButtonLink = function HeaderButtonLink(_ref4) {
-  var children = _ref4.children,
-      restProps = _objectWithoutProperties(_ref4, ["children"]);
+Header.ButtonLink = function HeaderButtonLink(_ref5) {
+  var children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_header.ButtonLink, restProps, children);
+};
+
+Header.Link = function HeaderLink(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_header.Link, restProps, children);
+};
+
+Header.Text = function HeaderText(_ref7) {
+  var children = _ref7.children,
+      restProps = _objectWithoutProperties(_ref7, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_header.Text, restProps, children);
+};
+
+Header.Feature = function HeaderFeature(_ref8) {
+  var children = _ref8.children,
+      restProps = _objectWithoutProperties(_ref8, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_header.Feature, restProps, children);
+};
+
+Header.FeatureCallOut = function HeaderFeatureCallOut(_ref9) {
+  var children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_header.FeatureCallOut, restProps, children);
+};
+
+Header.PlayButton = function HeaderPlayButton(_ref10) {
+  var children = _ref10.children,
+      restProps = _objectWithoutProperties(_ref10, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_header.PlayButton, restProps, children);
+};
+
+Header.Profile = function HeaderProfile(_ref11) {
+  var children = _ref11.children,
+      restProps = _objectWithoutProperties(_ref11, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_header.Profile, restProps, children);
+};
+
+Header.Dropdown = function HeaderDropdown(_ref12) {
+  var children = _ref12.children,
+      restProps = _objectWithoutProperties(_ref12, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_header.Dropdown, restProps, children);
+};
+
+Header.Picture = function HeaderPicture(_ref13) {
+  var src = _ref13.src,
+      restProps = _objectWithoutProperties(_ref13, ["src"]);
+
+  return /*#__PURE__*/_react.default.createElement(_header.Picture, _extends({}, restProps, {
+    src: "images/users/".concat(src, ".png")
+  }));
+};
+
+Header.Search = function HeaderSearch(_ref14) {
+  var searchTerm = _ref14.searchTerm,
+      setSearchTerm = _ref14.setSearchTerm,
+      restProps = _objectWithoutProperties(_ref14, ["searchTerm", "setSearchTerm"]);
+
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      searchActive = _useState2[0],
+      setSearchActive = _useState2[1];
+
+  return /*#__PURE__*/_react.default.createElement(_header.Search, restProps, /*#__PURE__*/_react.default.createElement(_header.SearchIcon, {
+    onClick: function onClick() {
+      return setSearchActive(!searchActive);
+    }
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: "/images/icons/search.png",
+    alt: "Search"
+  })), /*#__PURE__*/_react.default.createElement(_header.SearchInput, {
+    value: searchTerm,
+    onChange: function onChange(_ref15) {
+      var target = _ref15.target;
+      return setSearchTerm(target.value);
+    },
+    placeholder: "Search files and series",
+    active: searchActive
+  }));
 };
 },{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./styles/header":"src/components/header/styles/header.js"}],"src/components/feature/styles/feature.js":[function(require,module,exports) {
 "use strict";
@@ -37516,17 +37795,17 @@ exports.default = Signin;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _components = require("../components");
+
 var _reactRouterDom = require("react-router-dom");
 
-var ROUTE = _interopRequireWildcard(require("../constants/routes"));
+var ROUTES = _interopRequireWildcard(require("../constants/routes"));
+
+var _firebase = require("../context/firebase");
 
 var _header = _interopRequireDefault(require("../containers/header"));
 
-var _index = _interopRequireDefault(require("./../components/form/index"));
-
-var _footer = _interopRequireDefault(require("./../containers/footer"));
-
-var _firebase = require("./../context/firebase");
+var _footer = _interopRequireDefault(require("../containers/footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37552,46 +37831,48 @@ function Signin() {
 
   var history = (0, _reactRouterDom.useHistory)();
 
-  var _useState = (0, _react.useState)(""),
+  var _useState = (0, _react.useState)(''),
       _useState2 = _slicedToArray(_useState, 2),
       error = _useState2[0],
       setError = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(""),
+  var _useState3 = (0, _react.useState)(''),
       _useState4 = _slicedToArray(_useState3, 2),
       emailAddress = _useState4[0],
       setEmailAddress = _useState4[1];
 
-  var _useState5 = (0, _react.useState)(""),
+  var _useState5 = (0, _react.useState)(''),
       _useState6 = _slicedToArray(_useState5, 2),
       password = _useState6[0],
       setPassword = _useState6[1];
 
-  var isInvalid = password === "" || emailAddress === "";
+  var isInvalid = password === '' || emailAddress === '';
 
   var handleSignin = function handleSignin(event) {
-    event.preventDefault();
-    firebase.aut().signInWithEmailAndPassword(emailAddress, password).then(function () {
-      setEmailAddress("");
-      setPassword("");
-      setError("");
-      history.pushState(ROUTE.BROWSE);
+    event.preventDefault(); // call in here to firebase to authenticate the user
+    // if there's an error, populate the error state
+
+    firebase.auth().signInWithEmailAndPassword(emailAddress, password).then(function () {
+      setEmailAddress('');
+      setPassword('');
+      setError('');
+      history.push(ROUTES.BROWSE);
     }).catch(function (error) {
       return setError(error.message);
     });
   };
 
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_header.default, null, /*#__PURE__*/_react.default.createElement(_index.default, null, /*#__PURE__*/_react.default.createElement(_index.default.Title, null, "Sign in"), error && /*#__PURE__*/_react.default.createElement(_index.default.Error, null), /*#__PURE__*/_react.default.createElement(_index.default.Base, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null, /*#__PURE__*/_react.default.createElement(_components.Form, null, /*#__PURE__*/_react.default.createElement(_components.Form.Title, null, "Sign in"), error && /*#__PURE__*/_react.default.createElement(_components.Form.Error, null, error), /*#__PURE__*/_react.default.createElement(_components.Form.Base, {
     onSubmit: handleSignin,
     method: "POST"
-  }, /*#__PURE__*/_react.default.createElement(_index.default.Input, {
-    placeholder: "EmailAddress",
+  }, /*#__PURE__*/_react.default.createElement(_components.Form.Input, {
+    placeholder: "Email address",
     value: emailAddress,
     onChange: function onChange(_ref) {
       var target = _ref.target;
       return setEmailAddress(target.value);
     }
-  }), /*#__PURE__*/_react.default.createElement(_index.default.Input, {
+  }), /*#__PURE__*/_react.default.createElement(_components.Form.Input, {
     type: "password",
     placeholder: "Password",
     autoComplete: "off",
@@ -37600,14 +37881,14 @@ function Signin() {
       var target = _ref2.target;
       return setPassword(target.value);
     }
-  }), /*#__PURE__*/_react.default.createElement(_index.default.Submit, {
+  }), /*#__PURE__*/_react.default.createElement(_components.Form.Submit, {
     disabled: isInvalid,
     type: "submit"
-  }, "Sign In"), /*#__PURE__*/_react.default.createElement(_index.default.Text, null, "New to Netflix?", " ", /*#__PURE__*/_react.default.createElement(_index.default.Link, {
-    to: ROUTE.SIGN_UP
-  }, "Sign up now")), /*#__PURE__*/_react.default.createElement(_index.default.TextSmall, null, "This page is protected by Google reCAPTCHA")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
+  }, "Sign in"), /*#__PURE__*/_react.default.createElement(_components.Form.Text, null, "New to Netflix? ", /*#__PURE__*/_react.default.createElement(_components.Form.Link, {
+    to: "/signup"
+  }, "Sign up now.")), /*#__PURE__*/_react.default.createElement(_components.Form.TextSmall, null, "This page is protected by Google reCAPTCHA.")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../constants/routes":"src/constants/routes.js","../containers/header":"src/containers/header.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js","./../context/firebase":"src/context/firebase.js"}],"src/pages/signup.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../constants/routes":"src/constants/routes.js","../context/firebase":"src/context/firebase.js","../containers/header":"src/containers/header.js","../containers/footer":"src/containers/footer.js"}],"src/pages/signup.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37619,15 +37900,15 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var ROUTE = _interopRequireWildcard(require("../constants/routes"));
+var _firebase = require("../context/firebase");
 
 var _header = _interopRequireDefault(require("../containers/header"));
 
-var _firebase = require("../context/firebase");
+var _components = require("../components");
 
-var _index = _interopRequireDefault(require("./../components/form/index"));
+var ROUTES = _interopRequireWildcard(require("../constants/routes"));
 
-var _footer = _interopRequireDefault(require("./../containers/footer"));
+var _footer = _interopRequireDefault(require("../containers/footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37653,80 +37934,81 @@ function Signup() {
   var _useContext = (0, _react.useContext)(_firebase.FirebaseContext),
       firebase = _useContext.firebase;
 
-  var _useState = (0, _react.useState)(""),
+  var _useState = (0, _react.useState)(''),
       _useState2 = _slicedToArray(_useState, 2),
       firstName = _useState2[0],
       setFirstName = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(""),
+  var _useState3 = (0, _react.useState)(''),
       _useState4 = _slicedToArray(_useState3, 2),
-      error = _useState4[0],
-      setError = _useState4[1];
+      emailAddress = _useState4[0],
+      setEmailAddress = _useState4[1];
 
-  var _useState5 = (0, _react.useState)(""),
+  var _useState5 = (0, _react.useState)(''),
       _useState6 = _slicedToArray(_useState5, 2),
-      emailAddress = _useState6[0],
-      setEmailAddress = _useState6[1];
+      password = _useState6[0],
+      setPassword = _useState6[1];
 
-  var _useState7 = (0, _react.useState)(""),
+  var _useState7 = (0, _react.useState)(''),
       _useState8 = _slicedToArray(_useState7, 2),
-      password = _useState8[0],
-      setPassword = _useState8[1];
+      error = _useState8[0],
+      setError = _useState8[1]; // form validation
 
-  var isInvalid = firstName === "" || password === "" || emailAddress === "";
 
-  var handleSignup = function handleSignup(event) {
+  var isInvalid = firstName === '' || password === '' || emailAddress === ''; // handleSignUp (takes the event)
+
+  var handleSignUp = function handleSignUp(event) {
     event.preventDefault();
     firebase.auth().createUserWithEmailAndPassword(emailAddress, password).then(function (result) {
       result.user.updateProfile({
         displayName: firstName,
-        photoUrl: Math.floor(Math.random() * 5) + 1
+        photoURL: Math.floor(Math.random() * 5) + 1
       }).then(function () {
-        setEmailAddress("");
-        setPassword("");
-        setError("");
-        history.push(ROUTE.BROWSE);
+        setEmailAddress('');
+        setPassword('');
+        setError('');
+        history.push(ROUTES.BROWSE);
       });
     }).catch(function (error) {
       return setError(error.message);
     });
-  };
+  }; // try to do the markup
 
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_header.default, null, /*#__PURE__*/_react.default.createElement(_index.default, null, /*#__PURE__*/_react.default.createElement(_index.default.Title, null, "Sign up"), error && /*#__PURE__*/_react.default.createElement(_index.default.Error, null), /*#__PURE__*/_react.default.createElement(_index.default.Base, {
-    onSubmit: handleSignup,
+
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null, /*#__PURE__*/_react.default.createElement(_components.Form, null, /*#__PURE__*/_react.default.createElement(_components.Form.Title, null, "Sign Up"), error && /*#__PURE__*/_react.default.createElement(_components.Form.Error, null, error), /*#__PURE__*/_react.default.createElement(_components.Form.Base, {
+    onSubmit: handleSignUp,
     method: "POST"
-  }, /*#__PURE__*/_react.default.createElement(_index.default.Input, {
-    placeholder: "FirstName",
+  }, /*#__PURE__*/_react.default.createElement(_components.Form.Input, {
     value: firstName,
     onChange: function onChange(_ref) {
       var target = _ref.target;
       return setFirstName(target.value);
-    }
-  }), /*#__PURE__*/_react.default.createElement(_index.default.Input, {
-    placeholder: "EmailAddress",
-    autoComplete: "off",
+    },
+    placeholder: "First Name"
+  }), /*#__PURE__*/_react.default.createElement(_components.Form.Input, {
     value: emailAddress,
     onChange: function onChange(_ref2) {
       var target = _ref2.target;
       return setEmailAddress(target.value);
-    }
-  }), /*#__PURE__*/_react.default.createElement(_index.default.Input, {
-    type: "password",
-    placeholder: "Password",
-    autoComplete: "off",
+    },
+    placeholder: "Email Address"
+  }), /*#__PURE__*/_react.default.createElement(_components.Form.Input, {
     value: password,
+    type: "password",
+    autoComplete: "off",
     onChange: function onChange(_ref3) {
       var target = _ref3.target;
       return setPassword(target.value);
-    }
-  }), /*#__PURE__*/_react.default.createElement(_index.default.Submit, {
-    disabled: isInvalid,
-    type: "submit"
-  }, "Sign Up"), /*#__PURE__*/_react.default.createElement(_index.default.Text, null, "Already have an account.", " ", /*#__PURE__*/_react.default.createElement(_index.default.Link, {
-    to: ROUTE.SIGN_IN
-  }, " Sign In")), /*#__PURE__*/_react.default.createElement(_index.default.TextSmall, null, "This page is protected by Google reCAPTCHA")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
+    },
+    placeholder: "Password"
+  }), /*#__PURE__*/_react.default.createElement(_components.Form.Submit, {
+    type: "submit",
+    disabled: isInvalid
+  }, "Sign Up"), /*#__PURE__*/_react.default.createElement(_components.Form.Text, null, "Already have another account?\xA0", /*#__PURE__*/_react.default.createElement(_components.Form.Link, {
+    to: ROUTES.SIGN_IN
+  }, "Sign in.")), /*#__PURE__*/_react.default.createElement(_components.Form.TextSmall, null, "This page is protected by Google reCAPTCHA.")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../constants/routes":"src/constants/routes.js","../containers/header":"src/containers/header.js","../context/firebase":"src/context/firebase.js","./../components/form/index":"src/components/form/index.js","./../containers/footer":"src/containers/footer.js"}],"src/containers/profiles.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../context/firebase":"src/context/firebase.js","../containers/header":"src/containers/header.js","../components":"src/components/index.js","../constants/routes":"src/constants/routes.js","../containers/footer":"src/containers/footer.js"}],"src/containers/profiles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37776,15 +38058,15 @@ exports.default = BrowseContainer;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var ROUTE = _interopRequireWildcard(require("../constants/routes"));
+var _components = require("../components");
 
-var _header = require("./header");
+var ROUTES = _interopRequireWildcard(require("../constants/routes"));
 
 var _firebase = require("../context/firebase");
 
-var _profiles = _interopRequireDefault(require("../containers/profiles"));
+var _profiles = _interopRequireDefault(require("./profiles"));
 
-var _footer = _interopRequireDefault(require("../containers/footer"));
+var _footer = _interopRequireDefault(require("./footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37810,17 +38092,59 @@ function BrowseContainer() {
       profile = _useState2[0],
       setProfile = _useState2[1];
 
+  var _useState3 = (0, _react.useState)(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      searchTerm = _useState4[0],
+      setSearchTerm = _useState4[1];
+
+  var _useState5 = (0, _react.useState)('series'),
+      _useState6 = _slicedToArray(_useState5, 2),
+      category = _useState6[0],
+      setCategory = _useState6[1];
+
+  var _useState7 = (0, _react.useState)(true),
+      _useState8 = _slicedToArray(_useState7, 2),
+      loading = _useState8[0],
+      setLoading = _useState8[1];
+
   var user = {
-    displayName: "Karl",
-    photoUrl: "1"
+    displayName: 'Daniel',
+    photoURL: '1'
   };
-  return profile.displayName ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("p", null, "BROWSE CONTAINER"), /*#__PURE__*/_react.default.createElement(_footer.default, null)) : /*#__PURE__*/_react.default.createElement(_profiles.default, {
+  return profile.displayName ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_components.Header, {
+    src: "joker1",
+    dontShowOnSmallViewPort: true
+  }, /*#__PURE__*/_react.default.createElement(_components.Header.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Header.Group, null, /*#__PURE__*/_react.default.createElement(_components.Header.Logo, {
+    to: ROUTES.HOME,
+    src: "/images/misc/logo.svg",
+    alt: "Netflix"
+  }), /*#__PURE__*/_react.default.createElement(_components.Header.Link, {
+    onClick: function onClick() {
+      return setCategory('series');
+    },
+    active: category === 'series' ? 'true' : 'false'
+  }, "Series"), /*#__PURE__*/_react.default.createElement(_components.Header.Link, {
+    onClick: function onClick() {
+      return setCategory('films');
+    },
+    active: category === 'films' ? 'true' : 'false'
+  }, "Films")), /*#__PURE__*/_react.default.createElement(_components.Header.Group, null, /*#__PURE__*/_react.default.createElement(_components.Header.Search, {
+    searchTerm: searchTerm,
+    setSearchTerm: setSearchTerm
+  }), /*#__PURE__*/_react.default.createElement(_components.Header.Profile, null, /*#__PURE__*/_react.default.createElement(_components.Header.Picture, {
+    src: user.photoURL
+  }), /*#__PURE__*/_react.default.createElement(_components.Header.Dropdown, null, /*#__PURE__*/_react.default.createElement(_components.Header.Group, null, /*#__PURE__*/_react.default.createElement(_components.Header.Picture, {
+    src: user.photoURL
+  }), /*#__PURE__*/_react.default.createElement(_components.Header.Link, null, user.displayName)), /*#__PURE__*/_react.default.createElement(_components.Header.Group, null, /*#__PURE__*/_react.default.createElement(_components.Header.Link, {
+    onClick: function onClick() {
+      return firebase.auth().signOut();
+    }
+  }, "Sign out")))))), /*#__PURE__*/_react.default.createElement(_components.Header.Feature, null, /*#__PURE__*/_react.default.createElement(_components.Header.FeatureCallOut, null, "Watch Joker Now"), /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the world around him."), /*#__PURE__*/_react.default.createElement(_components.Header.PlayButton, null, "Play"))), /*#__PURE__*/_react.default.createElement(_footer.default, null)) : /*#__PURE__*/_react.default.createElement(_profiles.default, {
     user: user,
-    setProfile: setProfile,
-    profile: profile
+    setProfile: setProfile
   });
 }
-},{"react":"node_modules/react/index.js","../constants/routes":"src/constants/routes.js","./header":"src/containers/header.js","../context/firebase":"src/context/firebase.js","../containers/profiles":"src/containers/profiles.js","../containers/footer":"src/containers/footer.js"}],"src/pages/browse.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js","../constants/routes":"src/constants/routes.js","../context/firebase":"src/context/firebase.js","./profiles":"src/containers/profiles.js","./footer":"src/containers/footer.js"}],"src/pages/browse.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37992,7 +38316,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50667" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51392" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
