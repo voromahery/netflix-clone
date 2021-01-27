@@ -37610,9 +37610,155 @@ Loading.ReleaseBody = function LoadingReleaseBody(_ref2) {
 
   return /*#__PURE__*/_react.default.createElement(_Loading.ReleaseBody, restProps);
 };
-},{"react":"node_modules/react/index.js","./styles/Loading":"src/components/loading/styles/Loading.js"}],"src/components/card/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/Loading":"src/components/loading/styles/Loading.js"}],"src/components/card/styles/card.js":[function(require,module,exports) {
 
-},{}],"src/components/index.js":[function(require,module,exports) {
+},{}],"src/components/card/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Card;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _card = require("./styles/card");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var FeatureContext = (0, _react.createContext)();
+
+function Card(_ref) {
+  var children = _ref.children,
+      restProps = _objectWithoutProperties(_ref, ["children"]);
+
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      showFeature = _useState2[0],
+      setShowFeature = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      itemFeature = _useState4[0],
+      setItemFeature = _useState4[1];
+
+  return /*#__PURE__*/_react.default.createElement(FeatureContext.Provider, {
+    value: {
+      showFeature: showFeature,
+      setShowFeature: setShowFeature,
+      itemFeature: itemFeature,
+      setItemFeature: setItemFeature
+    }
+  }, /*#__PURE__*/_react.default.createElement(Container, restProps, children));
+}
+
+Card.Group = function CardGroup(_ref2) {
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_card.Group, restProps, children);
+};
+
+Card.Title = function CardTitle(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_card.Title, restProps, children);
+};
+
+Card.SubTitle = function CardSubTitle(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_card.SubTitle, restProps, children);
+};
+
+Card.Entities = function CardEntities(_ref5) {
+  var children = _ref5.children,
+      restProps = _objectWithoutProperties(_ref5, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_card.Entities, restProps, children);
+};
+
+Card.Meta = function CardMeta(_ref6) {
+  var children = _ref6.children,
+      restProps = _objectWithoutProperties(_ref6, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_card.Meta, restProps, children);
+};
+
+Card.Item = function CardItem(_ref7) {
+  var item = _ref7.item,
+      children = _ref7.children,
+      restProps = _objectWithoutProperties(_ref7, ["item", "children"]);
+
+  var _useContext = (0, _react.useContext)(FeatureContext),
+      setShowFeature = _useContext.setShowFeature,
+      setItemFeature = _useContext.setItemFeature;
+
+  return /*#__PURE__*/_react.default.createElement(_card.Item, _extends({
+    onClick: function onClick() {
+      setItemFeature(item);
+      setShowFeature(true);
+    }
+  }, restProps), children);
+};
+
+Card.Image = function CardImage(_ref8) {
+  var restProps = Object.assign({}, _ref8);
+  return /*#__PURE__*/_react.default.createElement(_card.Image, restProps);
+};
+
+Card.Feature = function CardFeature(_ref9) {
+  var category = _ref9.category,
+      children = _ref9.children,
+      restProps = _objectWithoutProperties(_ref9, ["category", "children"]);
+
+  var _useContext2 = (0, _react.useContext)(FeatureContext),
+      showFeature = _useContext2.showFeature,
+      itemFeature = _useContext2.itemFeature,
+      setShowFeature = _useContext2.setShowFeature;
+
+  return showFeature ? /*#__PURE__*/_react.default.createElement(_card.Feature, {
+    src: "/images/".concat(category, "/").concat(itemFeature.genre, "/").concat(itemFeature.slug, "/large.jpg")
+  }, /*#__PURE__*/_react.default.createElement(_card.Content, null, /*#__PURE__*/_react.default.createElement(_card.FeatureTitle, null, itemFeature.title), /*#__PURE__*/_react.default.createElement(_card.FeatureText, null, itemFeature.description), /*#__PURE__*/_react.default.createElement(_card.FeatureClose, {
+    onClick: function onClick() {
+      return setShowFeature(false);
+    }
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: "/images/icons/close.png",
+    alt: "close"
+  })), /*#__PURE__*/_react.default.createElement(_card.Group, {
+    margin: "30px 0",
+    flexDirection: "row",
+    alignItems: "center"
+  }, /*#__PURE__*/_react.default.createElement(_card.Maturity, {
+    rating: itemFeature.maturity
+  }, itemFeature.maturity < 12 ? "PG" : itemFeature.maturity), /*#__PURE__*/_react.default.createElement(_card.FeatureText, {
+    fontWeight: "bold"
+  }, itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1))), children)) : null;
+};
+},{"react":"node_modules/react/index.js","./styles/card":"src/components/card/styles/card.js"}],"src/components/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38238,7 +38384,7 @@ function BrowseContainer(_ref) {
     }, 3000);
   }, [user]);
   (0, _react.useEffect)(function () {
-    setSlideRows(slides[rows]);
+    setSlideRows(slides[category]);
   }, [slides, category]);
   return profile.displayName ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, loading ? /*#__PURE__*/_react.default.createElement(_components.Loading, {
     src: user.photoURL

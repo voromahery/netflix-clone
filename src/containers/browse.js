@@ -26,7 +26,7 @@ export default function BrowseContainer({ slides }) {
   }, [user]);
 
   useEffect(() => {
-    setSlideRows(slides[rows]);
+    setSlideRows(slides[category]);
   }, [slides, category]);
 
   return profile.displayName ? (
