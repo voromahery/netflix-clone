@@ -1,5 +1,6 @@
 import React, { useState, createContext, useContext } from "react";
 import {
+  Container,
   Group,
   Title,
   SubTitle,
@@ -49,6 +50,10 @@ Card.Entities = function CardEntities({ children, ...restProps }) {
 Card.Meta = function CardMeta({ children, ...restProps }) {
   return <Meta {...restProps}>{children}</Meta>;
 };
+
+Card.Text = function CardText({ children, ...restProps }) {
+    return <Text {...restProps}>{children}</Text>;
+  };
 
 Card.Item = function CardItem({ item, children, ...restProps }) {
   const { setShowFeature, setItemFeature } = useContext(FeatureContext);
