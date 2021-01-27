@@ -37610,7 +37610,9 @@ Loading.ReleaseBody = function LoadingReleaseBody(_ref2) {
 
   return /*#__PURE__*/_react.default.createElement(_Loading.ReleaseBody, restProps);
 };
-},{"react":"node_modules/react/index.js","./styles/Loading":"src/components/loading/styles/Loading.js"}],"src/components/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/Loading":"src/components/loading/styles/Loading.js"}],"src/components/card/index.js":[function(require,module,exports) {
+
+},{}],"src/components/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -37670,6 +37672,12 @@ Object.defineProperty(exports, "Loading", {
     return _loading.default;
   }
 });
+Object.defineProperty(exports, "Card", {
+  enumerable: true,
+  get: function () {
+    return _card.default;
+  }
+});
 
 var _jumbotron = _interopRequireDefault(require("./jumbotron"));
 
@@ -37689,8 +37697,10 @@ var _profiles = _interopRequireDefault(require("./profiles"));
 
 var _loading = _interopRequireDefault(require("./loading"));
 
+var _card = _interopRequireDefault(require("./card"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./jumbotron":"src/components/jumbotron/index.js","./footer":"src/components/footer/index.js","./accordion":"src/components/accordion/index.js","./opt-form":"src/components/opt-form/index.js","./header":"src/components/header/index.js","./feature":"src/components/feature/index.js","./form":"src/components/form/index.js","./profiles":"src/components/profiles/index.js","./loading":"src/components/loading/index.js"}],"src/containers/jumbotron.js":[function(require,module,exports) {
+},{"./jumbotron":"src/components/jumbotron/index.js","./footer":"src/components/footer/index.js","./accordion":"src/components/accordion/index.js","./opt-form":"src/components/opt-form/index.js","./header":"src/components/header/index.js","./feature":"src/components/feature/index.js","./form":"src/components/form/index.js","./profiles":"src/components/profiles/index.js","./loading":"src/components/loading/index.js","./card":"src/components/card/index.js"}],"src/containers/jumbotron.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -38170,6 +38180,8 @@ var _profiles = _interopRequireDefault(require("./profiles"));
 
 var _footer = _interopRequireDefault(require("./footer"));
 
+var _jumbotron = require("../components/jumbotron/styles/jumbotron");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -38188,7 +38200,9 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function BrowseContainer() {
+function BrowseContainer(_ref) {
+  var slides = _ref.slides;
+
   var _useState = (0, _react.useState)({}),
       _useState2 = _slicedToArray(_useState, 2),
       profile = _useState2[0],
@@ -38209,6 +38223,11 @@ function BrowseContainer() {
       loading = _useState8[0],
       setLoading = _useState8[1];
 
+  var _useState9 = (0, _react.useState)([]),
+      _useState10 = _slicedToArray(_useState9, 2),
+      slideRows = _useState10[0],
+      setSlideRows = _useState10[1];
+
   var user = {
     displayName: "Daniel",
     photoURL: "1"
@@ -38218,6 +38237,9 @@ function BrowseContainer() {
       setLoading(false);
     }, 3000);
   }, [user]);
+  (0, _react.useEffect)(function () {
+    setSlideRows(slides[rows]);
+  }, [slides, category]);
   return profile.displayName ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, loading ? /*#__PURE__*/_react.default.createElement(_components.Loading, {
     src: user.photoURL
   }) : /*#__PURE__*/_react.default.createElement(_components.Loading.ReleaseBody, null), /*#__PURE__*/_react.default.createElement(_components.Header, {
@@ -38248,12 +38270,24 @@ function BrowseContainer() {
     onClick: function onClick() {
       return firebase.auth().signOut();
     }
-  }, "Sign out")))))), /*#__PURE__*/_react.default.createElement(_components.Header.Feature, null, /*#__PURE__*/_react.default.createElement(_components.Header.FeatureCallOut, null, "Watch Joker Now"), /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the world around him."), /*#__PURE__*/_react.default.createElement(_components.Header.PlayButton, null, "Play"))), /*#__PURE__*/_react.default.createElement(_footer.default, null)) : /*#__PURE__*/_react.default.createElement(_profiles.default, {
+  }, "Sign out")))))), /*#__PURE__*/_react.default.createElement(_components.Header.Feature, null, /*#__PURE__*/_react.default.createElement(_components.Header.FeatureCallOut, null, "Watch Joker Now"), /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the world around him."), /*#__PURE__*/_react.default.createElement(_components.Header.PlayButton, null, "Play"))), /*#__PURE__*/_react.default.createElement(_components.Card.Group, null, slideRows.map(function (slideItem) {
+    return /*#__PURE__*/_react.default.createElement(_components.Card, {
+      key: "".concat(category, " - ").concat(slideItem.title.toLowerCase())
+    }, /*#__PURE__*/_react.default.createElement(_components.Card.Title, null, slideItem.title), /*#__PURE__*/_react.default.createElement(_components.Card.Entities, null, slideItem.data.map(function (item) {
+      /*#__PURE__*/
+      _react.default.createElement(_components.Card.Item, {
+        key: _jumbotron.Item.docId,
+        item: item
+      }, /*#__PURE__*/_react.default.createElement(_components.Card.Image, {
+        src: "/images/".concat(category, "/").concat(item.slug, "/small.jpg")
+      }), /*#__PURE__*/_react.default.createElement(_components.Card.Meta, null, /*#__PURE__*/_react.default.createElement(_components.Card.SubTitle, null, item.title), /*#__PURE__*/_react.default.createElement(_components.Card.Text, null, item.description)));
+    })));
+  })), /*#__PURE__*/_react.default.createElement(_footer.default, null)) : /*#__PURE__*/_react.default.createElement(_profiles.default, {
     user: user,
     setProfile: setProfile
   });
 }
-},{"react":"node_modules/react/index.js","../components":"src/components/index.js","../constants/routes":"src/constants/routes.js","../context/firebase":"src/context/firebase.js","./profiles":"src/containers/profiles.js","./footer":"src/containers/footer.js"}],"src/hooks/use-content.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../components":"src/components/index.js","../constants/routes":"src/constants/routes.js","../context/firebase":"src/context/firebase.js","./profiles":"src/containers/profiles.js","./footer":"src/containers/footer.js","../components/jumbotron/styles/jumbotron":"src/components/jumbotron/styles/jumbotron.js"}],"src/hooks/use-content.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
