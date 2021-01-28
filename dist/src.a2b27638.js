@@ -42002,17 +42002,18 @@ var _dotenv = _interopRequireDefault(require("dotenv"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_dotenv.default.config(); // import { seedDatabase } from './seed';
-
-
+// import { seedDatabase } from './seed';
 var config = {
-  apiKey: "AIzaSyDxUyuoEGZb3HaWcd-naMKARRz7-MOdX8o,",
-  authDomain: "netflix-onja-daniel.firebaseapp.com,",
-  projectId: "netflix-onja-daniel,",
-  storageBucket: "netflix-onja-daniel.appspot.com,",
-  messagingSenderId: "457412370353,",
-  appId: "1:457412370353:web:8b3be230e1300535056790,"
+  apiKey: "AIzaSyDxUyuoEGZb3HaWcd-naMKARRz7-MOdX8o",
+  authDomain: "netflix-onja-daniel.firebaseapp.com",
+  projectId: "netflix-onja-daniel",
+  storageBucket: "netflix-onja-daniel.appspot.com",
+  messagingSenderId: "457412370353",
+  appId: "1:457412370353:web:8b3be230e1300535056790"
 };
+
+_dotenv.default.config();
+
 var firebase = window.firebase.initializeApp(config); // seedDatabase(firebase);
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_firebase.FirebaseContext.Provider, {
@@ -42048,7 +42049,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51027" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52248" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

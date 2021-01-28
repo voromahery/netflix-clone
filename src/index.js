@@ -4,8 +4,6 @@ import { App } from "./app";
 import { GlobalStyles } from "./global-styles";
 import { FirebaseContext } from "./context/firebase";
 import dotenv from "dotenv";
-
-dotenv.config();
 // import { seedDatabase } from './seed';
 
 const config = {
@@ -17,6 +15,7 @@ const config = {
   appId: process.env.FB_APP_ID,
 };
 
+dotenv.config();
 const firebase = window.firebase.initializeApp(config);
 // seedDatabase(firebase);
 
