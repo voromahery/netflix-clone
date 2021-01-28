@@ -3,18 +3,19 @@ import ReactDOM from "react-dom";
 import { App } from "./app";
 import { GlobalStyles } from "./global-styles";
 import { FirebaseContext } from "./context/firebase";
+import dotenv from "dotenv";
 
+dotenv.config();
 // import { seedDatabase } from './seed';
 
 const config = {
-  apiKey: "AIzaSyDxUyuoEGZb3HaWcd-naMKARRz7-MOdX8o",
-  authDomain: "netflix-onja-daniel.firebaseapp.com",
-  projectId: "netflix-onja-daniel",
-  storageBucket: "netflix-onja-daniel.appspot.com",
-  messagingSenderId: "457412370353",
-  appId: "1:457412370353:web:8b3be230e1300535056790",
+  apiKey: process.env.FB_API_KEY,
+  authDomain: process.env.FB_AUTH_DOMAIN,
+  projectId: process.env.FB_PROJECT_ID,
+  storageBucket: process.env.FB_STORAGE_BUCKET,
+  messagingSenderId: process.env.FB_MESSAGING_SENDER_ID,
+  appId: process.env.FB_APP_ID,
 };
-
 
 const firebase = window.firebase.initializeApp(config);
 // seedDatabase(firebase);
