@@ -52,8 +52,8 @@ Card.Meta = function CardMeta({ children, ...restProps }) {
 };
 
 Card.Text = function CardText({ children, ...restProps }) {
-    return <Text {...restProps}>{children}</Text>;
-  };
+  return <Text {...restProps}>{children}</Text>;
+};
 
 Card.Item = function CardItem({ item, children, ...restProps }) {
   const { setShowFeature, setItemFeature } = useContext(FeatureContext);
@@ -83,6 +83,7 @@ Card.Feature = function CardFeature({ category, children, ...restProps }) {
   return showFeature ? (
     <Feature
       src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}
+      {...restProps}
     >
       <Content>
         <FeatureTitle>{itemFeature.title}</FeatureTitle>
