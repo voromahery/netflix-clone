@@ -10814,7 +10814,7 @@ if ("development" !== "production") {
       }
 
       var eventName = 'on' + eventNameSuffix;
-      var isSupported = (eventName in document);
+      var isSupported = eventName in document;
 
       if (!isSupported) {
         var element = document.createElement('div');
@@ -31963,7 +31963,9 @@ function createReactContext(defaultValue, calculateChangedBits) {
 
   var contextProp = '__create-react-context-' + getUniqueId() + '__';
 
-  var Provider = /*#__PURE__*/function (_Component) {
+  var Provider =
+  /*#__PURE__*/
+  function (_Component) {
     (0, _inheritsLoose2.default)(Provider, _Component);
 
     function Provider() {
@@ -32015,7 +32017,9 @@ function createReactContext(defaultValue, calculateChangedBits) {
 
   Provider.childContextTypes = (_Provider$childContex = {}, _Provider$childContex[contextProp] = _propTypes.default.object.isRequired, _Provider$childContex);
 
-  var Consumer = /*#__PURE__*/function (_Component2) {
+  var Consumer =
+  /*#__PURE__*/
+  function (_Component2) {
     (0, _inheritsLoose2.default)(Consumer, _Component2);
 
     function Consumer() {
@@ -33093,7 +33097,9 @@ var createNamedContext = function createNamedContext(name) {
   return context;
 };
 
-var historyContext = /*#__PURE__*/createNamedContext("Router-History"); // TODO: Replace with React.createContext once we can assume React 16+
+var historyContext =
+/*#__PURE__*/
+createNamedContext("Router-History"); // TODO: Replace with React.createContext once we can assume React 16+
 
 exports.__HistoryContext = historyContext;
 
@@ -33103,14 +33109,18 @@ var createNamedContext$1 = function createNamedContext(name) {
   return context;
 };
 
-var context = /*#__PURE__*/createNamedContext$1("Router");
+var context =
+/*#__PURE__*/
+createNamedContext$1("Router");
 /**
  * The public API for putting history on context.
  */
 
 exports.__RouterContext = context;
 
-var Router = /*#__PURE__*/function (_React$Component) {
+var Router =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(Router, _React$Component);
 
   Router.computeRootMatch = function computeRootMatch(pathname) {
@@ -33203,7 +33213,9 @@ if ("development" !== "production") {
  */
 
 
-var MemoryRouter = /*#__PURE__*/function (_React$Component) {
+var MemoryRouter =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(MemoryRouter, _React$Component);
 
   function MemoryRouter() {
@@ -33246,7 +33258,9 @@ if ("development" !== "production") {
   };
 }
 
-var Lifecycle = /*#__PURE__*/function (_React$Component) {
+var Lifecycle =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(Lifecycle, _React$Component);
 
   function Lifecycle() {
@@ -33492,7 +33506,9 @@ function evalChildrenDev(children, props, path) {
  */
 
 
-var Route = /*#__PURE__*/function (_React$Component) {
+var Route =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(Route, _React$Component);
 
   function Route() {
@@ -33601,7 +33617,9 @@ function noop() {}
  */
 
 
-var StaticRouter = /*#__PURE__*/function (_React$Component) {
+var StaticRouter =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(StaticRouter, _React$Component);
 
   function StaticRouter() {
@@ -33695,7 +33713,9 @@ if ("development" !== "production") {
  */
 
 
-var Switch = /*#__PURE__*/function (_React$Component) {
+var Switch =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(Switch, _React$Component);
 
   function Switch() {
@@ -33952,7 +33972,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * The public API for a <Router> that uses HTML5 history.
  */
-var BrowserRouter = /*#__PURE__*/function (_React$Component) {
+var BrowserRouter =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(BrowserRouter, _React$Component);
 
   function BrowserRouter() {
@@ -33999,7 +34021,9 @@ if ("development" !== "production") {
  */
 
 
-var HashRouter = /*#__PURE__*/function (_React$Component) {
+var HashRouter =
+/*#__PURE__*/
+function (_React$Component) {
   (0, _inheritsLoose2.default)(HashRouter, _React$Component);
 
   function HashRouter() {
@@ -36511,111 +36535,43 @@ exports.Image = exports.SubTitle = exports.Pane = exports.Title = exports.Contai
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  max-width: 100%;\n  height: auto;\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 26px;\n  font-weight: normal;\n  line-height: normal;\n\n  @media (max-width: 600px) {\n    font-size: 18px;\n  }\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  width: 50%;\n\n  @media (max-width: 1000px) {\n    width: 1000px;\n    padding: 0 45px;\n    text-align: center;\n  }\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 50px;\n  line-height: 1.1;\n  margin-bottom: 8px;\n\n  @media (max-width: 600px) {\n    font-size: 35px;\n  }\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  background: black;\n\n  @media (max-width: 1000px) {\n    ", ":last-of-type h2 {\n      margin-bottom: 50px;\n    }\n  }\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  border-bottom: 8px solid #222;\n  padding: 50px 5%;\n  color: white;\n  overflow: hidden;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-direction: ", ";\n  max-width: 1100px;\n  margin: auto;\n  width: 100%;\n\n  @media (max-width: 1000px) {\n    flex-direction: column;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Inner = _styledComponents.default.div(_templateObject(), function (_ref) {
+var Inner = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-direction: ", ";\n  max-width: 1100px;\n  margin: auto;\n  width: 100%;\n\n  @media (max-width: 1000px) {\n    flex-direction: column;\n  }\n"])), function (_ref) {
   var direction = _ref.direction;
   return direction;
 });
 
 exports.Inner = Inner;
 
-var Item = _styledComponents.default.div(_templateObject2());
+var Item = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  border-bottom: 8px solid #222;\n  padding: 50px 5%;\n  color: white;\n  overflow: hidden;\n"])));
 
 exports.Item = Item;
 
-var Container = _styledComponents.default.section(_templateObject3(), Item); // Title
+var Container = _styledComponents.default.section(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  background: black;\n\n  @media (max-width: 1000px) {\n    ", ":last-of-type h2 {\n      margin-bottom: 50px;\n    }\n  }\n"])), Item); // Title
 
 
 exports.Container = Container;
 
-var Title = _styledComponents.default.h1(_templateObject4());
+var Title = _styledComponents.default.h1(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-size: 50px;\n  line-height: 1.1;\n  margin-bottom: 8px;\n\n  @media (max-width: 600px) {\n    font-size: 35px;\n  }\n"])));
 
 exports.Title = Title;
 
-var Pane = _styledComponents.default.div(_templateObject5()); // Subtitle
+var Pane = _styledComponents.default.div(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 50%;\n\n  @media (max-width: 1000px) {\n    width: 1000px;\n    padding: 0 45px;\n    text-align: center;\n  }\n"]))); // Subtitle
 
 
 exports.Pane = Pane;
 
-var SubTitle = _styledComponents.default.h2(_templateObject6()); // Image
+var SubTitle = _styledComponents.default.h2(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  font-size: 26px;\n  font-weight: normal;\n  line-height: normal;\n\n  @media (max-width: 600px) {\n    font-size: 18px;\n  }\n"]))); // Image
 
 
 exports.SubTitle = SubTitle;
 
-var Image = _styledComponents.default.img(_templateObject7());
+var Image = _styledComponents.default.img(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  max-width: 100%;\n  height: auto;\n"])));
 
 exports.Image = Image;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/jumbotron/index.js":[function(require,module,exports) {
@@ -36644,7 +36600,7 @@ function Jumbotron(_ref) {
       direction = _ref$direction === void 0 ? "row" : _ref$direction,
       restProps = _objectWithoutProperties(_ref, ["children", "direction"]);
 
-  return /*#__PURE__*/_react.default.createElement(_jumbotron.Item, restProps, /*#__PURE__*/_react.default.createElement(_jumbotron.Inner, {
+  return _react.default.createElement(_jumbotron.Item, restProps, _react.default.createElement(_jumbotron.Inner, {
     direction: direction
   }, children));
 }
@@ -36653,33 +36609,33 @@ Jumbotron.Container = function JumbontronContainer(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_jumbotron.Container, restProps, children);
+  return _react.default.createElement(_jumbotron.Container, restProps, children);
 };
 
 Jumbotron.Title = function JumbontronTitle(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_jumbotron.Title, restProps, children);
+  return _react.default.createElement(_jumbotron.Title, restProps, children);
 };
 
 Jumbotron.SubTitle = function JumbontronSubTitle(_ref4) {
   var children = _ref4.children,
       restProps = _objectWithoutProperties(_ref4, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_jumbotron.SubTitle, restProps, children);
+  return _react.default.createElement(_jumbotron.SubTitle, restProps, children);
 };
 
 Jumbotron.Image = function JumbontronImage(_ref5) {
   var restProps = Object.assign({}, _ref5);
-  return /*#__PURE__*/_react.default.createElement(_jumbotron.Image, restProps);
+  return _react.default.createElement(_jumbotron.Image, restProps);
 };
 
 Jumbotron.Pane = function JumbontronPane(_ref6) {
   var children = _ref6.children,
       restProps = _objectWithoutProperties(_ref6, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_jumbotron.Pane, restProps, " ", children);
+  return _react.default.createElement(_jumbotron.Pane, restProps, " ", children);
 };
 },{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","./styles/jumbotron":"src/components/jumbotron/styles/jumbotron.js"}],"src/components/footer/styles/footer.js":[function(require,module,exports) {
 "use strict";
@@ -36693,105 +36649,37 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  flex-basis: 100%;\n  height: 0;\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 13px;\n  color: #757575;\n  margin-bottom: 40px;\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 16px;\n  color: #757575;\n  margin-bottom: 40px;\n\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  color: #757575;\n  margin-bottom: 20px;\n  font-size: 13px;\n  text-decoration: none\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));\n  grid-gap: 15px;\n  \n   @media (max-width: 1000px) {\n    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));\n  }\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  text-align: left\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  max-width: 1000px;\n  flex-direction: column;\n  padding: 70px 56px;\n  margin: auto;\n\n  @media (max-width: 1000px) {\n      padding: 70px 30px\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Container = _styledComponents.default.div(_templateObject());
+var Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  max-width: 1000px;\n  flex-direction: column;\n  padding: 70px 56px;\n  margin: auto;\n\n  @media (max-width: 1000px) {\n      padding: 70px 30px\n  }\n"])));
 
 exports.Container = Container;
 
-var Column = _styledComponents.default.div(_templateObject2());
+var Column = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  text-align: left\n"])));
 
 exports.Column = Column;
 
-var Row = _styledComponents.default.div(_templateObject3());
+var Row = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));\n  grid-gap: 15px;\n  \n   @media (max-width: 1000px) {\n    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));\n  }\n"])));
 
 exports.Row = Row;
 
-var Link = _styledComponents.default.a(_templateObject4());
+var Link = _styledComponents.default.a(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  color: #757575;\n  margin-bottom: 20px;\n  font-size: 13px;\n  text-decoration: none\n"])));
 
 exports.Link = Link;
 
-var Title = _styledComponents.default.p(_templateObject5());
+var Title = _styledComponents.default.p(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  font-size: 16px;\n  color: #757575;\n  margin-bottom: 40px;\n\n"])));
 
 exports.Title = Title;
 
-var Text = _styledComponents.default.p(_templateObject6());
+var Text = _styledComponents.default.p(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  font-size: 13px;\n  color: #757575;\n  margin-bottom: 40px;\n"])));
 
 exports.Text = Text;
 
-var Break = _styledComponents.default.div(_templateObject7());
+var Break = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  flex-basis: 100%;\n  height: 0;\n"])));
 
 exports.Break = Break;
 },{"react":"node_modules/react/index.js","styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/footer/index.js":[function(require,module,exports) {
@@ -36816,49 +36704,49 @@ function Footer(_ref) {
   var children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_footer.Container, restProps, children);
+  return _react.default.createElement(_footer.Container, restProps, children);
 }
 
 Footer.Row = function FooterRow(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_footer.Row, restProps, children);
+  return _react.default.createElement(_footer.Row, restProps, children);
 };
 
 Footer.Column = function FooterColumn(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_footer.Column, restProps, children);
+  return _react.default.createElement(_footer.Column, restProps, children);
 };
 
 Footer.Link = function FooterLink(_ref4) {
   var children = _ref4.children,
       restProps = _objectWithoutProperties(_ref4, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_footer.Link, restProps, children);
+  return _react.default.createElement(_footer.Link, restProps, children);
 };
 
 Footer.Title = function FooterTitle(_ref5) {
   var children = _ref5.children,
       restProps = _objectWithoutProperties(_ref5, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_footer.Title, restProps, children);
+  return _react.default.createElement(_footer.Title, restProps, children);
 };
 
 Footer.Break = function FooterBreak(_ref6) {
   var children = _ref6.children,
       restProps = _objectWithoutProperties(_ref6, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_footer.Break, restProps, children);
+  return _react.default.createElement(_footer.Break, restProps, children);
 };
 
 Footer.Text = function FooterText(_ref7) {
   var children = _ref7.children,
       restProps = _objectWithoutProperties(_ref7, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_footer.Text, restProps, children);
+  return _react.default.createElement(_footer.Text, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/footer":"src/components/footer/styles/footer.js"}],"src/components/accordion/styles/accordion.js":[function(require,module,exports) {
 "use strict";
@@ -36870,105 +36758,37 @@ exports.Body = exports.Header = exports.Title = exports.Item = exports.Inner = e
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 26px;\n  line-height: normal;\n  transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);\n  padding: 0.8em 1.2em 0.8em 1.2em;\n  user-select: none;\n  align-items: center;\n  box-sizing: border-box;\n  background: #303030;\n  font-weight: normal;\n  width: 100%;\n\n  @media (max-width: 600px) {\n    font-size: 16px;\n    line-height: 22px;\n  }\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n  cursor: pointer;\n  margin-bottom: 1px;\n  font-size: 26px;\n  font-weight: normal;\n  background: #303030;\n  padding: 0.8em 1.2em 0.8em 1.2em;\n  user-select: none;\n  /* width: 100%; */\n\n  img {\n    filter: brightness(0) invert(1);\n    width: 24px;\n    align-items: center;\n\n    @media (max-width: 600px) {\n      width: 16px;\n    }\n  }\n\n  @media (max-width: 600px) {\n    font-size: 16px;\n  }\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 50px;\n  line-height: 1.1;\n  margin-top: 0;\n  margin-bottom: 8px;\n  color: white;\n  text-align: center;\n\n  @media (max-width: 600px) {\n    font-size: 35px;\n  }\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  color: white;\n  margin-bottom: 10px;\n\n  &:first-of-type {\n    margin-top: 3em;\n  }\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  padding: 70px 45px;\n  flex-direction: column;\n  max-width: 815px;\n  margin: auto;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  margin-bottom: 10px;\n  max-width: 1200px;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  border-bottom: 8px solid #222;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Container = _styledComponents.default.section(_templateObject());
+var Container = _styledComponents.default.section(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  border-bottom: 8px solid #222;\n"])));
 
 exports.Container = Container;
 
-var Frame = _styledComponents.default.div(_templateObject2());
+var Frame = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  margin-bottom: 10px;\n  max-width: 1200px;\n"])));
 
 exports.Frame = Frame;
 
-var Inner = _styledComponents.default.section(_templateObject3());
+var Inner = _styledComponents.default.section(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  display: flex;\n  padding: 70px 45px;\n  flex-direction: column;\n  max-width: 815px;\n  margin: auto;\n"])));
 
 exports.Inner = Inner;
 
-var Item = _styledComponents.default.div(_templateObject4());
+var Item = _styledComponents.default.div(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  color: white;\n  margin-bottom: 10px;\n\n  &:first-of-type {\n    margin-top: 3em;\n  }\n"])));
 
 exports.Item = Item;
 
-var Title = _styledComponents.default.h1(_templateObject5());
+var Title = _styledComponents.default.h1(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  font-size: 50px;\n  line-height: 1.1;\n  margin-top: 0;\n  margin-bottom: 8px;\n  color: white;\n  text-align: center;\n\n  @media (max-width: 600px) {\n    font-size: 35px;\n  }\n"])));
 
 exports.Title = Title;
 
-var Header = _styledComponents.default.div(_templateObject6());
+var Header = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n  cursor: pointer;\n  margin-bottom: 1px;\n  font-size: 26px;\n  font-weight: normal;\n  background: #303030;\n  padding: 0.8em 1.2em 0.8em 1.2em;\n  user-select: none;\n  /* width: 100%; */\n\n  img {\n    filter: brightness(0) invert(1);\n    width: 24px;\n    align-items: center;\n\n    @media (max-width: 600px) {\n      width: 16px;\n    }\n  }\n\n  @media (max-width: 600px) {\n    font-size: 16px;\n  }\n"])));
 
 exports.Header = Header;
 
-var Body = _styledComponents.default.div(_templateObject7());
+var Body = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  font-size: 26px;\n  line-height: normal;\n  transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);\n  padding: 0.8em 1.2em 0.8em 1.2em;\n  user-select: none;\n  align-items: center;\n  box-sizing: border-box;\n  background: #303030;\n  font-weight: normal;\n  width: 100%;\n\n  @media (max-width: 600px) {\n    font-size: 16px;\n    line-height: 22px;\n  }\n"])));
 
 exports.Body = Body;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/accordion/index.js":[function(require,module,exports) {
@@ -37011,7 +36831,7 @@ function Accordion(_ref) {
   var children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_accordion.Container, restProps, /*#__PURE__*/_react.default.createElement(_accordion.Inner, null, children));
+  return _react.default.createElement(_accordion.Container, restProps, _react.default.createElement(_accordion.Inner, null, children));
 } // Accordion.Fram = function AccordionFram({ children, ...restProps }) {
 //   return <Fram {...restProps}>{children}</Fram>;
 // };
@@ -37026,26 +36846,26 @@ Accordion.Item = function AccordionItem(_ref2) {
       toggleShow = _useState2[0],
       setToggleShow = _useState2[1];
 
-  return /*#__PURE__*/_react.default.createElement(ToggleContext.Provider, {
+  return _react.default.createElement(ToggleContext.Provider, {
     value: {
       toggleShow: toggleShow,
       setToggleShow: setToggleShow
     }
-  }, /*#__PURE__*/_react.default.createElement(_accordion.Item, restProps, children));
+  }, _react.default.createElement(_accordion.Item, restProps, children));
 };
 
 Accordion.Title = function AccordionTitle(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_accordion.Title, restProps, children);
+  return _react.default.createElement(_accordion.Title, restProps, children);
 };
 
 Accordion.Frame = function AccordionFrame(_ref4) {
   var children = _ref4.children,
       restProps = _objectWithoutProperties(_ref4, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_accordion.Frame, restProps, children);
+  return _react.default.createElement(_accordion.Frame, restProps, children);
 };
 
 Accordion.Header = function AccordionHeader(_ref5) {
@@ -37056,14 +36876,14 @@ Accordion.Header = function AccordionHeader(_ref5) {
       toggleShow = _useContext.toggleShow,
       setToggleShow = _useContext.setToggleShow;
 
-  return /*#__PURE__*/_react.default.createElement(_accordion.Header, _extends({
+  return _react.default.createElement(_accordion.Header, _extends({
     onClick: function onClick() {
       return setToggleShow(!toggleShow);
     }
-  }, restProps), children, toggleShow ? /*#__PURE__*/_react.default.createElement("img", {
+  }, restProps), children, toggleShow ? _react.default.createElement("img", {
     src: "/images/icons/close-slim.png",
     alt: "close"
-  }) : /*#__PURE__*/_react.default.createElement("img", {
+  }) : _react.default.createElement("img", {
     src: "/images/icons/add.png",
     alt: "open"
   }));
@@ -37076,7 +36896,7 @@ Accordion.Body = function AccordionBody(_ref6) {
   var _useContext2 = (0, _react.useContext)(ToggleContext),
       toggleShow = _useContext2.toggleShow;
 
-  return toggleShow ? /*#__PURE__*/_react.default.createElement(_accordion.Body, restProps, children) : null;
+  return toggleShow ? _react.default.createElement(_accordion.Body, restProps, children) : null;
 };
 },{"react":"node_modules/react/index.js","./styles/accordion":"src/components/accordion/styles/accordion.js"}],"src/components/opt-form/styles/opt-form.js":[function(require,module,exports) {
 "use strict";
@@ -37088,63 +36908,25 @@ exports.Text = exports.Button = exports.Input = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 19px;\n  color: white;\n  text-align: center;\n\n  @media (max-width: 600px) {\n    font-size: 16px;\n    line-height: 22px;\n  }\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  height: 70px;\n  background: #e50914;\n  color: white;\n  padding: 0 32px;\n  text-transform: uppercase;\n  font-size: 26px;\n  border: 0;\n  cursor: pointer;\n\n  img {\n    margin-left: 10px;\n    filter: brightness(0) invert(1);\n    width: 24px;\n\n    @media (max-width: 1000px) {\n      width: 16px;\n    }\n  }\n\n  &:hover {\n    background: #f40612;\n  }\n\n  @media (max-width: 1000px) {\n    height: 50px;\n    font-size: 16px;\n    margin-top: 20px;\n    font-weight: bold;\n  }\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  max-width: 450px;\n  width: 100%;\n  border: 0;\n  padding: 10px;\n  height: 70px;\n  box-sizing: border-box;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  height: 100%;\n  margin-top: 20px;\n  flex-wrap: wrap;\n\n  @media (max-width: 1000px) {\n    flex-direction: column;\n    align-items: center;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Container = _styledComponents.default.div(_templateObject());
+var Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: center;\n  height: 100%;\n  margin-top: 20px;\n  flex-wrap: wrap;\n\n  @media (max-width: 1000px) {\n    flex-direction: column;\n    align-items: center;\n  }\n"])));
 
 exports.Container = Container;
 
-var Input = _styledComponents.default.input(_templateObject2());
+var Input = _styledComponents.default.input(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  max-width: 450px;\n  width: 100%;\n  border: 0;\n  padding: 10px;\n  height: 70px;\n  box-sizing: border-box;\n"])));
 
 exports.Input = Input;
 
-var Button = _styledComponents.default.button(_templateObject3());
+var Button = _styledComponents.default.button(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  height: 70px;\n  background: #e50914;\n  color: white;\n  padding: 0 32px;\n  text-transform: uppercase;\n  font-size: 26px;\n  border: 0;\n  cursor: pointer;\n\n  img {\n    margin-left: 10px;\n    filter: brightness(0) invert(1);\n    width: 24px;\n\n    @media (max-width: 1000px) {\n      width: 16px;\n    }\n  }\n\n  &:hover {\n    background: #f40612;\n  }\n\n  @media (max-width: 1000px) {\n    height: 50px;\n    font-size: 16px;\n    margin-top: 20px;\n    font-weight: bold;\n  }\n"])));
 
 exports.Button = Button;
 
-var Text = _styledComponents.default.p(_templateObject4());
+var Text = _styledComponents.default.p(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  font-size: 19px;\n  color: white;\n  text-align: center;\n\n  @media (max-width: 600px) {\n    font-size: 16px;\n    line-height: 22px;\n  }\n"])));
 
 exports.Text = Text;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/opt-form/index.js":[function(require,module,exports) {
@@ -37169,21 +36951,21 @@ function OptForm(_ref) {
   var children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_optForm.Container, restProps, children);
+  return _react.default.createElement(_optForm.Container, restProps, children);
 }
 
 OptForm.Input = function OptFormInput(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_optForm.Input, restProps, children);
+  return _react.default.createElement(_optForm.Input, restProps, children);
 };
 
 OptForm.Button = function OptFormButton(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_optForm.Button, restProps, children, /*#__PURE__*/_react.default.createElement("img", {
+  return _react.default.createElement(_optForm.Button, restProps, children, _react.default.createElement("img", {
     src: "/images/icons/chevron-right.png",
     alt: "Try now"
   }));
@@ -37193,7 +36975,7 @@ OptForm.Text = function OptFormText(_ref4) {
   var children = _ref4.children,
       restProps = _objectWithoutProperties(_ref4, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_optForm.Text, restProps, children);
+  return _react.default.createElement(_optForm.Text, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/opt-form":"src/components/opt-form/styles/opt-form.js"}],"src/components/header/styles/header.js":[function(require,module,exports) {
 "use strict";
@@ -37207,171 +36989,13 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15, _templateObject16;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject16() {
-  var data = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\tmargin-left: 20px;\n\tposition: relative;\n\tbutton {\n\t\tcursor: pointer;\n\t}\n\t&:hover > ", " {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t}\n"]);
-
-  _templateObject16 = function _templateObject16() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject15() {
-  var data = _taggedTemplateLiteral(["\n\tdisplay: none;\n\tposition: absolute;\n\tbackground-color: black;\n\tpadding: 10px;\n\twidth: 100px;\n\ttop: 32px;\n\tright: 10px;\n\t", ":last-of-type ", " {\n\t\tcursor: pointer;\n\t}\n\t", " {\n\t\tmargin-bottom: 10px;\n\t\t&:last-of-type {\n\t\t\tmargin-bottom: 0;\n\t\t}\n\t\t", ", ", " {\n\t\t\tcursor: default;\n\t\t}\n\t}\n\tbutton {\n\t\tmargin-right: 10px;\n\t}\n\tp {\n\t\tfont-size: 12px;\n\t\tmargin-bottom: 0;\n\t\tmargin-top: 0;\n\t}\n"]);
-
-  _templateObject15 = function _templateObject15() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject14() {
-  var data = _taggedTemplateLiteral(["\n\tbackground: url(", ");\n\tbackground-size: contain;\n\tborder: 0;\n\twidth: 32px;\n\theight: 32px;\n\tcursor: pointer;\n"]);
-
-  _templateObject14 = function _templateObject14() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject13() {
-  var data = _taggedTemplateLiteral(["\n\tbackground-color: #44444459;\n\tcolor: white;\n\tborder: 1px solid white;\n\ttransition: width 0.5s;\n\theight: 30px;\n\tfont-size: 14px;\n\tmargin-left: ", ";\n\tpadding: ", ";\n\topacity: ", ";\n\twidth: ", ";\n"]);
-
-  _templateObject13 = function _templateObject13() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n\tcursor: pointer;\n\tbackground-color: transparent;\n\tborder: 0;\n\timg {\n\t\tfilter: brightness(0) invert(1);\n\t\twidth: 16px;\n\t}\n"]);
-
-  _templateObject12 = function _templateObject12() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\t@media (max-width: 700px) {\n\t\tdisplay: none;\n\t}\n"]);
-
-  _templateObject11 = function _templateObject11() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n    box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);\n    background-color: #e6e6e6;\n    color: #000;\n    border-width: 0;\n    padding: 10px 20px;\n    border-radius: 5px;\n    max-width: 130px;\n    font-weight: bold;\n    font-size: 20px;\n    margin-top: 10px;\n    cursor: pointer;\n    transition: background-color 0.5s ease;\n    \n    &:hover {\n        background: #ff1e1e;\n        color: white;\n    }\n"]);
-
-  _templateObject10 = function _templateObject10() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n\tcolor: white;\n\tfont-size: 50px;\n\tline-height: normal;\n\tfont-weight: bold;\n\ttext-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);\n\tmargin: 0;\n"]);
-
-  _templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n\tpadding: 150px 0 500px 0;\n\tflex-direction: column;\n\talign-items: normal;\n\twidth: 50%;\n\t@media (max-width: 1100px) {\n\t\tdisplay: none;\n\t}\n"]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n\tcolor: white;\n\tfont-size: 22px;\n\tline-height: normal;\n\ttext-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n\theight: 32px;\n\twidth: 108px;\n\tmargin-right: 40px;\n\t@media (min-width: 1449px) {\n\t\theight: 45px;\n\t\twidth: 167px;\n\t}\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n\tdisplay: block;\n\tbackground-color: #e50914;\n\twidth: 84px;\n\theight: fit-content;\n\tcolor: white;\n\tborder: 0;\n\tfont-size: 15px;\n\tborder-radius: 3px;\n\tpadding: 8px 17px;\n\tcursor: pointer;\n\ttext-decoration: none;\n\tbox-sizing: border-box;\n\t&:hover {\n\t\tbackground: #f40612;\n\t}\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n\tcolor: #fff;\n\ttext-decoration: none;\n\tmargin-right: 30px;\n\tfont-weight: ", ";\n\tcursor: pointer;\n\t&:hover {\n\t\tfont-weight: bold;\n\t}\n\t&:last-of-type {\n\t\tmargin-right: 0;\n\t}\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tmargin: 0 56px;\n\theight: 64px;\n\tpadding: 18px 0;\n\tjustify-content: space-between;\n\talign-items: center;\n\ta {\n\t\tdisplay: flex;\n\t}\n\t@media (max-width: 1000px) {\n\t\tmargin: 0 30px;\n\t}\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tflex-direction: column;\n\tbackground: url(", ") top left / cover no-repeat;\n\t@media (max-width: 1100px) {\n\t\t", "\n\t}\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Background = _styledComponents.default.section(_templateObject(), function (_ref) {
+var Background = _styledComponents.default.section(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tflex-direction: column;\n\tbackground: url(", ") top left / cover no-repeat;\n\t@media (max-width: 1100px) {\n\t\t", "\n\t}\n"])), function (_ref) {
   var src = _ref.src;
   return src ? "../images/misc/".concat(src, ".jpg") : '../images/misc/home-bg.jpg';
 }, function (_ref2) {
@@ -37381,50 +37005,50 @@ var Background = _styledComponents.default.section(_templateObject(), function (
 
 exports.Background = Background;
 
-var Container = _styledComponents.default.div(_templateObject2());
+var Container = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\tmargin: 0 56px;\n\theight: 64px;\n\tpadding: 18px 0;\n\tjustify-content: space-between;\n\talign-items: center;\n\ta {\n\t\tdisplay: flex;\n\t}\n\t@media (max-width: 1000px) {\n\t\tmargin: 0 30px;\n\t}\n"])));
 
 exports.Container = Container;
 
-var Link = _styledComponents.default.p(_templateObject3(), function (_ref3) {
+var Link = _styledComponents.default.p(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n\tcolor: #fff;\n\ttext-decoration: none;\n\tmargin-right: 30px;\n\tfont-weight: ", ";\n\tcursor: pointer;\n\t&:hover {\n\t\tfont-weight: bold;\n\t}\n\t&:last-of-type {\n\t\tmargin-right: 0;\n\t}\n"])), function (_ref3) {
   var active = _ref3.active;
   return active === 'true' ? '700' : 'normal';
 });
 
 exports.Link = Link;
-var ButtonLink = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject4());
+var ButtonLink = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n\tdisplay: block;\n\tbackground-color: #e50914;\n\twidth: 84px;\n\theight: fit-content;\n\tcolor: white;\n\tborder: 0;\n\tfont-size: 15px;\n\tborder-radius: 3px;\n\tpadding: 8px 17px;\n\tcursor: pointer;\n\ttext-decoration: none;\n\tbox-sizing: border-box;\n\t&:hover {\n\t\tbackground: #f40612;\n\t}\n"])));
 exports.ButtonLink = ButtonLink;
 
-var Logo = _styledComponents.default.img(_templateObject5());
+var Logo = _styledComponents.default.img(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n\theight: 32px;\n\twidth: 108px;\n\tmargin-right: 40px;\n\t@media (min-width: 1449px) {\n\t\theight: 45px;\n\t\twidth: 167px;\n\t}\n"])));
 
 exports.Logo = Logo;
 
-var Group = _styledComponents.default.div(_templateObject6());
+var Group = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n"])));
 
 exports.Group = Group;
 
-var Text = _styledComponents.default.p(_templateObject7());
+var Text = _styledComponents.default.p(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n\tcolor: white;\n\tfont-size: 22px;\n\tline-height: normal;\n\ttext-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);\n"])));
 
 exports.Text = Text;
-var Feature = (0, _styledComponents.default)(Container)(_templateObject8());
+var Feature = (0, _styledComponents.default)(Container)(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n\tpadding: 150px 0 500px 0;\n\tflex-direction: column;\n\talign-items: normal;\n\twidth: 50%;\n\t@media (max-width: 1100px) {\n\t\tdisplay: none;\n\t}\n"])));
 exports.Feature = Feature;
 
-var FeatureCallOut = _styledComponents.default.h2(_templateObject9());
+var FeatureCallOut = _styledComponents.default.h2(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n\tcolor: white;\n\tfont-size: 50px;\n\tline-height: normal;\n\tfont-weight: bold;\n\ttext-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);\n\tmargin: 0;\n"])));
 
 exports.FeatureCallOut = FeatureCallOut;
 
-var PlayButton = _styledComponents.default.button(_templateObject10());
+var PlayButton = _styledComponents.default.button(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);\n    background-color: #e6e6e6;\n    color: #000;\n    border-width: 0;\n    padding: 10px 20px;\n    border-radius: 5px;\n    max-width: 130px;\n    font-weight: bold;\n    font-size: 20px;\n    margin-top: 10px;\n    cursor: pointer;\n    transition: background-color 0.5s ease;\n    \n    &:hover {\n        background: #ff1e1e;\n        color: white;\n    }\n"])));
 
 exports.PlayButton = PlayButton;
 
-var Search = _styledComponents.default.div(_templateObject11());
+var Search = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\t@media (max-width: 700px) {\n\t\tdisplay: none;\n\t}\n"])));
 
 exports.Search = Search;
 
-var SearchIcon = _styledComponents.default.button(_templateObject12());
+var SearchIcon = _styledComponents.default.button(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n\tcursor: pointer;\n\tbackground-color: transparent;\n\tborder: 0;\n\timg {\n\t\tfilter: brightness(0) invert(1);\n\t\twidth: 16px;\n\t}\n"])));
 
 exports.SearchIcon = SearchIcon;
 
-var SearchInput = _styledComponents.default.input(_templateObject13(), function (_ref4) {
+var SearchInput = _styledComponents.default.input(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n\tbackground-color: #44444459;\n\tcolor: white;\n\tborder: 1px solid white;\n\ttransition: width 0.5s;\n\theight: 30px;\n\tfont-size: 14px;\n\tmargin-left: ", ";\n\tpadding: ", ";\n\topacity: ", ";\n\twidth: ", ";\n"])), function (_ref4) {
   var active = _ref4.active;
   return active === true ? '10px' : '0';
 }, function (_ref5) {
@@ -37440,18 +37064,18 @@ var SearchInput = _styledComponents.default.input(_templateObject13(), function 
 
 exports.SearchInput = SearchInput;
 
-var Picture = _styledComponents.default.button(_templateObject14(), function (_ref8) {
+var Picture = _styledComponents.default.button(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n\tbackground: url(", ");\n\tbackground-size: contain;\n\tborder: 0;\n\twidth: 32px;\n\theight: 32px;\n\tcursor: pointer;\n"])), function (_ref8) {
   var src = _ref8.src;
   return src;
 });
 
 exports.Picture = Picture;
 
-var Dropdown = _styledComponents.default.div(_templateObject15(), Group, Link, Group, Link, Picture);
+var Dropdown = _styledComponents.default.div(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n\tdisplay: none;\n\tposition: absolute;\n\tbackground-color: black;\n\tpadding: 10px;\n\twidth: 100px;\n\ttop: 32px;\n\tright: 10px;\n\t", ":last-of-type ", " {\n\t\tcursor: pointer;\n\t}\n\t", " {\n\t\tmargin-bottom: 10px;\n\t\t&:last-of-type {\n\t\t\tmargin-bottom: 0;\n\t\t}\n\t\t", ", ", " {\n\t\t\tcursor: default;\n\t\t}\n\t}\n\tbutton {\n\t\tmargin-right: 10px;\n\t}\n\tp {\n\t\tfont-size: 12px;\n\t\tmargin-bottom: 0;\n\t\tmargin-top: 0;\n\t}\n"])), Group, Link, Group, Link, Picture);
 
 exports.Dropdown = Dropdown;
 
-var Profile = _styledComponents.default.div(_templateObject16(), Dropdown);
+var Profile = _styledComponents.default.div(_templateObject16 || (_templateObject16 = _taggedTemplateLiteral(["\n\tdisplay: flex;\n\talign-items: center;\n\tmargin-left: 20px;\n\tposition: relative;\n\tbutton {\n\t\tcursor: pointer;\n\t}\n\t&:hover > ", " {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t}\n"])), Dropdown);
 
 exports.Profile = Profile;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/components/header/index.js":[function(require,module,exports) {
@@ -37496,21 +37120,21 @@ function Header(_ref) {
       children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["bg", "children"]);
 
-  return bg ? /*#__PURE__*/_react.default.createElement(_header.Background, restProps, children) : children;
+  return bg ? _react.default.createElement(_header.Background, restProps, children) : children;
 }
 
 Header.Frame = function HeaderFrame(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_header.Container, restProps, children);
+  return _react.default.createElement(_header.Container, restProps, children);
 };
 
 Header.Group = function HeaderGroup(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_header.Group, restProps, children);
+  return _react.default.createElement(_header.Group, restProps, children);
 }; // create a new element called logo
 // use ReachRouterLink
 // pass the children to ReachRouterLink
@@ -37520,72 +37144,72 @@ Header.Logo = function HeaderLogo(_ref4) {
   var to = _ref4.to,
       restProps = _objectWithoutProperties(_ref4, ["to"]);
 
-  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  return _react.default.createElement(_reactRouterDom.Link, {
     to: to
-  }, /*#__PURE__*/_react.default.createElement(_header.Logo, restProps));
+  }, _react.default.createElement(_header.Logo, restProps));
 };
 
 Header.ButtonLink = function HeaderButtonLink(_ref5) {
   var children = _ref5.children,
       restProps = _objectWithoutProperties(_ref5, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_header.ButtonLink, restProps, children);
+  return _react.default.createElement(_header.ButtonLink, restProps, children);
 };
 
 Header.Link = function HeaderLink(_ref6) {
   var children = _ref6.children,
       restProps = _objectWithoutProperties(_ref6, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_header.Link, restProps, children);
+  return _react.default.createElement(_header.Link, restProps, children);
 };
 
 Header.Text = function HeaderText(_ref7) {
   var children = _ref7.children,
       restProps = _objectWithoutProperties(_ref7, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_header.Text, restProps, children);
+  return _react.default.createElement(_header.Text, restProps, children);
 };
 
 Header.Feature = function HeaderFeature(_ref8) {
   var children = _ref8.children,
       restProps = _objectWithoutProperties(_ref8, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_header.Feature, restProps, children);
+  return _react.default.createElement(_header.Feature, restProps, children);
 };
 
 Header.FeatureCallOut = function HeaderFeatureCallOut(_ref9) {
   var children = _ref9.children,
       restProps = _objectWithoutProperties(_ref9, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_header.FeatureCallOut, restProps, children);
+  return _react.default.createElement(_header.FeatureCallOut, restProps, children);
 };
 
 Header.PlayButton = function HeaderPlayButton(_ref10) {
   var children = _ref10.children,
       restProps = _objectWithoutProperties(_ref10, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_header.PlayButton, restProps, children);
+  return _react.default.createElement(_header.PlayButton, restProps, children);
 };
 
 Header.Profile = function HeaderProfile(_ref11) {
   var children = _ref11.children,
       restProps = _objectWithoutProperties(_ref11, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_header.Profile, restProps, children);
+  return _react.default.createElement(_header.Profile, restProps, children);
 };
 
 Header.Dropdown = function HeaderDropdown(_ref12) {
   var children = _ref12.children,
       restProps = _objectWithoutProperties(_ref12, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_header.Dropdown, restProps, children);
+  return _react.default.createElement(_header.Dropdown, restProps, children);
 };
 
 Header.Picture = function HeaderPicture(_ref13) {
   var src = _ref13.src,
       restProps = _objectWithoutProperties(_ref13, ["src"]);
 
-  return /*#__PURE__*/_react.default.createElement(_header.Picture, _extends({}, restProps, {
+  return _react.default.createElement(_header.Picture, _extends({}, restProps, {
     src: "images/users/".concat(src, ".png")
   }));
 };
@@ -37600,14 +37224,14 @@ Header.Search = function HeaderSearch(_ref14) {
       searchActive = _useState2[0],
       setSearchActive = _useState2[1];
 
-  return /*#__PURE__*/_react.default.createElement(_header.Search, restProps, /*#__PURE__*/_react.default.createElement(_header.SearchIcon, {
+  return _react.default.createElement(_header.Search, restProps, _react.default.createElement(_header.SearchIcon, {
     onClick: function onClick() {
       return setSearchActive(!searchActive);
     }
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     src: "/images/icons/search.png",
     alt: "Search"
-  })), /*#__PURE__*/_react.default.createElement(_header.SearchInput, {
+  })), _react.default.createElement(_header.SearchInput, {
     value: searchTerm,
     onChange: function onChange(_ref15) {
       var target = _ref15.target;
@@ -37627,49 +37251,21 @@ exports.SubTitle = exports.Title = exports.Container = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _templateObject, _templateObject2, _templateObject3;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    color: white;\n    font-size: 26px;\n    font-weight: normal;\n    margin: 16px auto;\n    @media (max-width: 600px) {\n        font-size: 18px;\n    }\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    color: white;\n    max-width: 640px;\n    font-size: 50px;\n    font-weight: 500;\n    margin: auto;\n    @media (max-width: 600px) {\n        font-size: 35px;\n    }\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    border-bottom: 8px solid #222;\n    text-align: center;\n    padding: 165px 45px;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Container = _styledComponents.default.div(_templateObject());
+var Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    border-bottom: 8px solid #222;\n    text-align: center;\n    padding: 165px 45px;\n"])));
 
 exports.Container = Container;
 
-var Title = _styledComponents.default.h1(_templateObject2());
+var Title = _styledComponents.default.h1(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    color: white;\n    max-width: 640px;\n    font-size: 50px;\n    font-weight: 500;\n    margin: auto;\n    @media (max-width: 600px) {\n        font-size: 35px;\n    }\n"])));
 
 exports.Title = Title;
 
-var SubTitle = _styledComponents.default.h2(_templateObject3());
+var SubTitle = _styledComponents.default.h2(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    color: white;\n    font-size: 26px;\n    font-weight: normal;\n    margin: 16px auto;\n    @media (max-width: 600px) {\n        font-size: 18px;\n    }\n"])));
 
 exports.SubTitle = SubTitle;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/feature/index.js":[function(require,module,exports) {
@@ -37694,21 +37290,21 @@ function Feature(_ref) {
   var children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_feature.Container, restProps, children);
+  return _react.default.createElement(_feature.Container, restProps, children);
 }
 
 Feature.Title = function FeatureTitle(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_feature.Title, restProps, children);
+  return _react.default.createElement(_feature.Title, restProps, children);
 };
 
 Feature.SubTitle = function FeatureSubTitle(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_feature.SubTitle, restProps, children);
+  return _react.default.createElement(_feature.SubTitle, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/feature":"src/components/feature/styles/feature.js"}],"src/components/form/styles/form.js":[function(require,module,exports) {
 "use strict";
@@ -37722,131 +37318,43 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    background: #e50914;\n    border-radius: 4px;\n    font-size: 16px;\n    font-weight: bold;\n    margin: 0 0 12px;\n    padding: 16px;\n    border: 0;\n    color: white;\n    cursor: pointer;\n    &:disabled {\n        opacity: 0.5;\n    }\n"]);
-
-  _templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    background: #333;\n    border-radius: 4px;\n    border: 0;\n    color: #fff;\n    height: 50px;\n    line-height: 50px;\n    padding: 5px 20px;\n    margin-bottom: 20px;\n    &:last-of-type {\n        margin-bottom: 30px;\n    }\n"]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    color: #fff;\n    text-decoration: none;\n    &:hover {\n        text-decoration: underline;\n    }\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n    margin-top: 10px;\n    font-size: 13px;\n    line-height: normal;\n    color: #8c8c8c;\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    color: #737373;\n    font-size: 16px;\n    font-weight: 500;\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    color: #fff;\n    font-size: 32px;\n    font-weight: bold;\n    margin-bottom: 28px;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    max-width: 450px;\n    width: 100%;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    background: #e87c03;\n    border-radius: 4px;\n    font-size: 14px;\n    margin: 0 0 16px;\n    color: white;\n    padding: 15px 20px;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    min-height: 660px;\n    background-color: rgba(0, 0, 0, 0.75);\n    border-radius: 5px;\n    box-sizing: border-box;\n    width: 100%;\n    margin: auto;\n    max-width: 450px;\n    padding: 60px 68px 40px;\n    margin-bottom: 100px;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Container = _styledComponents.default.section(_templateObject());
+var Container = _styledComponents.default.section(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    min-height: 660px;\n    background-color: rgba(0, 0, 0, 0.75);\n    border-radius: 5px;\n    box-sizing: border-box;\n    width: 100%;\n    margin: auto;\n    max-width: 450px;\n    padding: 60px 68px 40px;\n    margin-bottom: 100px;\n"])));
 
 exports.Container = Container;
 
-var Error = _styledComponents.default.div(_templateObject2());
+var Error = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    background: #e87c03;\n    border-radius: 4px;\n    font-size: 14px;\n    margin: 0 0 16px;\n    color: white;\n    padding: 15px 20px;\n"])));
 
 exports.Error = Error;
 
-var Base = _styledComponents.default.form(_templateObject3());
+var Base = _styledComponents.default.form(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    max-width: 450px;\n    width: 100%;\n"])));
 
 exports.Base = Base;
 
-var Title = _styledComponents.default.h1(_templateObject4());
+var Title = _styledComponents.default.h1(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    color: #fff;\n    font-size: 32px;\n    font-weight: bold;\n    margin-bottom: 28px;\n"])));
 
 exports.Title = Title;
 
-var Text = _styledComponents.default.h1(_templateObject5());
+var Text = _styledComponents.default.h1(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    color: #737373;\n    font-size: 16px;\n    font-weight: 500;\n"])));
 
 exports.Text = Text;
 
-var TextSmall = _styledComponents.default.h2(_templateObject6());
+var TextSmall = _styledComponents.default.h2(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    margin-top: 10px;\n    font-size: 13px;\n    line-height: normal;\n    color: #8c8c8c;\n"])));
 
 exports.TextSmall = TextSmall;
-var Link = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject7());
+var Link = (0, _styledComponents.default)(_reactRouterDom.Link)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    color: #fff;\n    text-decoration: none;\n    &:hover {\n        text-decoration: underline;\n    }\n"])));
 exports.Link = Link;
 
-var Input = _styledComponents.default.input(_templateObject8());
+var Input = _styledComponents.default.input(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    background: #333;\n    border-radius: 4px;\n    border: 0;\n    color: #fff;\n    height: 50px;\n    line-height: 50px;\n    padding: 5px 20px;\n    margin-bottom: 20px;\n    &:last-of-type {\n        margin-bottom: 30px;\n    }\n"])));
 
 exports.Input = Input;
 
-var Submit = _styledComponents.default.button(_templateObject9());
+var Submit = _styledComponents.default.button(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    background: #e50914;\n    border-radius: 4px;\n    font-size: 16px;\n    font-weight: bold;\n    margin: 0 0 12px;\n    padding: 16px;\n    border: 0;\n    color: white;\n    cursor: pointer;\n    &:disabled {\n        opacity: 0.5;\n    }\n"])));
 
 exports.Submit = Submit;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/components/form/index.js":[function(require,module,exports) {
@@ -37871,63 +37379,63 @@ function Form(_ref) {
   var children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_form.Container, restProps, children);
+  return _react.default.createElement(_form.Container, restProps, children);
 }
 
 Form.Input = function FormInput(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_form.Input, restProps, children);
+  return _react.default.createElement(_form.Input, restProps, children);
 };
 
 Form.Base = function FormBase(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_form.Base, restProps, children);
+  return _react.default.createElement(_form.Base, restProps, children);
 };
 
 Form.Link = function FormLink(_ref4) {
   var children = _ref4.children,
       restProps = _objectWithoutProperties(_ref4, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_form.Link, restProps, children);
+  return _react.default.createElement(_form.Link, restProps, children);
 };
 
 Form.TextSmall = function FormTextSmall(_ref5) {
   var children = _ref5.children,
       restProps = _objectWithoutProperties(_ref5, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_form.TextSmall, restProps, children);
+  return _react.default.createElement(_form.TextSmall, restProps, children);
 };
 
 Form.Text = function FormText(_ref6) {
   var children = _ref6.children,
       restProps = _objectWithoutProperties(_ref6, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_form.Text, restProps, children);
+  return _react.default.createElement(_form.Text, restProps, children);
 };
 
 Form.Title = function FormTitle(_ref7) {
   var children = _ref7.children,
       restProps = _objectWithoutProperties(_ref7, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_form.Title, restProps, children);
+  return _react.default.createElement(_form.Title, restProps, children);
 };
 
 Form.Submit = function FormSubmit(_ref8) {
   var children = _ref8.children,
       restProps = _objectWithoutProperties(_ref8, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_form.Submit, restProps, children);
+  return _react.default.createElement(_form.Submit, restProps, children);
 };
 
 Form.Error = function FormError(_ref9) {
   var children = _ref9.children,
       restProps = _objectWithoutProperties(_ref9, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_form.Error, restProps, children);
+  return _react.default.createElement(_form.Error, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/form":"src/components/form/styles/form.js"}],"src/components/profiles/styles/profiles.js":[function(require,module,exports) {
 "use strict";
@@ -37939,105 +37447,37 @@ exports.Item = exports.User = exports.Picture = exports.Name = exports.List = ex
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  max-height: 200px;\n  max-width: 200px;\n  list-style-type: none;\n  text-align: center;\n  margin-right: 30px;\n  &:hover > ", " {\n    border: 3px solid white;\n  }\n  &:hover ", " {\n    font-weight: bold;\n    color: white;\n  }\n  &:last-of-type {\n    margin-right: 0;\n  }\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  display: block;\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 150px;\n  height: auto;\n  border: 3px solid black;\n  cursor: pointer;\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  color: #808080;\n  text-overflow: ellipsis;\n  font-size: 16px;\n  &:hover {\n    font-weight: bold;\n    color: #e5e5e5;\n  }\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n  padding: 0;\n  margin: 0;\n  display: flex;\n  flex-direction: row;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  color: #fff;\n  font-size: 48px;\n  text-align: center;\n  font-weight: 500;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  margin: auto;\n  max-width: 80%;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Container = _styledComponents.default.div(_templateObject());
+var Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  margin: auto;\n  max-width: 80%;\n"])));
 
 exports.Container = Container;
 
-var Title = _styledComponents.default.h1(_templateObject2());
+var Title = _styledComponents.default.h1(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n  width: 100%;\n  color: #fff;\n  font-size: 48px;\n  text-align: center;\n  font-weight: 500;\n"])));
 
 exports.Title = Title;
 
-var List = _styledComponents.default.ul(_templateObject3());
+var List = _styledComponents.default.ul(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n  padding: 0;\n  margin: 0;\n  display: flex;\n  flex-direction: row;\n"])));
 
 exports.List = List;
 
-var Name = _styledComponents.default.p(_templateObject4());
+var Name = _styledComponents.default.p(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n  color: #808080;\n  text-overflow: ellipsis;\n  font-size: 16px;\n  &:hover {\n    font-weight: bold;\n    color: #e5e5e5;\n  }\n"])));
 
 exports.Name = Name;
 
-var Picture = _styledComponents.default.img(_templateObject5());
+var Picture = _styledComponents.default.img(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 150px;\n  height: auto;\n  border: 3px solid black;\n  cursor: pointer;\n"])));
 
 exports.Picture = Picture;
 
-var User = _styledComponents.default.div(_templateObject6());
+var User = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n  display: block;\n"])));
 
 exports.User = User;
 
-var Item = _styledComponents.default.li(_templateObject7(), Picture, Name);
+var Item = _styledComponents.default.li(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n  max-height: 200px;\n  max-width: 200px;\n  list-style-type: none;\n  text-align: center;\n  margin-right: 30px;\n  &:hover > ", " {\n    border: 3px solid white;\n  }\n  &:hover ", " {\n    font-weight: bold;\n    color: white;\n  }\n  &:last-of-type {\n    margin-right: 0;\n  }\n"])), Picture, Name);
 
 exports.Item = Item;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/profiles/index.js":[function(require,module,exports) {
@@ -38064,35 +37504,35 @@ function Profiles(_ref) {
   var children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_profiles.Container, restProps, children);
+  return _react.default.createElement(_profiles.Container, restProps, children);
 }
 
 Profiles.Title = function ProfilesTitle(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_profiles.Title, restProps, children);
+  return _react.default.createElement(_profiles.Title, restProps, children);
 };
 
 Profiles.List = function ProfilesList(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_profiles.List, restProps, children);
+  return _react.default.createElement(_profiles.List, restProps, children);
 };
 
 Profiles.User = function ProfilesUser(_ref4) {
   var children = _ref4.children,
       restProps = _objectWithoutProperties(_ref4, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_profiles.Item, restProps, children);
+  return _react.default.createElement(_profiles.Item, restProps, children);
 };
 
 Profiles.Picture = function ProfilesPicture(_ref5) {
   var src = _ref5.src,
       restProps = _objectWithoutProperties(_ref5, ["src"]);
 
-  return /*#__PURE__*/_react.default.createElement(_profiles.Picture, _extends({}, restProps, {
+  return _react.default.createElement(_profiles.Picture, _extends({}, restProps, {
     src: "/images/users/1.png"
   }));
 };
@@ -38101,7 +37541,7 @@ Profiles.Name = function ProfilesName(_ref6) {
   var children = _ref6.children,
       restProps = _objectWithoutProperties(_ref6, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_profiles.Name, restProps, children);
+  return _react.default.createElement(_profiles.Name, restProps, children);
 };
 },{"react":"node_modules/react/index.js","./styles/profiles":"src/components/profiles/styles/profiles.js"}],"src/components/loading/styles/Loading.js":[function(require,module,exports) {
 "use strict";
@@ -38113,62 +37553,24 @@ exports.Picture = exports.Spinner = exports.ReleaseBody = exports.LockBody = voi
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4;
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    width: 50px;\n    height: 50px;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-top: -100px;\n    margin-left: -22px;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    background-color: black;\n    z-index: 999;\n    :after {\n        content: '';\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        background-image: url(/images/misc/spinner.png);\n        background-size: contain;\n        background-repeat: no-repeat;\n        margin-top: -150px;\n        margin-left: -75px;\n        width: 150px;\n        height: 150px;\n        animation-name: spin;\n        animation-duration: 1000ms;\n        animation-iteration-count: infinite;\n        animation-timing-function: linear;\n    }\n    @-ms-keyframes spin {\n        from {\n            -ms-transform: rotate(0deg);\n        }\n        to {\n            -ms-transform: rotate(360deg);\n        }\n    }\n    @-moz-keyframes spin {\n        from {\n            -moz-transform: rotate(0deg);\n        }\n        to {\n            -moz-transform: rotate(360deg);\n        }\n    }\n    @-webkit-keyframes spin {\n        from {\n            -webkit-transform: rotate(0deg);\n        }\n        to {\n            -webkit-transform: rotate(360deg);\n        }\n    }\n    @keyframes spin {\n        from {\n            transform: rotate(0deg);\n        }\n        to {\n            transform: rotate(360deg);\n        }\n    }\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    body {\n        overflow: visible;\n    }\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    body {\n        overflow: hidden;\n    }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var LockBody = (0, _styledComponents.createGlobalStyle)(_templateObject());
+var LockBody = (0, _styledComponents.createGlobalStyle)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    body {\n        overflow: hidden;\n    }\n"])));
 exports.LockBody = LockBody;
-var ReleaseBody = (0, _styledComponents.createGlobalStyle)(_templateObject2());
+var ReleaseBody = (0, _styledComponents.createGlobalStyle)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    body {\n        overflow: visible;\n    }\n"])));
 exports.ReleaseBody = ReleaseBody;
 
-var Spinner = _styledComponents.default.div(_templateObject3());
+var Spinner = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    background-color: black;\n    z-index: 999;\n    :after {\n        content: '';\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        background-image: url(/images/misc/spinner.png);\n        background-size: contain;\n        background-repeat: no-repeat;\n        margin-top: -150px;\n        margin-left: -75px;\n        width: 150px;\n        height: 150px;\n        animation-name: spin;\n        animation-duration: 1000ms;\n        animation-iteration-count: infinite;\n        animation-timing-function: linear;\n    }\n    @-ms-keyframes spin {\n        from {\n            -ms-transform: rotate(0deg);\n        }\n        to {\n            -ms-transform: rotate(360deg);\n        }\n    }\n    @-moz-keyframes spin {\n        from {\n            -moz-transform: rotate(0deg);\n        }\n        to {\n            -moz-transform: rotate(360deg);\n        }\n    }\n    @-webkit-keyframes spin {\n        from {\n            -webkit-transform: rotate(0deg);\n        }\n        to {\n            -webkit-transform: rotate(360deg);\n        }\n    }\n    @keyframes spin {\n        from {\n            transform: rotate(0deg);\n        }\n        to {\n            transform: rotate(360deg);\n        }\n    }\n"])));
 
 exports.Spinner = Spinner;
 
-var Picture = _styledComponents.default.img(_templateObject4());
+var Picture = _styledComponents.default.img(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    width: 50px;\n    height: 50px;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    margin-top: -100px;\n    margin-left: -22px;\n"])));
 
 exports.Picture = Picture;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/loading/index.js":[function(require,module,exports) {
@@ -38193,7 +37595,7 @@ function Loading(_ref) {
   var src = _ref.src,
       restProps = _objectWithoutProperties(_ref, ["src"]);
 
-  return /*#__PURE__*/_react.default.createElement(_Loading.Spinner, restProps, /*#__PURE__*/_react.default.createElement(_Loading.LockBody, null), /*#__PURE__*/_react.default.createElement(_Loading.Picture, {
+  return _react.default.createElement(_Loading.Spinner, restProps, _react.default.createElement(_Loading.LockBody, null), _react.default.createElement(_Loading.Picture, {
     src: "/images/users/".concat(src, ".png")
   }));
 }
@@ -38202,7 +37604,7 @@ Loading.ReleaseBody = function LoadingReleaseBody(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_Loading.ReleaseBody, restProps);
+  return _react.default.createElement(_Loading.ReleaseBody, restProps);
 };
 },{"react":"node_modules/react/index.js","./styles/Loading":"src/components/loading/styles/Loading.js"}],"src/components/card/styles/card.js":[function(require,module,exports) {
 "use strict";
@@ -38214,169 +37616,21 @@ exports.Maturity = exports.Content = exports.FeatureClose = exports.FeatureTitle
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12, _templateObject13, _templateObject14, _templateObject15;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject15() {
-  var data = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 15px;\n    width: 20px;\n    padding: 5px;\n    text-align: center;\n    color: white;\n    font-weight: bold;\n    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);\n    margin-right: 10px;\n    font-size: 12px;\n"]);
-
-  _templateObject15 = function _templateObject15() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject14() {
-  var data = _taggedTemplateLiteral(["\n    margin: 56px;\n    max-width: 500px;\n    line-height: normal;\n    @media (max-width: 1000px) {\n        margin: 30px;\n        max-width: none;\n    }\n"]);
-
-  _templateObject14 = function _templateObject14() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject13() {
-  var data = _taggedTemplateLiteral(["\n    color: white;\n    position: absolute;\n    right: 20px;\n    top: 20px;\n    cursor: pointer;\n    background-color: transparent;\n    border: 0;\n    img {\n        filter: brightness(0) invert(1);\n        width: 24px;\n    }\n"]);
-
-  _templateObject13 = function _templateObject13() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n    margin-left: 0;\n"]);
-
-  _templateObject12 = function _templateObject12() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject11() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    background: url(", ");\n    background-size: contain;\n    position: relative;\n    height: 360px;\n    background-position-x: right;\n    background-repeat: no-repeat;\n    background-color: black;\n    @media (max-width: 1000px) {\n        height: auto;\n        background-size: auto;\n        ", " {\n            font-size: 20px;\n            line-height: 20px;\n            margin-bottom: 10px;\n        }\n        ", " {\n            font-size: 14px;\n        }\n    }\n"]);
-
-  _templateObject11 = function _templateObject11() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject10() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 18px;\n    color: white;\n    font-weight: ", ";\n    margin: 0;\n    @media (max-width: 800px) {\n        line-height: 22px;\n    }\n"]);
-
-  _templateObject10 = function _templateObject10() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    margin-right: 5px;\n    position: relative;\n    cursor: pointer;\n    transition: transform 0.2;\n    &:hover {\n        transform: scale(1.3);\n        z-index: 99;\n    }\n    @media (min-width: 1000px) {\n        &:hover ", ", &:hover ", ", &:hover ", " {\n            display: block;\n            z-index: 100;\n        }\n    }\n    &:first-of-type {\n        margin-left: 56px;\n        @media (max-width: 1000px) {\n            margin-left: 30px;\n        }\n    }\n    &:last-of-type {\n        margin-right: 56px;\n        @media (max-width: 1000px) {\n            margin-right: 30px;\n        }\n    }\n"]);
-
-  _templateObject9 = function _templateObject9() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n    border: 0;\n    width: 100%;\n    max-width: 305px;\n    cursor: pointer;\n    height: auto;\n    padding: 0;\n    margin: 0;\n"]);
-
-  _templateObject8 = function _templateObject8() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n    display: none;\n    position: absolute;\n    bottom: 0;\n    padding: 10px;\n    background-color: #0000008f;\n"]);
-
-  _templateObject7 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n"]);
-
-  _templateObject6 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    margin-top: 5px;\n    font-size: 10px;\n    color: white;\n    margin-bottom: 0;\n    user-select: none;\n    display: none;\n    line-height: normal;\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 12px;\n    color: white;\n    font-weight: bold;\n    margin-top: 0;\n    margin-bottom: 0;\n    user-select: none;\n    display: none;\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: ", ";\n    ", ";\n    ", ";\n    > ", ":first-of-type {\n        @media (min-width: 1100px) {\n            margin-top: -150px;\n        }\n    }\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    margin-bottom: 50px;\n    box-sizing: border-box;\n    > ", " {\n        @media (max-width: 1000px) {\n            margin-left: 30px;\n        }\n    }\n    &:last-of-type {\n        margin-bottom: 0;\n    }\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 24px;\n    color: #e5e5e5;\n    font-weight: bold;\n    margin-left: 56px;\n    margin-right: 56px;\n    margin-top: 0;\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Title = _styledComponents.default.p(_templateObject());
+var Title = _styledComponents.default.p(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    font-size: 24px;\n    color: #e5e5e5;\n    font-weight: bold;\n    margin-left: 56px;\n    margin-right: 56px;\n    margin-top: 0;\n"])));
 
 exports.Title = Title;
 
-var Container = _styledComponents.default.div(_templateObject2(), Title);
+var Container = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    margin-bottom: 50px;\n    box-sizing: border-box;\n    > ", " {\n        @media (max-width: 1000px) {\n            margin-left: 30px;\n        }\n    }\n    &:last-of-type {\n        margin-bottom: 0;\n    }\n"])), Title);
 
 exports.Container = Container;
 
-var Group = _styledComponents.default.div(_templateObject3(), function (_ref) {
+var Group = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: ", ";\n    ", ";\n    ", ";\n    > ", ":first-of-type {\n        @media (min-width: 1100px) {\n            margin-top: -150px;\n        }\n    }\n"])), function (_ref) {
   var flexDirection = _ref.flexDirection;
   return flexDirection === 'row' ? 'row' : 'column';
 }, function (_ref2) {
@@ -38389,55 +37643,55 @@ var Group = _styledComponents.default.div(_templateObject3(), function (_ref) {
 
 exports.Group = Group;
 
-var SubTitle = _styledComponents.default.p(_templateObject4());
+var SubTitle = _styledComponents.default.p(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    font-size: 12px;\n    color: white;\n    font-weight: bold;\n    margin-top: 0;\n    margin-bottom: 0;\n    user-select: none;\n    display: none;\n"])));
 
 exports.SubTitle = SubTitle;
 
-var Text = _styledComponents.default.p(_templateObject5());
+var Text = _styledComponents.default.p(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    margin-top: 5px;\n    font-size: 10px;\n    color: white;\n    margin-bottom: 0;\n    user-select: none;\n    display: none;\n    line-height: normal;\n"])));
 
 exports.Text = Text;
 
-var Entities = _styledComponents.default.div(_templateObject6());
+var Entities = _styledComponents.default.div(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n"])));
 
 exports.Entities = Entities;
 
-var Meta = _styledComponents.default.div(_templateObject7());
+var Meta = _styledComponents.default.div(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n    display: none;\n    position: absolute;\n    bottom: 0;\n    padding: 10px;\n    background-color: #0000008f;\n"])));
 
 exports.Meta = Meta;
 
-var Image = _styledComponents.default.img(_templateObject8());
+var Image = _styledComponents.default.img(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n    border: 0;\n    width: 100%;\n    max-width: 305px;\n    cursor: pointer;\n    height: auto;\n    padding: 0;\n    margin: 0;\n"])));
 
 exports.Image = Image;
 
-var Item = _styledComponents.default.div(_templateObject9(), Meta, Text, SubTitle);
+var Item = _styledComponents.default.div(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    margin-right: 5px;\n    position: relative;\n    cursor: pointer;\n    transition: transform 0.2;\n    &:hover {\n        transform: scale(1.3);\n        z-index: 99;\n    }\n    @media (min-width: 1000px) {\n        &:hover ", ", &:hover ", ", &:hover ", " {\n            display: block;\n            z-index: 100;\n        }\n    }\n    &:first-of-type {\n        margin-left: 56px;\n        @media (max-width: 1000px) {\n            margin-left: 30px;\n        }\n    }\n    &:last-of-type {\n        margin-right: 56px;\n        @media (max-width: 1000px) {\n            margin-right: 30px;\n        }\n    }\n"])), Meta, Text, SubTitle);
 
 exports.Item = Item;
 
-var FeatureText = _styledComponents.default.p(_templateObject10(), function (_ref4) {
+var FeatureText = _styledComponents.default.p(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n    font-size: 18px;\n    color: white;\n    font-weight: ", ";\n    margin: 0;\n    @media (max-width: 800px) {\n        line-height: 22px;\n    }\n"])), function (_ref4) {
   var fontWeight = _ref4.fontWeight;
   fontWeight === 'bold' ? 'bold' : 'normal';
 });
 
 exports.FeatureText = FeatureText;
 
-var Feature = _styledComponents.default.div(_templateObject11(), function (_ref5) {
+var Feature = _styledComponents.default.div(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: row;\n    background: url(", ");\n    background-size: contain;\n    position: relative;\n    height: 360px;\n    background-position-x: right;\n    background-repeat: no-repeat;\n    background-color: black;\n    @media (max-width: 1000px) {\n        height: auto;\n        background-size: auto;\n        ", " {\n            font-size: 20px;\n            line-height: 20px;\n            margin-bottom: 10px;\n        }\n        ", " {\n            font-size: 14px;\n        }\n    }\n"])), function (_ref5) {
   var src = _ref5.src;
   return src;
 }, Title, FeatureText);
 
 exports.Feature = Feature;
-var FeatureTitle = (0, _styledComponents.default)(Title)(_templateObject12());
+var FeatureTitle = (0, _styledComponents.default)(Title)(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n    margin-left: 0;\n"])));
 exports.FeatureTitle = FeatureTitle;
 
-var FeatureClose = _styledComponents.default.button(_templateObject13());
+var FeatureClose = _styledComponents.default.button(_templateObject13 || (_templateObject13 = _taggedTemplateLiteral(["\n    color: white;\n    position: absolute;\n    right: 20px;\n    top: 20px;\n    cursor: pointer;\n    background-color: transparent;\n    border: 0;\n    img {\n        filter: brightness(0) invert(1);\n        width: 24px;\n    }\n"])));
 
 exports.FeatureClose = FeatureClose;
 
-var Content = _styledComponents.default.div(_templateObject14());
+var Content = _styledComponents.default.div(_templateObject14 || (_templateObject14 = _taggedTemplateLiteral(["\n    margin: 56px;\n    max-width: 500px;\n    line-height: normal;\n    @media (max-width: 1000px) {\n        margin: 30px;\n        max-width: none;\n    }\n"])));
 
 exports.Content = Content;
 
-var Maturity = _styledComponents.default.div(_templateObject15(), function (_ref6) {
+var Maturity = _styledComponents.default.div(_templateObject15 || (_templateObject15 = _taggedTemplateLiteral(["\n    background-color: ", ";\n    border-radius: 15px;\n    width: 20px;\n    padding: 5px;\n    text-align: center;\n    color: white;\n    font-weight: bold;\n    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);\n    margin-right: 10px;\n    font-size: 12px;\n"])), function (_ref6) {
   var rating = _ref6.rating;
   return rating >= 15 ? 'red' : 'green';
 });
@@ -38493,56 +37747,56 @@ function Card(_ref) {
       itemFeature = _useState4[0],
       setItemFeature = _useState4[1];
 
-  return /*#__PURE__*/_react.default.createElement(FeatureContext.Provider, {
+  return _react.default.createElement(FeatureContext.Provider, {
     value: {
       showFeature: showFeature,
       setShowFeature: setShowFeature,
       itemFeature: itemFeature,
       setItemFeature: setItemFeature
     }
-  }, /*#__PURE__*/_react.default.createElement(_card.Container, restProps, children));
+  }, _react.default.createElement(_card.Container, restProps, children));
 }
 
 Card.Group = function CardGroup(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_card.Group, restProps, children);
+  return _react.default.createElement(_card.Group, restProps, children);
 };
 
 Card.Title = function CardTitle(_ref3) {
   var children = _ref3.children,
       restProps = _objectWithoutProperties(_ref3, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_card.Title, restProps, children);
+  return _react.default.createElement(_card.Title, restProps, children);
 };
 
 Card.SubTitle = function CardSubTitle(_ref4) {
   var children = _ref4.children,
       restProps = _objectWithoutProperties(_ref4, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_card.SubTitle, restProps, children);
+  return _react.default.createElement(_card.SubTitle, restProps, children);
 };
 
 Card.Entities = function CardEntities(_ref5) {
   var children = _ref5.children,
       restProps = _objectWithoutProperties(_ref5, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_card.Entities, restProps, children);
+  return _react.default.createElement(_card.Entities, restProps, children);
 };
 
 Card.Meta = function CardMeta(_ref6) {
   var children = _ref6.children,
       restProps = _objectWithoutProperties(_ref6, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_card.Meta, restProps, children);
+  return _react.default.createElement(_card.Meta, restProps, children);
 };
 
 Card.Text = function CardText(_ref7) {
   var children = _ref7.children,
       restProps = _objectWithoutProperties(_ref7, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_card.Text, restProps, children);
+  return _react.default.createElement(_card.Text, restProps, children);
 };
 
 Card.Item = function CardItem(_ref8) {
@@ -38554,7 +37808,7 @@ Card.Item = function CardItem(_ref8) {
       setShowFeature = _useContext.setShowFeature,
       setItemFeature = _useContext.setItemFeature;
 
-  return /*#__PURE__*/_react.default.createElement(_card.Item, _extends({
+  return _react.default.createElement(_card.Item, _extends({
     onClick: function onClick() {
       setItemFeature(item);
       setShowFeature(true);
@@ -38564,7 +37818,7 @@ Card.Item = function CardItem(_ref8) {
 
 Card.Image = function CardImage(_ref9) {
   var restProps = Object.assign({}, _ref9);
-  return /*#__PURE__*/_react.default.createElement(_card.Image, restProps);
+  return _react.default.createElement(_card.Image, restProps);
 };
 
 Card.Feature = function CardFeature(_ref10) {
@@ -38577,22 +37831,22 @@ Card.Feature = function CardFeature(_ref10) {
       itemFeature = _useContext2.itemFeature,
       setShowFeature = _useContext2.setShowFeature;
 
-  return showFeature ? /*#__PURE__*/_react.default.createElement(_card.Feature, _extends({
+  return showFeature ? _react.default.createElement(_card.Feature, _extends({
     src: "/images/".concat(category, "/").concat(itemFeature.genre, "/").concat(itemFeature.slug, "/large.jpg")
-  }, restProps), /*#__PURE__*/_react.default.createElement(_card.Content, null, /*#__PURE__*/_react.default.createElement(_card.FeatureTitle, null, itemFeature.title), /*#__PURE__*/_react.default.createElement(_card.FeatureText, null, itemFeature.description), /*#__PURE__*/_react.default.createElement(_card.FeatureClose, {
+  }, restProps), _react.default.createElement(_card.Content, null, _react.default.createElement(_card.FeatureTitle, null, itemFeature.title), _react.default.createElement(_card.FeatureText, null, itemFeature.description), _react.default.createElement(_card.FeatureClose, {
     onClick: function onClick() {
       return setShowFeature(false);
     }
-  }, /*#__PURE__*/_react.default.createElement("img", {
+  }, _react.default.createElement("img", {
     src: "/images/icons/close.png",
     alt: "close"
-  })), /*#__PURE__*/_react.default.createElement(_card.Group, {
+  })), _react.default.createElement(_card.Group, {
     margin: "30px 0",
     flexDirection: "row",
     alignItems: "center"
-  }, /*#__PURE__*/_react.default.createElement(_card.Maturity, {
+  }, _react.default.createElement(_card.Maturity, {
     rating: itemFeature.maturity
-  }, itemFeature.maturity < 12 ? "PG" : itemFeature.maturity), /*#__PURE__*/_react.default.createElement(_card.FeatureText, {
+  }, itemFeature.maturity < 12 ? "PG" : itemFeature.maturity), _react.default.createElement(_card.FeatureText, {
     fontWeight: "bold"
   }, itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1))), children)) : null;
 };
@@ -38606,77 +37860,29 @@ exports.Button = exports.Close = exports.Inner = exports.Overlay = exports.Conta
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n    background-color: #e50914;\n    border-color: #ff0a16;\n    width: 115px;\n    height: 45px;\n    text-transform: uppercase;\n    font-weight: bold;\n    color: white;\n    font-size: 18px;\n    height: 45px;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    padding-left: 0;\n    &:hover {\n        transform: scale(1.05);\n        background-color: #ff0a16;\n    }\n"]);
-
-  _templateObject5 = function _templateObject5() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n    position: absolute;\n    right: 15px;\n    top: 15px;\n    width: 22px;\n    height: 22px;\n    opacity: 1;\n    background-color: transparent;\n    border: 0;\n    cursor: pointer;\n    &:before,\n    &:after {\n        position: absolute;\n        left: 10px;\n        top: 0;\n        content: ' ';\n        height: 22px;\n        width: 2px;\n        background-color: white;\n    }\n    &:hover {\n        transform: rotate(45deg);\n    }\n    &:after {\n        transform: rotate(-45deg);\n    }\n    &:before {\n        transform: rotate(-155deg);\n    }\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    position: relative;\n    width: 100%;\n    max-width: 900px;\n    margin: auto;\n    video {\n        height: 100%;\n        width: 100%;\n    }\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    margin: 0 20px;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = _taggedTemplateLiteral([""]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var Container = _styledComponents.default.div(_templateObject());
+var Container = _styledComponents.default.div(_templateObject || (_templateObject = _taggedTemplateLiteral([""])));
 
 exports.Container = Container;
 
-var Overlay = _styledComponents.default.div(_templateObject2());
+var Overlay = _styledComponents.default.div(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: rgba(0, 0, 0, 0.5);\n    margin: 0 20px;\n"])));
 
 exports.Overlay = Overlay;
 
-var Inner = _styledComponents.default.div(_templateObject3());
+var Inner = _styledComponents.default.div(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n    position: relative;\n    width: 100%;\n    max-width: 900px;\n    margin: auto;\n    video {\n        height: 100%;\n        width: 100%;\n    }\n"])));
 
 exports.Inner = Inner;
 
-var Close = _styledComponents.default.button(_templateObject4());
+var Close = _styledComponents.default.button(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n    position: absolute;\n    right: 15px;\n    top: 15px;\n    width: 22px;\n    height: 22px;\n    opacity: 1;\n    background-color: transparent;\n    border: 0;\n    cursor: pointer;\n    &:before,\n    &:after {\n        position: absolute;\n        left: 10px;\n        top: 0;\n        content: ' ';\n        height: 22px;\n        width: 2px;\n        background-color: white;\n    }\n    &:hover {\n        transform: rotate(45deg);\n    }\n    &:after {\n        transform: rotate(-45deg);\n    }\n    &:before {\n        transform: rotate(-155deg);\n    }\n"])));
 
 exports.Close = Close;
 
-var Button = _styledComponents.default.button(_templateObject5());
+var Button = _styledComponents.default.button(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n    background-color: #e50914;\n    border-color: #ff0a16;\n    width: 115px;\n    height: 45px;\n    text-transform: uppercase;\n    font-weight: bold;\n    color: white;\n    font-size: 18px;\n    height: 45px;\n    cursor: pointer;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    padding-left: 0;\n    &:hover {\n        transform: scale(1.05);\n        background-color: #ff0a16;\n    }\n"])));
 
 exports.Button = Button;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/player/index.js":[function(require,module,exports) {
@@ -38728,19 +37934,19 @@ function Player(_ref) {
       showPlayer = _useState2[0],
       setShowPlayer = _useState2[1];
 
-  return /*#__PURE__*/_react.default.createElement(PlayerContext.Provider, {
+  return _react.default.createElement(PlayerContext.Provider, {
     value: {
       showPlayer: showPlayer,
       setShowPlayer: setShowPlayer
     }
-  }, /*#__PURE__*/_react.default.createElement(_player.Container, restProps, children));
+  }, _react.default.createElement(_player.Container, restProps, children));
 }
 
 Player.Inner = function PlayerInner(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_player.Inner, restProps, children);
+  return _react.default.createElement(_player.Inner, restProps, children);
 };
 
 Player.Video = function PlayerVideo(_ref3) {
@@ -38750,17 +37956,17 @@ Player.Video = function PlayerVideo(_ref3) {
       showPlayer = _useContext.showPlayer,
       setShowPlayer = _useContext.setShowPlayer;
 
-  return showPlayer ? _reactDom.default.createPortal( /*#__PURE__*/_react.default.createElement(_player.Overlay, {
+  return showPlayer ? _reactDom.default.createPortal(_react.default.createElement(_player.Overlay, {
     onClick: function onClick() {
       return setShowPlayer(false);
     }
-  }, /*#__PURE__*/_react.default.createElement("video", {
+  }, _react.default.createElement("video", {
     id: "netflix-player",
     controls: true
-  }, /*#__PURE__*/_react.default.createElement("source", {
+  }, _react.default.createElement("source", {
     src: "/videos/bunny.mp4",
     type: "video/mp4"
-  })), /*#__PURE__*/_react.default.createElement(_player.Close, null)), document.body) : null;
+  })), _react.default.createElement(_player.Close, null)), document.body) : null;
 };
 
 Player.Button = function PlayerButton(_ref4) {
@@ -38770,7 +37976,7 @@ Player.Button = function PlayerButton(_ref4) {
       showPlayer = _useContext2.showPlayer,
       setShowPlayer = _useContext2.setShowPlayer;
 
-  return /*#__PURE__*/_react.default.createElement(_player.Button, {
+  return _react.default.createElement(_player.Button, {
     onClick: function onClick() {
       return setShowPlayer(!showPlayer);
     }
@@ -38890,11 +38096,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // import Jumbotron from '../components/jumbotron'
 function JumbontronContainer() {
-  return /*#__PURE__*/_react.default.createElement(_components.Jumbotron.Container, null, _jumbo.default.map(function (item) {
-    return /*#__PURE__*/_react.default.createElement(_components.Jumbotron, {
+  return _react.default.createElement(_components.Jumbotron.Container, null, _jumbo.default.map(function (item) {
+    return _react.default.createElement(_components.Jumbotron, {
       key: item.id,
       direction: item.direction
-    }, /*#__PURE__*/_react.default.createElement(_components.Jumbotron.Pane, null, /*#__PURE__*/_react.default.createElement(_components.Jumbotron.Title, null, item.title), /*#__PURE__*/_react.default.createElement(_components.Jumbotron.SubTitle, null, item.subTitle)), /*#__PURE__*/_react.default.createElement(_components.Jumbotron.Pane, null, /*#__PURE__*/_react.default.createElement(_components.Jumbotron.Image, {
+    }, _react.default.createElement(_components.Jumbotron.Pane, null, _react.default.createElement(_components.Jumbotron.Title, null, item.title), _react.default.createElement(_components.Jumbotron.SubTitle, null, item.subTitle)), _react.default.createElement(_components.Jumbotron.Pane, null, _react.default.createElement(_components.Jumbotron.Image, {
       src: item.image,
       alt: item.alt
     })));
@@ -38915,43 +38121,43 @@ var _components = require("../components");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function FooterContainer() {
-  return /*#__PURE__*/_react.default.createElement(_components.Footer, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Title, null, "Question? Contact us"), /*#__PURE__*/_react.default.createElement(_components.Footer.Break, null), /*#__PURE__*/_react.default.createElement(_components.Footer.Row, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Column, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  return _react.default.createElement(_components.Footer, null, _react.default.createElement(_components.Footer.Title, null, "Question? Contact us"), _react.default.createElement(_components.Footer.Break, null), _react.default.createElement(_components.Footer.Row, null, _react.default.createElement(_components.Footer.Column, null, _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "FAQs"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "FAQs"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Investor relation"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Investor relation"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Ways to watch"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Ways to watch"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Conporarte informatio"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Conporarte informatio"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Netflix Original"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Netflix Original"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "FAQ")), /*#__PURE__*/_react.default.createElement(_components.Footer.Column, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "FAQ")), _react.default.createElement(_components.Footer.Column, null, _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Helpe Center"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Helpe Center"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Jobs"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Jobs"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Term of use"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Term of use"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Contact us")), /*#__PURE__*/_react.default.createElement(_components.Footer.Column, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Contact us")), _react.default.createElement(_components.Footer.Column, null, _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Account"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Account"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Redeem git card"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Redeem git card"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Privacy"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Privacy"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Speed test")), /*#__PURE__*/_react.default.createElement(_components.Footer.Column, null, /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Speed test")), _react.default.createElement(_components.Footer.Column, null, _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Media center"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Media center"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Buy gift card"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "Buy gift card"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "cookie preference"), /*#__PURE__*/_react.default.createElement(_components.Footer.Link, {
+  }, "cookie preference"), _react.default.createElement(_components.Footer.Link, {
     href: "#"
-  }, "Legl notice"))), /*#__PURE__*/_react.default.createElement(_components.Footer.Text, null, "Nextflix Madagascar"));
+  }, "Legl notice"))), _react.default.createElement(_components.Footer.Text, null, "Nextflix Madagascar"));
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js"}],"src/fixtures/faqs.json":[function(require,module,exports) {
 module.exports = [{
@@ -38992,13 +38198,13 @@ var _faqs = _interopRequireDefault(require("../fixtures/faqs.json"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function FaqsContainer() {
-  return /*#__PURE__*/_react.default.createElement(_components.Accordion, null, /*#__PURE__*/_react.default.createElement(_components.Accordion.Title, null, "Frequently Asked Question"), /*#__PURE__*/_react.default.createElement(_components.Accordion.Frame, null, _faqs.default.map(function (item) {
-    return /*#__PURE__*/_react.default.createElement(_components.Accordion.Item, {
+  return _react.default.createElement(_components.Accordion, null, _react.default.createElement(_components.Accordion.Title, null, "Frequently Asked Question"), _react.default.createElement(_components.Accordion.Frame, null, _faqs.default.map(function (item) {
+    return _react.default.createElement(_components.Accordion.Item, {
       key: item.id
-    }, /*#__PURE__*/_react.default.createElement(_components.Accordion.Header, null, item.header), /*#__PURE__*/_react.default.createElement(_components.Accordion.Body, null, item.body));
-  })), /*#__PURE__*/_react.default.createElement(_components.OptForm, null, /*#__PURE__*/_react.default.createElement(_components.OptForm.Input, {
+    }, _react.default.createElement(_components.Accordion.Header, null, item.header), _react.default.createElement(_components.Accordion.Body, null, item.body));
+  })), _react.default.createElement(_components.OptForm, null, _react.default.createElement(_components.OptForm.Input, {
     placeholder: "Email Address"
-  }), /*#__PURE__*/_react.default.createElement(_components.OptForm.Button, null, "Try it now!"), /*#__PURE__*/_react.default.createElement(_components.OptForm.Text, null, "Ready to watch? Enter your email to create or restart.")));
+  }), _react.default.createElement(_components.OptForm.Button, null, "Try it now!"), _react.default.createElement(_components.OptForm.Text, null, "Ready to watch? Enter your email to create or restart.")));
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js","../fixtures/faqs.json":"src/fixtures/faqs.json"}],"src/containers/header.js":[function(require,module,exports) {
 "use strict";
@@ -39022,11 +38228,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function HeaderContainer(_ref) {
   var children = _ref.children;
-  return /*#__PURE__*/_react.default.createElement(_components.Header, null, /*#__PURE__*/_react.default.createElement(_components.Header.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Header.Logo, {
+  return _react.default.createElement(_components.Header, null, _react.default.createElement(_components.Header.Frame, null, _react.default.createElement(_components.Header.Logo, {
     to: ROUTE.HOME,
     src: "/images/misc/logo.svg",
     alt: "netflix"
-  }), /*#__PURE__*/_react.default.createElement(_components.Header.ButtonLink, {
+  }), _react.default.createElement(_components.Header.ButtonLink, {
     to: ROUTE.SIGN_IN
   }, "Sign In")), children);
 }
@@ -39053,9 +38259,9 @@ var _components = require("../components");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Home() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null, /*#__PURE__*/_react.default.createElement(_components.Feature, null, /*#__PURE__*/_react.default.createElement(_components.Feature.Title, null, "Unlimited Films, TV programmes and more."), /*#__PURE__*/_react.default.createElement(_components.Feature.SubTitle, null, "Watch anywhere, cancel anytime."), /*#__PURE__*/_react.default.createElement(_components.OptForm, null, /*#__PURE__*/_react.default.createElement(_components.OptForm.Input, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_header.default, null, _react.default.createElement(_components.Feature, null, _react.default.createElement(_components.Feature.Title, null, "Unlimited Films, TV programmes and more."), _react.default.createElement(_components.Feature.SubTitle, null, "Watch anywhere, cancel anytime."), _react.default.createElement(_components.OptForm, null, _react.default.createElement(_components.OptForm.Input, {
     placeholder: "Email Address"
-  }), /*#__PURE__*/_react.default.createElement(_components.OptForm.Button, null, "Try it now!"), /*#__PURE__*/_react.default.createElement(_components.OptForm.Text, null, "Ready to watch? Enter your email to create or restart your membership.")))), /*#__PURE__*/_react.default.createElement(_jumbotron.default, null), /*#__PURE__*/_react.default.createElement(_faqs.default, null), /*#__PURE__*/_react.default.createElement(_footer.default, null));
+  }), _react.default.createElement(_components.OptForm.Button, null, "Try it now!"), _react.default.createElement(_components.OptForm.Text, null, "Ready to watch? Enter your email to create or restart your membership.")))), _react.default.createElement(_jumbotron.default, null), _react.default.createElement(_faqs.default, null), _react.default.createElement(_footer.default, null));
 }
 },{"react":"node_modules/react/index.js","../containers/jumbotron":"src/containers/jumbotron.js","../containers/footer":"src/containers/footer.js","../containers/faqs":"src/containers/faqs.js","../containers/header":"src/containers/header.js","../components":"src/components/index.js"}],"src/context/firebase.js":[function(require,module,exports) {
 "use strict";
@@ -39145,17 +38351,17 @@ function Signin() {
     });
   };
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null, /*#__PURE__*/_react.default.createElement(_components.Form, null, /*#__PURE__*/_react.default.createElement(_components.Form.Title, null, "Sign in"), error && /*#__PURE__*/_react.default.createElement(_components.Form.Error, null, error), /*#__PURE__*/_react.default.createElement(_components.Form.Base, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_header.default, null, _react.default.createElement(_components.Form, null, _react.default.createElement(_components.Form.Title, null, "Sign in"), error && _react.default.createElement(_components.Form.Error, null, error), _react.default.createElement(_components.Form.Base, {
     onSubmit: handleSignin,
     method: "POST"
-  }, /*#__PURE__*/_react.default.createElement(_components.Form.Input, {
+  }, _react.default.createElement(_components.Form.Input, {
     placeholder: "Email address",
     value: emailAddress,
     onChange: function onChange(_ref) {
       var target = _ref.target;
       return setEmailAddress(target.value);
     }
-  }), /*#__PURE__*/_react.default.createElement(_components.Form.Input, {
+  }), _react.default.createElement(_components.Form.Input, {
     type: "password",
     placeholder: "Password",
     autoComplete: "off",
@@ -39164,12 +38370,12 @@ function Signin() {
       var target = _ref2.target;
       return setPassword(target.value);
     }
-  }), /*#__PURE__*/_react.default.createElement(_components.Form.Submit, {
+  }), _react.default.createElement(_components.Form.Submit, {
     disabled: isInvalid,
     type: "submit"
-  }, "Sign in"), /*#__PURE__*/_react.default.createElement(_components.Form.Text, null, "New to Netflix? ", /*#__PURE__*/_react.default.createElement(_components.Form.Link, {
+  }, "Sign in"), _react.default.createElement(_components.Form.Text, null, "New to Netflix? ", _react.default.createElement(_components.Form.Link, {
     to: "/signup"
-  }, "Sign up now.")), /*#__PURE__*/_react.default.createElement(_components.Form.TextSmall, null, "This page is protected by Google reCAPTCHA.")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
+  }, "Sign up now.")), _react.default.createElement(_components.Form.TextSmall, null, "This page is protected by Google reCAPTCHA.")))), _react.default.createElement(_footer.default, null));
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../constants/routes":"src/constants/routes.js","../context/firebase":"src/context/firebase.js","../containers/header":"src/containers/header.js","../containers/footer":"src/containers/footer.js"}],"src/pages/signup.js":[function(require,module,exports) {
 "use strict";
@@ -39257,24 +38463,24 @@ function Signup() {
   }; // try to do the markup
 
 
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null, /*#__PURE__*/_react.default.createElement(_components.Form, null, /*#__PURE__*/_react.default.createElement(_components.Form.Title, null, "Sign Up"), error && /*#__PURE__*/_react.default.createElement(_components.Form.Error, null, error), /*#__PURE__*/_react.default.createElement(_components.Form.Base, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_header.default, null, _react.default.createElement(_components.Form, null, _react.default.createElement(_components.Form.Title, null, "Sign Up"), error && _react.default.createElement(_components.Form.Error, null, error), _react.default.createElement(_components.Form.Base, {
     onSubmit: handleSignUp,
     method: "POST"
-  }, /*#__PURE__*/_react.default.createElement(_components.Form.Input, {
+  }, _react.default.createElement(_components.Form.Input, {
     value: firstName,
     onChange: function onChange(_ref) {
       var target = _ref.target;
       return setFirstName(target.value);
     },
     placeholder: "First Name"
-  }), /*#__PURE__*/_react.default.createElement(_components.Form.Input, {
+  }), _react.default.createElement(_components.Form.Input, {
     value: emailAddress,
     onChange: function onChange(_ref2) {
       var target = _ref2.target;
       return setEmailAddress(target.value);
     },
     placeholder: "Email Address"
-  }), /*#__PURE__*/_react.default.createElement(_components.Form.Input, {
+  }), _react.default.createElement(_components.Form.Input, {
     value: password,
     type: "password",
     autoComplete: "off",
@@ -39283,12 +38489,12 @@ function Signup() {
       return setPassword(target.value);
     },
     placeholder: "Password"
-  }), /*#__PURE__*/_react.default.createElement(_components.Form.Submit, {
+  }), _react.default.createElement(_components.Form.Submit, {
     type: "submit",
     disabled: isInvalid
-  }, "Sign Up"), /*#__PURE__*/_react.default.createElement(_components.Form.Text, null, "Already have another account?\xA0", /*#__PURE__*/_react.default.createElement(_components.Form.Link, {
+  }, "Sign Up"), _react.default.createElement(_components.Form.Text, null, "Already have another account?\xA0", _react.default.createElement(_components.Form.Link, {
     to: ROUTES.SIGN_IN
-  }, "Sign in.")), /*#__PURE__*/_react.default.createElement(_components.Form.TextSmall, null, "This page is protected by Google reCAPTCHA.")))), /*#__PURE__*/_react.default.createElement(_footer.default, null));
+  }, "Sign in.")), _react.default.createElement(_components.Form.TextSmall, null, "This page is protected by Google reCAPTCHA.")))), _react.default.createElement(_footer.default, null));
 }
 },{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../context/firebase":"src/context/firebase.js","../containers/header":"src/containers/header.js","../components":"src/components/index.js","../constants/routes":"src/constants/routes.js","../containers/footer":"src/containers/footer.js"}],"node_modules/fuse.js/dist/fuse.esm.js":[function(require,module,exports) {
 "use strict";
@@ -39310,7 +38516,7 @@ function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) ===
 
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
@@ -39715,7 +38921,9 @@ function createPatternAlphabet(pattern) {
   return mask;
 }
 
-var BitapSearch = /*#__PURE__*/function () {
+var BitapSearch =
+/*#__PURE__*/
+function () {
   function BitapSearch(pattern) {
     var _ref3 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
         _ref3$location = _ref3.location,
@@ -39846,7 +39054,9 @@ var BitapSearch = /*#__PURE__*/function () {
   return BitapSearch;
 }();
 
-var BaseMatch = /*#__PURE__*/function () {
+var BaseMatch =
+/*#__PURE__*/
+function () {
   function BaseMatch(pattern) {
     _classCallCheck(this, BaseMatch);
 
@@ -39879,7 +39089,9 @@ function getMatch(pattern, exp) {
 } // Token: 'file
 
 
-var ExactMatch = /*#__PURE__*/function (_BaseMatch) {
+var ExactMatch =
+/*#__PURE__*/
+function (_BaseMatch) {
   _inherits(ExactMatch, _BaseMatch);
 
   var _super = _createSuper(ExactMatch);
@@ -39931,7 +39143,9 @@ var ExactMatch = /*#__PURE__*/function (_BaseMatch) {
 }(BaseMatch); // Token: !fire
 
 
-var InverseExactMatch = /*#__PURE__*/function (_BaseMatch2) {
+var InverseExactMatch =
+/*#__PURE__*/
+function (_BaseMatch2) {
   _inherits(InverseExactMatch, _BaseMatch2);
 
   var _super2 = _createSuper(InverseExactMatch);
@@ -39974,7 +39188,9 @@ var InverseExactMatch = /*#__PURE__*/function (_BaseMatch2) {
 }(BaseMatch); // Token: ^file
 
 
-var PrefixExactMatch = /*#__PURE__*/function (_BaseMatch3) {
+var PrefixExactMatch =
+/*#__PURE__*/
+function (_BaseMatch3) {
   _inherits(PrefixExactMatch, _BaseMatch3);
 
   var _super3 = _createSuper(PrefixExactMatch);
@@ -40016,7 +39232,9 @@ var PrefixExactMatch = /*#__PURE__*/function (_BaseMatch3) {
 }(BaseMatch); // Token: !^fire
 
 
-var InversePrefixExactMatch = /*#__PURE__*/function (_BaseMatch4) {
+var InversePrefixExactMatch =
+/*#__PURE__*/
+function (_BaseMatch4) {
   _inherits(InversePrefixExactMatch, _BaseMatch4);
 
   var _super4 = _createSuper(InversePrefixExactMatch);
@@ -40058,7 +39276,9 @@ var InversePrefixExactMatch = /*#__PURE__*/function (_BaseMatch4) {
 }(BaseMatch); // Token: .file$
 
 
-var SuffixExactMatch = /*#__PURE__*/function (_BaseMatch5) {
+var SuffixExactMatch =
+/*#__PURE__*/
+function (_BaseMatch5) {
   _inherits(SuffixExactMatch, _BaseMatch5);
 
   var _super5 = _createSuper(SuffixExactMatch);
@@ -40100,7 +39320,9 @@ var SuffixExactMatch = /*#__PURE__*/function (_BaseMatch5) {
 }(BaseMatch); // Token: !.file$
 
 
-var InverseSuffixExactMatch = /*#__PURE__*/function (_BaseMatch6) {
+var InverseSuffixExactMatch =
+/*#__PURE__*/
+function (_BaseMatch6) {
   _inherits(InverseSuffixExactMatch, _BaseMatch6);
 
   var _super6 = _createSuper(InverseSuffixExactMatch);
@@ -40141,7 +39363,9 @@ var InverseSuffixExactMatch = /*#__PURE__*/function (_BaseMatch6) {
   return InverseSuffixExactMatch;
 }(BaseMatch);
 
-var FuzzyMatch = /*#__PURE__*/function (_BaseMatch7) {
+var FuzzyMatch =
+/*#__PURE__*/
+function (_BaseMatch7) {
   _inherits(FuzzyMatch, _BaseMatch7);
 
   var _super7 = _createSuper(FuzzyMatch);
@@ -40292,7 +39516,9 @@ var MultiMatchSet = new Set([FuzzyMatch.type, ExactMatch.type]);
  * ```
  */
 
-var ExtendedSearch = /*#__PURE__*/function () {
+var ExtendedSearch =
+/*#__PURE__*/
+function () {
   function ExtendedSearch(pattern) {
     var _ref5 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
         _ref5$isCaseSensitive = _ref5.isCaseSensitive,
@@ -40506,7 +39732,9 @@ function createIndex(keys, list) {
   return indexedList;
 }
 
-var KeyStore = /*#__PURE__*/function () {
+var KeyStore =
+/*#__PURE__*/
+function () {
   function KeyStore(keys) {
     _classCallCheck(this, KeyStore);
 
@@ -40629,7 +39857,9 @@ function register() {
   registeredSearchers.push.apply(registeredSearchers, arguments);
 }
 
-var Fuse = /*#__PURE__*/function () {
+var Fuse =
+/*#__PURE__*/
+function () {
   function Fuse(list) {
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     var index = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
@@ -40956,22 +40186,22 @@ function SelectProfileContainer(_ref) {
   var user = _ref.user,
       setProfile = _ref.setProfile;
   console.log(user.displayName, user);
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_components.Header, {
+  return _react.default.createElement("div", null, _react.default.createElement(_components.Header, {
     bg: false
-  }, /*#__PURE__*/_react.default.createElement(_components.Header.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Header.Logo, {
+  }, _react.default.createElement(_components.Header.Frame, null, _react.default.createElement(_components.Header.Logo, {
     to: ROUTES.HOME,
     src: "/images/misc/logo.svg",
     alt: "Netflix"
-  }))), /*#__PURE__*/_react.default.createElement(_components.Profiles, null, /*#__PURE__*/_react.default.createElement(_components.Profiles.Title, null, "Who's watching?"), /*#__PURE__*/_react.default.createElement(_components.Profiles.List, null, /*#__PURE__*/_react.default.createElement(_components.Profiles.User, {
+  }))), _react.default.createElement(_components.Profiles, null, _react.default.createElement(_components.Profiles.Title, null, "Who's watching?"), _react.default.createElement(_components.Profiles.List, null, _react.default.createElement(_components.Profiles.User, {
     onClick: function onClick() {
       return setProfile({
         displayName: user.displayName,
         photoUrl: user.photoUrl
       });
     }
-  }, /*#__PURE__*/_react.default.createElement(_components.Profiles.Picture, {
+  }, _react.default.createElement(_components.Profiles.Picture, {
     src: user.photoUrl
-  }), /*#__PURE__*/_react.default.createElement(_components.Profiles.Name, null, user.displayName)))));
+  }), _react.default.createElement(_components.Profiles.Name, null, user.displayName)))));
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js","../constants/routes":"src/constants/routes.js"}],"src/containers/browse.js":[function(require,module,exports) {
 "use strict";
@@ -41070,50 +40300,50 @@ function BrowseContainer(_ref) {
       setSlideRows(slides[category]);
     }
   }, [searchTerm]);
-  return profile.displayName ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, loading ? /*#__PURE__*/_react.default.createElement(_components.Loading, {
+  return profile.displayName ? _react.default.createElement(_react.default.Fragment, null, loading ? _react.default.createElement(_components.Loading, {
     src: user.photoURL
-  }) : /*#__PURE__*/_react.default.createElement(_components.Loading.ReleaseBody, null), /*#__PURE__*/_react.default.createElement(_components.Header, {
+  }) : _react.default.createElement(_components.Loading.ReleaseBody, null), _react.default.createElement(_components.Header, {
     src: "joker1",
     dontShowOnSmallViewPort: true
-  }, /*#__PURE__*/_react.default.createElement(_components.Header.Frame, null, /*#__PURE__*/_react.default.createElement(_components.Header.Group, null, /*#__PURE__*/_react.default.createElement(_components.Header.Logo, {
+  }, _react.default.createElement(_components.Header.Frame, null, _react.default.createElement(_components.Header.Group, null, _react.default.createElement(_components.Header.Logo, {
     to: ROUTES.HOME,
     src: "/images/misc/logo.svg",
     alt: "Netflix"
-  }), /*#__PURE__*/_react.default.createElement(_components.Header.Link, {
+  }), _react.default.createElement(_components.Header.Link, {
     onClick: function onClick() {
       return setCategory("series");
     },
     active: category === "series" ? "true" : "false"
-  }, "Series"), /*#__PURE__*/_react.default.createElement(_components.Header.Link, {
+  }, "Series"), _react.default.createElement(_components.Header.Link, {
     onClick: function onClick() {
       return setCategory("films");
     },
     active: category === "films" ? "true" : "false"
-  }, "Films")), /*#__PURE__*/_react.default.createElement(_components.Header.Group, null, /*#__PURE__*/_react.default.createElement(_components.Header.Search, {
+  }, "Films")), _react.default.createElement(_components.Header.Group, null, _react.default.createElement(_components.Header.Search, {
     searchTerm: searchTerm,
     setSearchTerm: setSearchTerm
-  }), /*#__PURE__*/_react.default.createElement(_components.Header.Profile, null, /*#__PURE__*/_react.default.createElement(_components.Header.Picture, {
+  }), _react.default.createElement(_components.Header.Profile, null, _react.default.createElement(_components.Header.Picture, {
     src: user.photoURL
-  }), /*#__PURE__*/_react.default.createElement(_components.Header.Dropdown, null, /*#__PURE__*/_react.default.createElement(_components.Header.Group, null, /*#__PURE__*/_react.default.createElement(_components.Header.Picture, {
+  }), _react.default.createElement(_components.Header.Dropdown, null, _react.default.createElement(_components.Header.Group, null, _react.default.createElement(_components.Header.Picture, {
     src: user.photoURL
-  }), /*#__PURE__*/_react.default.createElement(_components.Header.Link, null, user.displayName)), /*#__PURE__*/_react.default.createElement(_components.Header.Group, null, /*#__PURE__*/_react.default.createElement(_components.Header.Link, {
+  }), _react.default.createElement(_components.Header.Link, null, user.displayName)), _react.default.createElement(_components.Header.Group, null, _react.default.createElement(_components.Header.Link, {
     onClick: function onClick() {
       return firebase.auth().signOut();
     }
-  }, "Sign out")))))), /*#__PURE__*/_react.default.createElement(_components.Header.Feature, null, /*#__PURE__*/_react.default.createElement(_components.Header.FeatureCallOut, null, "Watch Joker Now"), /*#__PURE__*/_react.default.createElement(_components.Header.Text, null, "Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the world around him."), /*#__PURE__*/_react.default.createElement(_components.Header.PlayButton, null, "Play"))), /*#__PURE__*/_react.default.createElement(_components.Card.Group, null, slideRows.map(function (slideItem) {
-    return /*#__PURE__*/_react.default.createElement(_components.Card, {
+  }, "Sign out")))))), _react.default.createElement(_components.Header.Feature, null, _react.default.createElement(_components.Header.FeatureCallOut, null, "Watch Joker Now"), _react.default.createElement(_components.Header.Text, null, "Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the world around him."), _react.default.createElement(_components.Header.PlayButton, null, "Play"))), _react.default.createElement(_components.Card.Group, null, slideRows.map(function (slideItem) {
+    return _react.default.createElement(_components.Card, {
       key: "".concat(category, " - ").concat(slideItem.title.toLowerCase())
-    }, /*#__PURE__*/_react.default.createElement(_components.Card.Title, null, slideItem.title), /*#__PURE__*/_react.default.createElement(_components.Card.Entities, null, slideItem.data.map(function (item) {
-      return /*#__PURE__*/_react.default.createElement(_components.Card.Item, {
+    }, _react.default.createElement(_components.Card.Title, null, slideItem.title), _react.default.createElement(_components.Card.Entities, null, slideItem.data.map(function (item) {
+      return _react.default.createElement(_components.Card.Item, {
         key: item.docId,
         item: item
-      }, /*#__PURE__*/_react.default.createElement(_components.Card.Image, {
+      }, _react.default.createElement(_components.Card.Image, {
         src: "/images/".concat(category, "/").concat(item.genre, "/").concat(item.slug, "/small.jpg")
-      }), /*#__PURE__*/_react.default.createElement(_components.Card.Meta, null, /*#__PURE__*/_react.default.createElement(_components.Card.SubTitle, null, item.title), /*#__PURE__*/_react.default.createElement(_components.Card.Text, null, item.description)));
-    })), /*#__PURE__*/_react.default.createElement(_components.Card.Feature, {
+      }), _react.default.createElement(_components.Card.Meta, null, _react.default.createElement(_components.Card.SubTitle, null, item.title), _react.default.createElement(_components.Card.Text, null, item.description)));
+    })), _react.default.createElement(_components.Card.Feature, {
       category: category
-    }, /*#__PURE__*/_react.default.createElement(_components.Player, null, /*#__PURE__*/_react.default.createElement(_components.Player.Button, null), /*#__PURE__*/_react.default.createElement(_components.Player.Video, null))));
-  })), /*#__PURE__*/_react.default.createElement(_footer.default, null)) : /*#__PURE__*/_react.default.createElement(_profiles.default, {
+    }, _react.default.createElement(_components.Player, null, _react.default.createElement(_components.Player.Button, null), _react.default.createElement(_components.Player.Video, null))));
+  })), _react.default.createElement(_footer.default, null)) : _react.default.createElement(_profiles.default, {
     user: user,
     setProfile: setProfile
   });
@@ -41358,7 +40588,7 @@ function Browse() {
     series: series,
     films: films
   });
-  return /*#__PURE__*/_react.default.createElement(_browse.default, {
+  return _react.default.createElement(_browse.default, {
     slides: slides
   });
 }
@@ -41429,14 +40659,14 @@ function IsUserRedirect(_ref) {
       children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["user", "loggedInPath", "children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, _extends({}, restProps, {
+  return _react.default.createElement(_reactRouterDom.Route, _extends({}, restProps, {
     render: function render() {
       if (!user) {
         return children;
       }
 
       if (user) {
-        return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Redirect, {
+        return _react.default.createElement(_reactRouterDom.Redirect, {
           to: {
             pathname: loggedInPath
           }
@@ -41453,7 +40683,7 @@ function ProtectedRoot(_ref2) {
       children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["user", "children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, _extends({}, restProps, {
+  return _react.default.createElement(_reactRouterDom.Route, _extends({}, restProps, {
     render: function render(_ref3) {
       var location = _ref3.location;
 
@@ -41462,7 +40692,7 @@ function ProtectedRoot(_ref2) {
       }
 
       if (!user) {
-        return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Redirect, {
+        return _react.default.createElement(_reactRouterDom.Redirect, {
           to: {
             pathname: "signin",
             state: {
@@ -41506,22 +40736,22 @@ function App() {
   var _useAuthListener = (0, _hooks.useAuthListener)(),
       user = _useAuthListener.user;
 
-  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_routes2.IsUserRedirect, {
+  return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_routes2.IsUserRedirect, {
     user: user,
     loggedInPath: ROUTE.BROWSE,
     path: ROUTE.SIGN_IN
-  }, /*#__PURE__*/_react.default.createElement(_pages.Signin, null)), /*#__PURE__*/_react.default.createElement(_routes2.IsUserRedirect, {
+  }, _react.default.createElement(_pages.Signin, null)), _react.default.createElement(_routes2.IsUserRedirect, {
     user: user,
     loggedInPath: ROUTE.BROWSE,
     path: ROUTE.SIGN_UP
-  }, /*#__PURE__*/_react.default.createElement(_pages.Signup, null)), /*#__PURE__*/_react.default.createElement(_routes2.ProtectedRoot, {
+  }, _react.default.createElement(_pages.Signup, null)), _react.default.createElement(_routes2.ProtectedRoot, {
     user: user,
     path: ROUTE.BROWSE
-  }, /*#__PURE__*/_react.default.createElement(_pages.Browse, null)), /*#__PURE__*/_react.default.createElement(_routes2.IsUserRedirect, {
+  }, _react.default.createElement(_pages.Browse, null)), _react.default.createElement(_routes2.IsUserRedirect, {
     user: user,
     loggedInPath: ROUTE.BROWSE,
     path: ROUTE.HOME
-  }, /*#__PURE__*/_react.default.createElement(_pages.Home, null))));
+  }, _react.default.createElement(_pages.Home, null))));
 }
 },{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./constants/routes":"src/constants/routes.js","./pages":"src/pages/index.js","./hooks":"src/hooks/index.js","./hooks/helpers/routes":"src/hooks/helpers/routes.js"}],"src/global-styles.js":[function(require,module,exports) {
 "use strict";
@@ -41533,19 +40763,11 @@ exports.GlobalStyles = void 0;
 
 var _styledComponents = require("styled-components");
 
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n   htlm, body {\n       font-family: \"Helvetice Neue\", Helvetica, Arial, sans-serif;\n       -webkit-font-smoothing: antialiased;\n       -moz-osx-font-smoothing: grayscale;\n       background-color: #000000;\n       color: #333333;\n       font-size: 16px;\n       margin: 0\n   }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
+var _templateObject;
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var GlobalStyles = (0, _styledComponents.createGlobalStyle)(_templateObject());
+var GlobalStyles = (0, _styledComponents.createGlobalStyle)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n   html, body {\n       font-family: \"Helvetice Neue\", Helvetica, Arial, sans-serif;\n       -webkit-font-smoothing: antialiased;\n       -moz-osx-font-smoothing: grayscale;\n       background-color: #000000;\n       color: #333333;\n       font-size: 16px;\n       margin: 0\n   }\n"])));
 exports.GlobalStyles = GlobalStyles;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/_empty.js":[function(require,module,exports) {
 
@@ -42016,11 +41238,11 @@ _dotenv.default.config();
 
 var firebase = window.firebase.initializeApp(config); // seedDatabase(firebase);
 
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_firebase.FirebaseContext.Provider, {
+_reactDom.default.render(_react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_firebase.FirebaseContext.Provider, {
   value: {
     firebase: window.firebase
   }
-}, /*#__PURE__*/_react.default.createElement(_globalStyles.GlobalStyles, null), /*#__PURE__*/_react.default.createElement(_app.App, null))), document.getElementById("root"));
+}, _react.default.createElement(_globalStyles.GlobalStyles, null), _react.default.createElement(_app.App, null))), document.getElementById("root"));
 },{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./app":"src/app.js","./global-styles":"src/global-styles.js","./context/firebase":"src/context/firebase.js","dotenv":"node_modules/dotenv/lib/main.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -42049,7 +41271,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52248" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53011" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -42080,9 +41302,8 @@ if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
         assetsToAccept.forEach(function (v) {
           hmrAcceptRun(v[0], v[1]);
         });
-      } else if (location.reload) {
-        // `location` global exists in a web worker context but lacks `.reload()` function.
-        location.reload();
+      } else {
+        window.location.reload();
       }
     }
 
